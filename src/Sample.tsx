@@ -1,16 +1,14 @@
-import { IClassOf } from "@web-atoms/core/dist/core/types";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import Bind from "./xf/controls/Binding";
 import Button from "./xf/controls/Button";
-import ContentView from "./xf/controls/ContentView";
 import Entry from "./xf/controls/Entry";
 import Grid from "./xf/controls/Grid";
 import Label from "./xf/controls/Label";
 import ListBox from "./xf/controls/ListBox";
-import View from "./xf/controls/View";
-import document from "./xf/document";
-import XNode from "./xf/XNode";
+import Page from "./xf/controls/Page";
+import Document from "./xf/document";
+import XFControl from "./xf/XFControl";
 
 class SampleViewModel extends AtomViewModel {
     public submit() {
@@ -23,15 +21,9 @@ export class HeaderView extends AtomXFControl {
 
 }
 
-function createNode<T>(c: IClassOf<T>) {
-    return (attributes: { [k in keyof T]?: any }, child: XNode) => {
-        return document.createElement(() => child, attributes as any, [child]);
-    };
-}
+const HeaderViewNode = Document.prepare<HeaderView>(HeaderView);
 
-const HeaderViewNode = createNode(HeaderView);
-
-export default class Sample extends AtomXFControl {
+export default class Sample extends XFControl {
 
     public viewModel: SampleViewModel;
     // nothing
@@ -39,11 +31,12 @@ export default class Sample extends AtomXFControl {
     public create(): void {
         this.viewModel = this.resolve(SampleViewModel);
 
-        // tslint:disable-next-line: no-unused-expression
-        <ContentView>
+        this.render(
+        <Page>
             <Grid>
                 <HeaderViewNode></HeaderViewNode>
                 <Label
+                    Grid_Row={2}
                     text={Bind.oneTime(() => "")}/>
 
                 <ListBox
@@ -56,9 +49,10 @@ export default class Sample extends AtomXFControl {
                     value={Bind.twoWays((x) => x.viewModel.model.userName)}/>
                 <Button
                     label={Bind.oneWay((x) => x.viewModel.label)}
-                    command={ () => this.viewModel.submit() }
+                    command={Bind.event(() => this.viewModel.submit() )}
                     />
             </Grid>
-        </ContentView>;
+        </Page>
+        );
     }
 }

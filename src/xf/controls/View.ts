@@ -5,6 +5,7 @@ import XNode from "../XNode";
 export interface IViewAttributes {
     with?: IClassOf<AtomXFControl>;
     backgroundColor?: any;
+    [key: string]: any;
 }
 
 export default function View(attributes?: IViewAttributes) {

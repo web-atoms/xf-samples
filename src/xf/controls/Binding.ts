@@ -10,6 +10,13 @@ function oneTime(b: Binding, control: AtomXFControl) {
     });
 }
 
+function event(b: Binding, control: AtomXFControl) {
+    control.runAfterInit(() => {
+        const value = b.evaluate();
+        control.bindEvent(b.element, b.path, value);
+    });
+}
+
 function oneWay(b: Binding, control: AtomXFControl) {
     control.bind(b.element, b.path, b.pathList , false, b.sourcePath, control);
 }
@@ -19,6 +26,9 @@ function twoWays(b: Binding, control: AtomXFControl) {
 }
 
 export default class Binding {
+    public static event(sourcePath: () => void): any {
+        return new Binding(event, sourcePath);
+    }
 
     public static oneTime(sourcePath: string | bindingFunction): Binding {
         return new Binding(oneTime, sourcePath);
