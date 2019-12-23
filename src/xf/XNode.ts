@@ -1,3 +1,5 @@
+import { IClassOf } from "@web-atoms/core/dist/core/types";
+import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import Encoder from "./Encoder";
 import StyleHelper from "./StyleHelper";
 
@@ -35,7 +37,7 @@ export function mergeStyles(a: IKeyValuePair): IKeyValuePair {
 
 export default class XNode {
     constructor(
-        public name: string,
+        public name: string | IClassOf<AtomXFControl>,
         public attributes: IKeyValuePair,
         public children: XNode[] | XNode[][] | any[]) {
     }

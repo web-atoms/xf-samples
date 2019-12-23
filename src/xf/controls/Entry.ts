@@ -1,5 +1,5 @@
 import XNode from "../XNode";
-import Binding from "./Binding";
+import Binding from "./Bind";
 import { IViewAttributes } from "./View";
 
 export interface IEntryAttributes extends IViewAttributes {

@@ -1,12 +1,13 @@
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import Bind from "./xf/controls/Binding";
+import Bind from "./xf/controls/Bind";
 import Button from "./xf/controls/Button";
 import Entry from "./xf/controls/Entry";
 import Grid from "./xf/controls/Grid";
 import Label from "./xf/controls/Label";
 import ListBox from "./xf/controls/ListBox";
 import Page from "./xf/controls/Page";
+import StackLayout from "./xf/controls/StackLayout";
 import Document from "./xf/document";
 import XFControl from "./xf/XFControl";
 
@@ -17,7 +18,11 @@ class SampleViewModel extends AtomViewModel {
 
 }
 
-export class HeaderView extends AtomXFControl {
+export class HeaderView extends XFControl {
+
+    public create(): void {
+        this.render(<Label text={ Bind.oneWay(() => this.viewModel.title) }/>);
+    }
 
 }
 
@@ -33,25 +38,17 @@ export default class Sample extends XFControl {
 
         this.render(
         <Page>
-            <Grid>
+            <StackLayout>
                 <HeaderViewNode></HeaderViewNode>
                 <Label
-                    Grid_Row={2}
-                    text={Bind.oneTime(() => "")}/>
-
-                <ListBox
-                    itemTemplate={<Grid>
-                        <Label text={Bind.oneWay((x) => x.data.label)}/>
-                    </Grid>}>
-                </ListBox>
-
+                    text="Username"/>
                 <Entry
                     value={Bind.twoWays((x) => x.viewModel.model.userName)}/>
                 <Button
                     label={Bind.oneWay((x) => x.viewModel.label)}
                     command={Bind.event(() => this.viewModel.submit() )}
                     />
-            </Grid>
+            </StackLayout>
         </Page>
         );
     }
