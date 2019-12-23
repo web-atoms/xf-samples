@@ -1,6 +1,7 @@
 import XNode, { IKeyValuePair } from "./XNode";
 
-export class Document {
+// tslint:disable-next-line: class-name
+export class document {
     public static createElement(
         name: string | ((p: IKeyValuePair) => XNode),
         attributes: IKeyValuePair,
@@ -16,5 +17,4 @@ export class Document {
     }
 }
 
-const document = new Document();
 export default document;

@@ -1,3 +1,6 @@
+import { IClassOf } from "@web-atoms/core/dist/core/types";
+import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
+import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import Bind from "./xf/controls/Binding";
 import Button from "./xf/controls/Button";
 import ContentView from "./xf/controls/ContentView";
@@ -9,14 +12,37 @@ import View from "./xf/controls/View";
 import document from "./xf/document";
 import XNode from "./xf/XNode";
 
-export default class Sample {
+class SampleViewModel extends AtomViewModel {
+    public submit() {
+        throw new Error("Method not implemented.");
+    }
 
-    public viewModel: any;
+}
+
+export class HeaderView extends AtomXFControl {
+
+}
+
+function createNode<T>(c: IClassOf<T>) {
+    return (attributes: { [k in keyof T]?: any }, child: XNode) => {
+        return document.createElement(() => child, attributes as any, [child]);
+    };
+}
+
+const HeaderViewNode = createNode(HeaderView);
+
+export default class Sample extends AtomXFControl {
+
+    public viewModel: SampleViewModel;
     // nothing
 
-    public render(): XNode {
-        return <ContentView>
+    public create(): void {
+        this.viewModel = this.resolve(SampleViewModel);
+
+        // tslint:disable-next-line: no-unused-expression
+        <ContentView>
             <Grid>
+                <HeaderViewNode></HeaderViewNode>
                 <Label
                     text={Bind.oneTime(() => "")}/>
 

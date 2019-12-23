@@ -1,6 +1,9 @@
+import { IClassOf } from "@web-atoms/core/dist/core/types";
+import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import XNode from "../XNode";
 
 export interface IViewAttributes {
+    with?: IClassOf<AtomXFControl>;
     backgroundColor?: any;
 }
 

@@ -9,8 +9,8 @@
         "downlevelIteration": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "jsx": "preserve",
-        "jsxFactory": "document.createElement",
+        "jsx": "react",
+        "jsxFactory": "this.createElement",
         "lib": [
             "es6",
             "dom"
