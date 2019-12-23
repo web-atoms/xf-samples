@@ -1,0 +1,23 @@
+{
+  "name": "@web-atoms/xf-samples",
+  "version": "1.0.1",
+  "description": "Xamarin.Forms controls for web atoms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-atoms/xf-samples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-atoms/xf-samples/issues"
+  },
+  "homepage": "https://github.com/web-atoms/xf-samples#readme",
+  "dependencies": {
+    "@web-atoms/core": "^1.0.908"
+  }
+}
