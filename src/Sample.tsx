@@ -2,6 +2,7 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import Bind from "./xf/controls/Bind";
 import Button from "./xf/controls/Button";
+import ContentPage from "./xf/controls/ContentPage";
 import Entry from "./xf/controls/Entry";
 import Grid from "./xf/controls/Grid";
 import Label from "./xf/controls/Label";
@@ -37,7 +38,7 @@ export default class Sample extends XFControl {
         this.viewModel = this.resolve(SampleViewModel);
 
         this.render(
-        <Page>
+        <ContentPage>
             <StackLayout>
                 <HeaderViewNode></HeaderViewNode>
                 <Label
@@ -49,7 +50,7 @@ export default class Sample extends XFControl {
                     command={Bind.event(() => this.viewModel.submit() )}
                     />
             </StackLayout>
-        </Page>
+        </ContentPage>
         );
     }
 }

@@ -12,6 +12,9 @@ export default class Document {
 
     public static prepare<T>(n: any): ((attributes: Partial<T>, ... nodes: XNode[]) => XNode) {
         return (attributes: Partial<T>, ... nodes: XNode[]) => {
+            if (typeof n === "string") {
+                return new XNode(n, attributes as any, nodes);
+            }
             return new XNode(n, attributes as any, nodes);
         };
     }
@@ -20,13 +23,13 @@ export default class Document {
         name: string | IClassOf<AtomXFControl>,
         attributes: IKeyValuePair,
         ... children: Array<XNode | XNode[] | any>): XNode {
-        // if (typeof name === "function") {
-        //     if (children) {
-        //         attributes = attributes || {};
-        //         (attributes as any).children = children;
-        //     }
-        //     return name(attributes);
-        // }
+        if (typeof name === "function") {
+            if (children) {
+                attributes = attributes || {};
+                (attributes as any).children = children;
+            }
+            return (name as any)(attributes);
+        }
         return new XNode(name, attributes, children);
     }
 }

@@ -8,6 +8,6 @@ declare var bridge: any;
 export default class XFControl extends AtomXFControl {
 
     protected render(node: XNode): void {
-        (this as any).element = bridge.createNode(this, node, Binding);
+        (this as any).element = bridge.createNode(this, node, Binding, XNode, XFControl);
     }
 }
