@@ -2,6 +2,10 @@ import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
 import * as ExpressionParser from "@web-atoms/core/dist/core/ExpressionParser";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 
+/**
+ * Bindings needs to be cloned...
+ */
+
 export type bindingFunction = (control: AtomXFControl) => any;
 
 function oneTime(name: string, b: Binding, control: AtomXFControl, e: any) {
