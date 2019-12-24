@@ -54,6 +54,9 @@ export default class XNode {
         }
     }
     public toString(): string {
+        if (this.name) {
+            return "";
+        }
         if (this.name === "br") {
             return "<br/>";
         }
