@@ -1,32 +1,44 @@
 import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import * as ExpressionParser from "@web-atoms/core/dist/core/ExpressionParser";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 
 export type bindingFunction = (control: AtomXFControl) => any;
 
-function oneTime(b: Binding, control: AtomXFControl) {
-    control.runAfterInit(() => {
-        const value = b.evaluate();
-        control.setLocalValue(b.element, b.path, value);
+function oneTime(name: string, b: Binding, control: AtomXFControl, e: any) {
+    b.path = name;
+    b.element = e;
+    control.app.callLater(() => {
+        control.setLocalValue(b.element, b.path, b.sourcePath(control));
     });
 }
 
-function event(b: Binding, control: AtomXFControl) {
-    control.runAfterInit(() => {
-        const value = b.evaluate();
-        control.bindEvent(b.element, b.path, value);
+function event(name: string, b: Binding, control: AtomXFControl, e: any) {
+    b.path = name;
+    b.element = e;
+    control.app.callLater(() => {
+        control.bindEvent(b.element, b.path, b.sourcePath as any);
     });
 }
 
-function oneWay(b: Binding, control: AtomXFControl) {
-    control.bind(b.element, b.path, b.pathList , false, b.sourcePath, control);
+function oneWay(name: string, b: Binding, control: AtomXFControl, e: any) {
+    b.path = name;
+    b.element = e;
+    control.app.callLater(() => {
+        control.bind(b.element, b.path, b.pathList , false, null);
+    });
 }
 
-function twoWays(b: Binding, control: AtomXFControl) {
-    control.bind(b.element, b.path, b.pathList, false, b.sourcePath, control);
+function twoWays(name: string, b: Binding, control: AtomXFControl, e: any) {
+    b.path = name;
+    b.element = e;
+    control.app.callLater(() => {
+        control.bind(b.element, b.path, b.pathList, true, null);
+    });
 }
 
 export default class Binding {
-    public static event(sourcePath: () => void): any {
+    // tslint:disable-next-line: ban-types
+    public static event(sourcePath: any): any {
         return new Binding(event, sourcePath);
     }
 
@@ -47,7 +59,7 @@ export default class Binding {
     public readonly pathList: string[][];
 
     constructor(
-        public readonly setupFunction: ((b: Binding, c: AtomXFControl) => void),
+        public readonly setupFunction: ((name: string, b: Binding, c: AtomXFControl, e: any) => void),
         sourcePath: string | bindingFunction,
         public element?: any,
         public path?: string,
@@ -57,10 +69,15 @@ export default class Binding {
         } else {
             this.sourcePath = sourcePath;
         }
-    }
 
-    public evaluate() {
-        return this.sourcePath(this.element);
+        if (Array.isArray(this.sourcePath)) {
+            this.pathList = this.sourcePath as any;
+            // this.setupFunction = null;
+        } else {
+            this.pathList = ExpressionParser.parsePath(this.sourcePath);
+            // this.sourcePath = null;
+        }
+
     }
 
 }

@@ -26,9 +26,9 @@ export default class Document {
         if (typeof name === "function") {
             if (children) {
                 attributes = attributes || {};
-                (attributes as any).children = children;
+                // (attributes as any).children = children;
             }
-            return (name as any)(attributes);
+            return (name as any)(attributes, children);
         }
         return new XNode(name, attributes, children);
     }

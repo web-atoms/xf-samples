@@ -40,7 +40,18 @@ export default class XNode {
         public name: string | IClassOf<AtomXFControl>,
         public attributes: IKeyValuePair,
         public children: XNode[] | XNode[][] | any[]) {
-        this.children = this.children || this.attributes.children as any;
+        const first = this.children ? this.children[0] : null;
+        if (first && Array.isArray(first)) {
+            // flatten..
+            const a = this.children;
+            const copy = [];
+            for (const iterator of a) {
+                for (const child of iterator) {
+                    copy.push(child);
+                }
+            }
+            this.children = copy;
+        }
     }
     public toString(): string {
         if (this.name === "br") {
