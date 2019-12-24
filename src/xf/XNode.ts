@@ -40,6 +40,7 @@ export default class XNode {
         public name: string | IClassOf<AtomXFControl>,
         public attributes: IKeyValuePair,
         public children: XNode[] | XNode[][] | any[]) {
+        this.children = this.children || this.attributes.children as any;
     }
     public toString(): string {
         if (this.name === "br") {
