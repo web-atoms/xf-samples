@@ -10,7 +10,7 @@
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "jsx": "react",
-        "jsxFactory": "Document.createElement",
+        "jsxFactory": "XNode.create",
         "lib": [
             "es6",
             "dom"

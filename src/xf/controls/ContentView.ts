@@ -1,4 +1,4 @@
-import XNode from "../XNode";
+import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { IViewAttributes } from "./View";
 
 export interface IContentViewAttributes extends IViewAttributes {

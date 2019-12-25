@@ -1,5 +1,5 @@
-import XNode from "../XNode";
-import Bind from "./Bind";
+import Bind from "@web-atoms/core/dist/core/xnode/Bind";
+import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { IViewAttributes } from "./View";
 
 export interface IGridAttributes extends IViewAttributes {

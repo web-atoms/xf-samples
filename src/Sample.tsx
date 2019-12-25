@@ -1,7 +1,8 @@
+import Bind from "@web-atoms/core/dist/core/xnode/Bind";
+import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import Bind from "./xf/controls/Bind";
 import Button from "./xf/controls/Button";
 import CollectionView from "./xf/controls/CollectionView";
 import ContentPage from "./xf/controls/ContentPage";
@@ -12,9 +13,6 @@ import ListBox from "./xf/controls/ListView";
 import ListView from "./xf/controls/ListView";
 import Page from "./xf/controls/Page";
 import StackLayout from "./xf/controls/StackLayout";
-import Document from "./xf/document";
-import XFControl from "./xf/XFControl";
-import XNode from "./xf/XNode";
 
 class SampleViewModel extends AtomViewModel {
 
@@ -40,7 +38,7 @@ class SampleViewModel extends AtomViewModel {
 
 }
 
-export class HeaderView extends XFControl {
+export class HeaderView extends AtomXFControl {
 
     public create(): void {
         this.render(<Label text={ Bind.oneWay(() => this.viewModel.title) }/>);
@@ -48,9 +46,9 @@ export class HeaderView extends XFControl {
 
 }
 
-const HeaderViewNode = Document.prepare<HeaderView>(HeaderView);
+const HeaderViewNode = XNode.prepare<HeaderView>(HeaderView);
 
-export default class Sample extends XFControl {
+export default class Sample extends AtomXFControl {
 
     public viewModel: SampleViewModel;
 

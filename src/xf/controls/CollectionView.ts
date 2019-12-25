@@ -1,6 +1,5 @@
-import Document from "../document";
-import XNode from "../XNode";
-import Bind from "./Bind";
+import Bind from "@web-atoms/core/dist/core/xnode/Bind";
+import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import { IViewAttributes } from "./View";
 
 export interface ICollectionViewAttributes extends IViewAttributes {
@@ -8,5 +7,5 @@ export interface ICollectionViewAttributes extends IViewAttributes {
     itemTemplate?: any;
 }
 
-const CollectionView = Document.prepare<ICollectionViewAttributes>("CollectionView");
+const CollectionView = XNode.prepare<ICollectionViewAttributes>("CollectionView");
 export default CollectionView;
