@@ -1,12 +1,12 @@
 import XNode from "../XNode";
-import Binding from "./Bind";
+import Bind from "./Bind";
 import { IViewAttributes } from "./View";
 
 export interface IButtonAttributes extends IViewAttributes {
     /**
      * Xamarin.Forms.Button.Label string
      */
-    label?: string | Binding;
+    label?: string | Bind;
 
     command?: any;
 }

@@ -1,9 +1,9 @@
 import XNode from "../XNode";
-import Binding from "./Bind";
+import Bind from "./Bind";
 import { IViewAttributes } from "./View";
 
 export interface ILabelAttributes extends IViewAttributes {
-    text?: string | Binding;
+    text?: string | Bind;
 }
 
 export default function Label(attributes: ILabelAttributes) {

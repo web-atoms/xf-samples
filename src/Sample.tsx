@@ -14,6 +14,7 @@ import Page from "./xf/controls/Page";
 import StackLayout from "./xf/controls/StackLayout";
 import Document from "./xf/document";
 import XFControl from "./xf/XFControl";
+import XNode from "./xf/XNode";
 
 class SampleViewModel extends AtomViewModel {
 

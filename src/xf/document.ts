@@ -1,10 +1,10 @@
 import { IClassOf } from "@web-atoms/core/dist/core/types";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import Binding from "./controls/Bind";
+import Bind from "./controls/Bind";
 import XNode, { IKeyValuePair } from "./XNode";
 
 type Partial<T> = {
-    [P in keyof T]?: T[P] | Binding;
+    [P in keyof T]?: T[P] | Bind;
 };
 
 // tslint:disable-next-line: class-name

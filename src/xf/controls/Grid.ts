@@ -1,9 +1,9 @@
 import XNode from "../XNode";
-import Binding from "./Bind";
+import Bind from "./Bind";
 import { IViewAttributes } from "./View";
 
 export interface IGridAttributes extends IViewAttributes {
-    spacing?: any | Binding;
+    spacing?: any | Bind;
 }
 
 export default function Grid(attributes: IGridAttributes, children: XNode[]) {

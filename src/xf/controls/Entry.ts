@@ -1,9 +1,9 @@
 import XNode from "../XNode";
-import Binding from "./Bind";
+import Bind from "./Bind";
 import { IViewAttributes } from "./View";
 
 export interface IEntryAttributes extends IViewAttributes {
-    value?: string | Binding;
+    value?: string | Bind;
 }
 
 export default function Entry(attributes: IEntryAttributes) {
