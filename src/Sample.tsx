@@ -58,7 +58,6 @@ export default class Sample extends AtomXFControl {
         this.render(
         <ContentPage>
             <StackLayout>
-                <HeaderViewNode></HeaderViewNode>
                 <Label
                     text="Username"/>
                 <Entry
