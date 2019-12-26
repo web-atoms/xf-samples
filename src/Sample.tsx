@@ -5,7 +5,7 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { Button, ColumnDefinition, ColumnDefinitionCollection,
     ContentPage, Entry, Grid,
-    Label, RowDefinition, RowDefinitionCollection } from "@web-atoms/xf-controls/dist/controls/XF";
+    Label, RowDefinition, RowDefinitionCollection, ToolbarItem } from "@web-atoms/xf-controls/dist/controls/XF";
 
 class SampleViewModel extends AtomViewModel {
 
@@ -50,17 +50,22 @@ export default class Sample extends AtomXFControl {
 
         this.render(
         <ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
-            <Grid
 
-                rowDefinitions={<RowDefinitionCollection>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </RowDefinitionCollection>}
+            <ContentPage.ToolbarItems>
+                <ToolbarItem text="Add"/>
+            </ContentPage.ToolbarItems>
 
-                columnDefinitions={<ColumnDefinitionCollection>
+            <Grid>
+
+                <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                </ColumnDefinitionCollection>} >
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
                 <Label
                     text="Username"/>
