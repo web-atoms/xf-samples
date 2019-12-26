@@ -3,16 +3,9 @@ import XNode from "@web-atoms/core/dist/core/xnode/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import Button from "./xf/controls/Button";
-import CollectionView from "./xf/controls/CollectionView";
-import ContentPage from "./xf/controls/ContentPage";
-import Entry from "./xf/controls/Entry";
-import Grid from "./xf/controls/Grid";
-import Label from "./xf/controls/Label";
-import ListBox from "./xf/controls/ListView";
-import ListView from "./xf/controls/ListView";
-import Page from "./xf/controls/Page";
-import StackLayout from "./xf/controls/StackLayout";
+import { Button, ColumnDefinition, ColumnDefinitionCollection,
+    ContentPage, Entry, Grid,
+    Label, RowDefinition, RowDefinitionCollection } from "@web-atoms/xf-controls/dist/controls/XF";
 
 class SampleViewModel extends AtomViewModel {
 
@@ -56,22 +49,31 @@ export default class Sample extends AtomXFControl {
         this.viewModel = this.resolve(SampleViewModel);
 
         this.render(
-        <ContentPage>
-            <StackLayout>
+        <ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
+            <Grid
+
+                rowDefinitions={<RowDefinitionCollection>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </RowDefinitionCollection>}
+
+                columnDefinitions={<ColumnDefinitionCollection>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </ColumnDefinitionCollection>} >
+
                 <Label
                     text="Username"/>
                 <Entry
+                    { ... Grid.Column(1) }
                     text={Bind.twoWays((x) => x.viewModel.model.username)}/>
                 <Button
+                    { ... Grid.Row(1) }
+                    { ... Grid.ColumnSpan(2)}
                     text={Bind.oneWay((x) => x.viewModel.label)}
-                    command={Bind.oneTime(() => () => this.viewModel.submit() )}
+                    command={Bind.event(() => this.viewModel.submit() )}
                     />
-
-                <ListView
-                    itemsSource={Bind.oneTime(() => this.viewModel.countries)}
-                    itemTemplate={<Label text={Bind.oneWay((x) => x.data.label)}/>}
-                    ></ListView>
-            </StackLayout>
+            </Grid>
         </ContentPage>
         );
     }
