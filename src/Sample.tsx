@@ -52,7 +52,9 @@ export default class Sample extends AtomXFControl {
         <ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
 
             <ContentPage.ToolbarItems>
-                <ToolbarItem text="Add"/>
+                <ToolbarItem
+                    text="Add"
+                    command={Bind.event(() => this.viewModel.submit())}/>
             </ContentPage.ToolbarItems>
 
             <Grid>
