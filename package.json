@@ -21,7 +21,7 @@
     "@web-atoms/core": "^1.0.922",
     "@web-atoms/date-time": "^1.0.21",
     "@web-atoms/module-loader": "1.0.376",
-    "@web-atoms/xf-controls": "1.0.50",
+    "@web-atoms/xf-controls": "1.0.51",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {},

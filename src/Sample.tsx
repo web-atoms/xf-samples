@@ -41,6 +41,7 @@ export class HeaderView extends AtomXFControl {
 
 const HeaderViewNode = XNode.prepare<HeaderView>(HeaderView);
 
+/** Test 1 */
 export default class Sample extends AtomXFControl {
 
     public viewModel: SampleViewModel;
