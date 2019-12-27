@@ -13,6 +13,8 @@ export default class MenuService {
     @Inject
     public app: App;
 
+    public isOpen: boolean;
+
     @BindableProperty
     public menus: AtomList<MenuItem> = new AtomList();
 

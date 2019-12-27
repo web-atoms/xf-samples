@@ -16,6 +16,8 @@ export default class AppHostViewModel extends AtomViewModel {
     @Inject
     public navigationService: NavigationService;
 
+    public message: string = "Tap on Hamburger to continue";
+
     public currentPage: any;
 
     @Load({ init: true })
@@ -24,7 +26,7 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
-        this.menuService.add("Alert", () => null);
+        this.menuService.add("Alert", () => this.message = "Alert tapped");
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {

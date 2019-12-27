@@ -1,4 +1,5 @@
 import { App } from "@web-atoms/core/dist/App";
+import { AtomBinder } from "@web-atoms/core/dist/core/AtomBinder";
 import { AtomList } from "@web-atoms/core/dist/core/AtomList";
 import { INameValuePairs } from "@web-atoms/core/dist/core/types";
 import MenuService from "./MenuService";
@@ -47,7 +48,10 @@ export default class MenuItem {
     }
 
     public click(): any {
-        return this.action(this);
+        const r = this.action(this);
+        this.menuService.isOpen = false;
+        AtomBinder.refreshValue(this.menuService, "isOpen");
+        return r;
     }
 
     public add(label: string, action: () => any, icon?: string): MenuItem {
