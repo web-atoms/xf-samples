@@ -1,5 +1,4 @@
 import { App } from "@web-atoms/core/dist/App";
-import { AtomBinder } from "@web-atoms/core/dist/core/AtomBinder";
 import { AtomList } from "@web-atoms/core/dist/core/AtomList";
 import { INameValuePairs } from "@web-atoms/core/dist/core/types";
 import MenuService from "./MenuService";
@@ -48,9 +47,10 @@ export default class MenuItem {
     }
 
     public click(): any {
+        // this is hack as MasterDetailPage's IsPresented is set only property
+        this.menuService.isOpen = true;
         const r = this.action(this);
         this.menuService.isOpen = false;
-        AtomBinder.refreshValue(this.menuService, "isOpen");
         return r;
     }
 

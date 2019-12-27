@@ -30,7 +30,7 @@ export default class MenuService {
         return m;
     }
 
-    public addLink(label: string, pageSrc: string, pageParameters?: INameValuePairs, icon?: string): MenuItem {
+    public addLink(label: string, pageSrc: string | any, pageParameters?: INameValuePairs, icon?: string): MenuItem {
         const m = this.createLink(label, pageSrc, pageParameters, icon);
         this.menus.add(m);
         return m;

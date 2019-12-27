@@ -7,6 +7,7 @@ import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowV
 import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import MenuService from "../service/menu-service/MenuService";
+import addListSamples from "../samples/list/ListSamples";
 
 export default class AppHostViewModel extends AtomViewModel {
 
@@ -26,7 +27,7 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
-        this.menuService.add("Alert", () => this.message = "Alert tapped");
+        addListSamples(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
@@ -45,6 +46,8 @@ export default class AppHostViewModel extends AtomViewModel {
                 this.currentPage = null;
             }
         });
+
+        return view;
     }
 
 }
