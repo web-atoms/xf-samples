@@ -1,5 +1,5 @@
-import Bind from "@web-atoms/core/dist/core/xnode/Bind";
-import XNode from "@web-atoms/core/dist/core/xnode/XNode";
+import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";

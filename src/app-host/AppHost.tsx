@@ -1,5 +1,6 @@
-import Bind from "@web-atoms/core/dist/core/xnode/Bind";
-import XNode from "@web-atoms/core/dist/core/xnode/XNode";
+import { AtomBridge } from "@web-atoms/core/dist/core/AtomBridge";
+import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import { ColumnDefinition, ContentPage, Grid, Label, ListView,
     MasterDetailPage, RowDefinition, TapGestureRecognizer } from "@web-atoms/xf-controls/dist/controls/XF";
@@ -8,6 +9,10 @@ import AppHostViewModel from "./AppHostViewModel";
 export default class AppHost extends AtomXFControl {
 
     public viewModel: AppHostViewModel;
+
+    constructor(app: any, e: any) {
+        super(app, e || AtomBridge.instance.create(MasterDetailPage as any));
+    }
 
     public create(): void {
 
