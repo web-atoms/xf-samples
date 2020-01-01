@@ -3,9 +3,9 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { Button, ColumnDefinition, ColumnDefinitionCollection,
+import { Button, ColumnDefinition,
     ContentPage, Entry, Grid,
-    Label, RowDefinition, RowDefinitionCollection, ToolbarItem } from "@web-atoms/xf-controls/dist/controls/XF";
+    Label, RowDefinition, ToolbarItem } from "@web-atoms/xf-controls/dist/controls/XF";
 
 class SampleViewModel extends AtomViewModel {
 
