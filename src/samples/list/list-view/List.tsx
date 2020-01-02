@@ -1,10 +1,11 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import AtomContentPage from "@web-atoms/xf-controls/dist/controls/atom/AtomContentPage";
 import { ContentPage, Label, ListView } from "@web-atoms/xf-controls/dist/controls/XF";
 import ListViewModel from "./ListViewModel";
 
-export default class List extends AtomXFControl {
+export default class List extends AtomContentPage {
 
     public viewModel: ListViewModel;
 
