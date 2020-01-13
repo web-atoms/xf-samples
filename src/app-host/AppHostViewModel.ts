@@ -7,6 +7,7 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import addFormSamples from "../samples/form/FormSamples";
 import addListSamples from "../samples/list/ListSamples";
 import MenuService from "../service/menu-service/MenuService";
 
@@ -43,6 +44,8 @@ export default class AppHostViewModel extends AtomViewModel {
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
         addListSamples(this.menuService);
+
+        addFormSamples(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
