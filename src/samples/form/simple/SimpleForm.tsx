@@ -19,7 +19,7 @@ export default class SimpleForm extends AtomContentPage {
                     label="Username:"
                     isRequired={true}
                     error={Bind.oneWay(() => this.viewModel.errorUsername)}>
-                    <XF.Entry/>
+                    <XF.Entry text={Bind.twoWays(() => this.viewModel.model.username)}/>
                 </WA.AtomField>
                 <WA.AtomField
                     label="Password"
