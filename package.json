@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/web-atoms/xf-samples#readme",
   "dependencies": {
-    "@web-atoms/core": "^1.1.5",
+    "@web-atoms/core": "^1.1.11",
     "@web-atoms/date-time": "^1.0.21",
     "@web-atoms/module-loader": "1.0.395",
-    "@web-atoms/xf-controls": "1.0.75",
+    "@web-atoms/xf-controls": "1.0.77",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {},

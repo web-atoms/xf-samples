@@ -3,9 +3,7 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import { Button, ColumnDefinition,
-    ContentPage, Entry, Grid,
-    Label, RowDefinition, ToolbarItem } from "@web-atoms/xf-controls/dist/controls/XF";
+import XF from "@web-atoms/xf-controls/dist/controls/XF";
 
 class SampleViewModel extends AtomViewModel {
 
@@ -34,7 +32,7 @@ class SampleViewModel extends AtomViewModel {
 export class HeaderView extends AtomXFControl {
 
     public create(): void {
-        this.render(<Label text={ Bind.oneWay(() => this.viewModel.title) }/>);
+        this.render(<XF.Label text={ Bind.oneWay(() => this.viewModel.title) }/>);
     }
 
 }
@@ -50,39 +48,39 @@ export default class Sample extends AtomXFControl {
         this.viewModel = this.resolve(SampleViewModel);
 
         this.render(
-        <ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
+        <XF.ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
 
-            <ContentPage.ToolbarItems>
-                <ToolbarItem
+            <XF.ContentPage.ToolbarItems>
+                <XF.ToolbarItem
                     text="Add"
                     command={Bind.event(() => this.viewModel.submit())}/>
-            </ContentPage.ToolbarItems>
+            </XF.ContentPage.ToolbarItems>
 
-            <Grid>
+            <XF.Grid>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                <XF.Grid.ColumnDefinitions>
+                    <XF.ColumnDefinition/>
+                    <XF.ColumnDefinition/>
+                </XF.Grid.ColumnDefinitions>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+                <XF.Grid.RowDefinitions>
+                    <XF.RowDefinition/>
+                    <XF.RowDefinition/>
+                </XF.Grid.RowDefinitions>
 
-                <Label
+                <XF.Label
                     text="Username"/>
-                <Entry
-                    { ... Grid.Column(1) }
+                <XF.Entry
+                    { ... XF.Grid.Column(1) }
                     text={Bind.twoWays((x) => x.viewModel.model.username)}/>
-                <Button
-                    { ... Grid.Row(1) }
-                    { ... Grid.ColumnSpan(2)}
+                <XF.Button
+                    { ... XF.Grid.Row(1) }
+                    { ... XF.Grid.ColumnSpan(2)}
                     text={Bind.oneWay((x) => x.viewModel.label)}
                     command={Bind.event(() => this.viewModel.submit() )}
                     />
-            </Grid>
-        </ContentPage>
+            </XF.Grid>
+        </XF.ContentPage>
         );
     }
 }
