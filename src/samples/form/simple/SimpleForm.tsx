@@ -28,7 +28,7 @@ export default class SimpleForm extends AtomContentPage {
                     >
                     <XF.Entry
                         isPassword={true}
-                        text={Bind.twoWays(() => this.viewModel.model.Password)}
+                        text={Bind.twoWays(() => this.viewModel.model.password)}
                     />
                 </WA.AtomField>
                 <XF.Button
