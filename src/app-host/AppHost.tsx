@@ -13,6 +13,9 @@ export default class AppHost extends AtomMasterDetailPage {
         this.viewModel = this.resolve(AppHostViewModel);
         this.viewModel.owner = this;
 
+        // tslint:disable-next-line: no-console
+        console.log(`Render start`);
+
         this.render(
             <XF.MasterDetailPage
                 isPresented={Bind.twoWays(() => this.viewModel.menuService.isOpen)}
@@ -23,13 +26,15 @@ export default class AppHost extends AtomMasterDetailPage {
                             itemsSource={Bind.oneWay(() => this.viewModel.menuService.menus)}>
                             <XF.ListView.ItemTemplate>
                                 <XF.DataTemplate>
-                                    <XF.Label text={Bind.oneWay((x) => x.data.label)}>
-                                        <XF.Label.GestureRecognizers>
-                                            <XF.TapGestureRecognizer
-                                                command={ Bind.event((s) => s.data.click() ) }
-                                                />
-                                        </XF.Label.GestureRecognizers>
-                                    </XF.Label>
+                                    <XF.ViewCell>
+                                        <XF.Label text={Bind.oneWay((x) => x.data.label)}>
+                                            <XF.Label.GestureRecognizers>
+                                                <XF.TapGestureRecognizer
+                                                    command={ Bind.event((s) => s.data.click() ) }
+                                                    />
+                                            </XF.Label.GestureRecognizers>
+                                        </XF.Label>
+                                    </XF.ViewCell>
                                 </XF.DataTemplate>
                             </XF.ListView.ItemTemplate>
                         </XF.ListView>
