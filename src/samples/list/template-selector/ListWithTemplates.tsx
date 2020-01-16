@@ -18,19 +18,21 @@ export default class ListWithTemplates extends AtomContentPage {
             <XF.ListView itemsSource={Bind.oneWay(() => this.viewModel.movies.value)}>
                 <XF.ListView.ItemTemplate>
                     <WA.AtomTemplateSelector selector={(d: IMovie) => /horror/i.test(d.genre) ? 1 : 0}>
-                        {/* Template 0 */}
-                        <XF.DataTemplate>
-                            <XF.TextCell
-                                text={Bind.oneWay((x) => x.data.name)}
-                                />
-                        </XF.DataTemplate>
-                        {/* Template 1 */}
-                        <XF.DataTemplate>
-                            <XF.TextCell
-                                text={Bind.oneWay((x) => x.data.name)}
-                                textColor="red"
-                                />
-                        </XF.DataTemplate>
+                        <WA.AtomTemplateSelector.Templates>
+                            {/* Template 0 */}
+                            <XF.DataTemplate>
+                                <XF.TextCell
+                                    text={Bind.oneWay((x) => x.data.name)}
+                                    />
+                            </XF.DataTemplate>
+                            {/* Template 1 */}
+                            <XF.DataTemplate>
+                                <XF.TextCell
+                                    text={Bind.oneWay((x) => x.data.name)}
+                                    textColor="red"
+                                    />
+                            </XF.DataTemplate>
+                        </WA.AtomTemplateSelector.Templates>
                     </WA.AtomTemplateSelector>
                 </XF.ListView.ItemTemplate>
             </XF.ListView>
