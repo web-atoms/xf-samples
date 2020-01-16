@@ -14,27 +14,26 @@ export default class ListWithTemplates extends AtomContentPage {
 
         this.viewModel = this.resolve(ListViewModel);
 
-        this.render(<XF.ContentPage>
+        this.render(<XF.ContentPage title="List with Template Selector">
             <XF.ListView itemsSource={Bind.oneWay(() => this.viewModel.movies.value)}>
-                <XF.ListView.ItemTemplate>
+                <WA.AtomTemplateSelector.TemplateSelector>
                     <WA.AtomTemplateSelector selector={(d: IMovie) => /horror/i.test(d.genre) ? 1 : 0}>
-                        <WA.AtomTemplateSelector.Templates>
-                            {/* Template 0 */}
-                            <XF.DataTemplate>
-                                <XF.TextCell
-                                    text={Bind.oneWay((x) => x.data.name)}
-                                    />
-                            </XF.DataTemplate>
-                            {/* Template 1 */}
-                            <XF.DataTemplate>
-                                <XF.TextCell
-                                    text={Bind.oneWay((x) => x.data.name)}
-                                    textColor="red"
-                                    />
-                            </XF.DataTemplate>
-                        </WA.AtomTemplateSelector.Templates>
+                        {/* Template 0 */}
+                        <XF.DataTemplate>
+                            <XF.TextCell
+                                text={Bind.oneWay((x) => x.data.name)}
+                                textColor="black"
+                                />
+                        </XF.DataTemplate>
+                        {/* Template 1 */}
+                        <XF.DataTemplate>
+                            <XF.TextCell
+                                text={Bind.oneWay((x) => x.data.name)}
+                                textColor="red"
+                                />
+                        </XF.DataTemplate>
                     </WA.AtomTemplateSelector>
-                </XF.ListView.ItemTemplate>
+                </WA.AtomTemplateSelector.TemplateSelector>
             </XF.ListView>
         </XF.ContentPage>);
     }

@@ -1,12 +1,14 @@
+import { Atom } from "@web-atoms/core/dist/Atom";
 import MovieService, { IMovie, IPagedList } from "../MovieService";
-
 export default class MockMovieService extends MovieService {
 
-    public getMovies(
+    public async getMovies(
         category: string,
         search: string,
         start: number,
         size: number): Promise<IPagedList<IMovie>> {
+
+        await Atom.delay(100);
         return this.sendResult({
             count: 10,
             value: [

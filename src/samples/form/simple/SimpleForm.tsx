@@ -13,7 +13,7 @@ export default class SimpleForm extends AtomContentPage {
 
         this.viewModel = this.resolve(SimpleFormViewModel);
 
-        this.render(<XF.ContentPage padding="10">
+        this.render(<XF.ContentPage title="Simple Form" padding="10">
             <WA.AtomForm>
                 <WA.AtomField
                     label="Username:"
