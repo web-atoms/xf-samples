@@ -1,6 +1,7 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
-import { Regular } from "@web-atoms/font-awesome/dist/Icons";
+import { FontAwesomeRegular } from "@web-atoms/font-awesome/dist/FontAwesome";
+import WA from "@web-atoms/xf-controls/dist/controls/WA";
 import XF from "@web-atoms/xf-controls/dist/controls/XF";
 import AtomMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
@@ -52,6 +53,16 @@ export default class AppHost extends AtomMasterDetailPage {
                 </XF.MasterDetailPage.Master>
                 <XF.MasterDetailPage.Detail>
                     <XF.ContentPage title="Web Atoms Demo">
+                        <XF.ContentPage.ToolbarItems>
+                            <WA.AtomToolbarItem>
+                                <WA.AtomToolbarItem.IconImageSource>
+                                    <XF.FontImageSource
+                                        fontFamily={FontAwesomeRegular}
+                                        glyph={FontAwesomeRegular.plusSquare}
+                                        />
+                                </WA.AtomToolbarItem.IconImageSource>
+                            </WA.AtomToolbarItem>
+                        </XF.ContentPage.ToolbarItems>
                         <XF.Grid>
                             <XF.Grid.RowDefinitions>
                                 <XF.RowDefinition/>
@@ -65,8 +76,10 @@ export default class AppHost extends AtomMasterDetailPage {
                                 <XF.ColumnDefinition/>
                             </XF.Grid.ColumnDefinitions>
                             <XF.Label
-                                fontFamily={Regular}
-                                text={Regular.smile}
+                                { ... XF.Grid.Row(1) }
+                                { ... XF.Grid.Column(1) }
+                                fontFamily={FontAwesomeRegular}
+                                text={FontAwesomeRegular.smile}
                                 />
                             <XF.Label
                                 { ... XF.Grid.Row(1) }
