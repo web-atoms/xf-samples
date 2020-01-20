@@ -1,5 +1,6 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import { Regular } from "@web-atoms/font-awesome/dist/Icons";
 import XF from "@web-atoms/xf-controls/dist/controls/XF";
 import AtomMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
@@ -59,12 +60,17 @@ export default class AppHost extends AtomMasterDetailPage {
                             </XF.Grid.RowDefinitions>
                             <XF.Grid.ColumnDefinitions>
                                 <XF.ColumnDefinition/>
+                                <XF.ColumnDefinition width="50"/>
                                 <XF.ColumnDefinition width="Auto"/>
                                 <XF.ColumnDefinition/>
                             </XF.Grid.ColumnDefinitions>
                             <XF.Label
+                                fontFamily={Regular}
+                                text={Regular.smile}
+                                />
+                            <XF.Label
                                 { ... XF.Grid.Row(1) }
-                                { ... XF.Grid.Column(1) }
+                                { ... XF.Grid.Column(2) }
                                 text={Bind.oneWay(() => this.viewModel.message)}/>
                         </XF.Grid>
                     </XF.ContentPage>
