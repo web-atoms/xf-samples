@@ -70,7 +70,7 @@ export default class MenuItem {
         return m;
     }
 
-    public addLink(label: string, pageSrc: string, pageParameters?: INameValuePairs, icon?: string): MenuItem {
+    public addLink(label: string, pageSrc: string | any, pageParameters?: INameValuePairs, icon?: string): MenuItem {
         const m = this.menuService.createLink(label, pageSrc, pageParameters, icon);
         this.children.add(m);
         return m;
@@ -84,6 +84,10 @@ export default class MenuItem {
         const m = this.menuService.createLink(label, pageSrc, pageParameters, icon, { target: "app" });
         this.children.add(m);
         return m;
+    }
+
+    public toString() {
+        return this.label;
     }
 
 }

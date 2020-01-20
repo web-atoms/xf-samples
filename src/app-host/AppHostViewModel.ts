@@ -35,6 +35,8 @@ export default class AppHostViewModel extends AtomViewModel {
 
     public message: string = "Tap on Hamburger to continue";
 
+    public menus: any;
+
     public currentPage: any;
 
     @Load({ init: true })
@@ -46,6 +48,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addListSamples(this.menuService);
 
         addFormSamples(this.menuService);
+
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {

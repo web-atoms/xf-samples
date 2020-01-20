@@ -18,6 +18,19 @@ export default class MenuService {
     @BindableProperty
     public menus: AtomList<MenuItem> = new AtomList();
 
+    public get groupedMenus() {
+        const a = [];
+        for (const iterator of this.menus) {
+            const g = [] as any;
+            g.key = iterator;
+            a.push(g);
+            for (const child of iterator.children) {
+                g.push(child);
+            }
+        }
+        return a;
+    }
+
     public add(label: string, action: () => any, icon?: string): MenuItem {
         const m = this.create(label, action, icon);
         this.menus.add(m);
