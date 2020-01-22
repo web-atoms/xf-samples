@@ -1,6 +1,6 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
-import { FontAwesomeRegular } from "@web-atoms/font-awesome/dist/FontAwesome";
+import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
 import WA from "@web-atoms/xf-controls/dist/controls/WA";
 import XF from "@web-atoms/xf-controls/dist/controls/XF";
 import AtomMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomMasterDetailPage";
