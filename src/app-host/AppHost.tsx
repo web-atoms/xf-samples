@@ -1,12 +1,12 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
-import WA from "@web-atoms/xf-controls/dist/controls/WA";
-import XF from "@web-atoms/xf-controls/dist/controls/XF";
-import AtomMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomMasterDetailPage";
+import WA from "@web-atoms/xf-controls/dist/clr/WA";
+import XF from "@web-atoms/xf-controls/dist/clr/XF";
+import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
 
-export default class AppHost extends AtomMasterDetailPage {
+export default class AppHost extends AtomXFMasterDetailPage {
 
     public viewModel: AppHostViewModel;
 
