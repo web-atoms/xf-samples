@@ -1,7 +1,7 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
-import WA from "@web-atoms/xf-controls/dist/controls/WA";
-import XF from "@web-atoms/xf-controls/dist/controls/XF";
+import WA from "@web-atoms/xf-controls/dist/clr/WA";
+import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomContentPage from "@web-atoms/xf-controls/dist/pages/AtomContentPage";
 import { IMovie } from "../../../service/http/MovieService";
 import ListViewModel from "../list-view/ListViewModel";

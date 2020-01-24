@@ -3,7 +3,7 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
-import XF from "@web-atoms/xf-controls/dist/controls/XF";
+import XF from "@web-atoms/xf-controls/dist/clr/XF";
 
 class SampleViewModel extends AtomViewModel {
 
