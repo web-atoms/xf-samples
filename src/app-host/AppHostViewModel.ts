@@ -9,6 +9,7 @@ import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import addFormSamples from "../samples/form/FormSamples";
 import addListSamples from "../samples/list/ListSamples";
+import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import MenuService from "../service/menu-service/MenuService";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
@@ -45,9 +46,10 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
+        addFormSamples(this.menuService);
         addListSamples(this.menuService);
 
-        addFormSamples(this.menuService);
+        addToggleButtonBar(this.menuService);
 
     }
 

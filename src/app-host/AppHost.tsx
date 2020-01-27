@@ -26,9 +26,7 @@ export default class AppHost extends AtomXFMasterDetailPage {
                     <XF.ContentPage title="Home">
                         <XF.ListView
                             isGroupingEnabled={true}
-                            { ... {
-                                "WebAtoms.Controls.GroupBy:ItemsSource;WebAtoms":
-                                Bind.oneWay(() => this.viewModel.menuService.groupedMenus) } }>
+                            { ... WA.GroupBy.ItemsSource(Bind.oneWay(() => this.viewModel.menuService.groupedMenus)) }>
                             <XF.ListView.GroupHeaderTemplate>
                                 <XF.DataTemplate>
                                     <XF.TextCell
