@@ -15,13 +15,13 @@ export default class List extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title="List Sample">
                 <XF.ListView itemsSource={Bind.oneWay(() => this.viewModel.movies.value)}>
-                    <XF.ListView.ItemTemplate>
+                    <XF.ListView.itemTemplate>
                         <XF.DataTemplate>
                             <XF.ViewCell>
                                 <XF.Label text={Bind.oneWay((x) => x.data.name)}/>
                             </XF.ViewCell>
                         </XF.DataTemplate>
-                    </XF.ListView.ItemTemplate>
+                    </XF.ListView.itemTemplate>
                 </XF.ListView>
             </XF.ContentPage>
         );

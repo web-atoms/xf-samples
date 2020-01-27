@@ -22,70 +22,70 @@ export default class AppHost extends AtomXFMasterDetailPage {
             <XF.MasterDetailPage
                 isPresented={Bind.twoWays(() => this.viewModel.menuService.isOpen)}
                 title="Demo 1">
-                <XF.MasterDetailPage.Master>
+                <XF.MasterDetailPage.master>
                     <XF.ContentPage title="Home">
                         <XF.ListView
                             isGroupingEnabled={true}
-                            { ... WA.GroupBy.ItemsSource(Bind.oneWay(() => this.viewModel.menuService.groupedMenus)) }>
-                            <XF.ListView.GroupHeaderTemplate>
+                            { ... WA.GroupBy.itemsSource(Bind.oneWay(() => this.viewModel.menuService.groupedMenus)) }>
+                            <XF.ListView.groupHeaderTemplate>
                                 <XF.DataTemplate>
                                     <XF.TextCell
                                         text={Bind.oneWay((x) => x.data.label)}/>
                                 </XF.DataTemplate>
-                            </XF.ListView.GroupHeaderTemplate>
-                            <XF.ListView.ItemTemplate>
+                            </XF.ListView.groupHeaderTemplate>
+                            <XF.ListView.itemTemplate>
                                 <XF.DataTemplate>
                                     <XF.ViewCell>
                                         <XF.Label text={Bind.oneWay((x) => x.data.label)}>
-                                            <XF.Label.GestureRecognizers>
+                                            <XF.Label.gestureRecognizers>
                                                 <XF.TapGestureRecognizer
                                                     command={ Bind.event((s) => s.data.click() ) }
                                                     />
-                                            </XF.Label.GestureRecognizers>
+                                            </XF.Label.gestureRecognizers>
                                         </XF.Label>
                                     </XF.ViewCell>
                                 </XF.DataTemplate>
-                            </XF.ListView.ItemTemplate>
+                            </XF.ListView.itemTemplate>
                         </XF.ListView>
                     </XF.ContentPage>
-                </XF.MasterDetailPage.Master>
-                <XF.MasterDetailPage.Detail>
+                </XF.MasterDetailPage.master>
+                <XF.MasterDetailPage.detail>
                     <XF.ContentPage title="Web Atoms Demo">
-                        <XF.ContentPage.ToolbarItems>
+                        <XF.ContentPage.toolbarItems>
                             <WA.AtomToolbarItem>
-                                <WA.AtomToolbarItem.IconImageSource>
+                                <WA.AtomToolbarItem.iconImageSource>
                                     <XF.FontImageSource
                                         fontFamily={FontAwesomeRegular}
                                         glyph={FontAwesomeRegular.plusSquare}
                                         />
-                                </WA.AtomToolbarItem.IconImageSource>
+                                </WA.AtomToolbarItem.iconImageSource>
                             </WA.AtomToolbarItem>
-                        </XF.ContentPage.ToolbarItems>
+                        </XF.ContentPage.toolbarItems>
                         <XF.Grid>
-                            <XF.Grid.RowDefinitions>
+                            <XF.Grid.rowDefinitions>
                                 <XF.RowDefinition/>
                                 <XF.RowDefinition height="Auto"/>
                                 <XF.RowDefinition/>
-                            </XF.Grid.RowDefinitions>
-                            <XF.Grid.ColumnDefinitions>
+                            </XF.Grid.rowDefinitions>
+                            <XF.Grid.columnDefinitions>
                                 <XF.ColumnDefinition/>
                                 <XF.ColumnDefinition width="50"/>
                                 <XF.ColumnDefinition width="Auto"/>
                                 <XF.ColumnDefinition/>
-                            </XF.Grid.ColumnDefinitions>
+                            </XF.Grid.columnDefinitions>
                             <XF.Label
-                                { ... XF.Grid.Row(1) }
-                                { ... XF.Grid.Column(1) }
+                                { ... XF.Grid.row(1) }
+                                { ... XF.Grid.column(1) }
                                 fontFamily={FontAwesomeRegular}
                                 text={FontAwesomeRegular.smile}
                                 />
                             <XF.Label
-                                { ... XF.Grid.Row(1) }
-                                { ... XF.Grid.Column(2) }
+                                { ... XF.Grid.row(1) }
+                                { ... XF.Grid.column(2) }
                                 text={Bind.oneWay(() => this.viewModel.message)}/>
                         </XF.Grid>
                     </XF.ContentPage>
-                </XF.MasterDetailPage.Detail>
+                </XF.MasterDetailPage.detail>
             </XF.MasterDetailPage>
         );
     }

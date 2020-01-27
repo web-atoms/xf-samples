@@ -50,32 +50,32 @@ export default class Sample extends AtomXFControl {
         this.render(
         <XF.ContentPage title={Bind.oneWay(() => this.viewModel.title)}>
 
-            <XF.ContentPage.ToolbarItems>
+            <XF.ContentPage.toolbarItems>
                 <XF.ToolbarItem
                     text="Add"
                     command={Bind.event(() => this.viewModel.submit())}/>
-            </XF.ContentPage.ToolbarItems>
+            </XF.ContentPage.toolbarItems>
 
             <XF.Grid>
 
-                <XF.Grid.ColumnDefinitions>
+                <XF.Grid.columnDefinitions>
                     <XF.ColumnDefinition/>
                     <XF.ColumnDefinition/>
-                </XF.Grid.ColumnDefinitions>
+                </XF.Grid.columnDefinitions>
 
-                <XF.Grid.RowDefinitions>
+                <XF.Grid.rowDefinitions>
                     <XF.RowDefinition/>
                     <XF.RowDefinition/>
-                </XF.Grid.RowDefinitions>
+                </XF.Grid.rowDefinitions>
 
                 <XF.Label
                     text="Username"/>
                 <XF.Entry
-                    { ... XF.Grid.Column(1) }
+                    { ... XF.Grid.column(1) }
                     text={Bind.twoWays((x) => x.viewModel.model.username)}/>
                 <XF.Button
-                    { ... XF.Grid.Row(1) }
-                    { ... XF.Grid.ColumnSpan(2)}
+                    { ... XF.Grid.row(1) }
+                    { ... XF.Grid.columnSpan(2)}
                     text={Bind.oneWay((x) => x.viewModel.label)}
                     command={Bind.event(() => this.viewModel.submit() )}
                     />

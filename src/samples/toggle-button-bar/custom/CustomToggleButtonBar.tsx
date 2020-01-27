@@ -30,10 +30,10 @@ export default class CustomToggleButtonBar extends AtomXFContentPage {
                                         ? FontAwesomeSolid.female
                                         : FontAwesomeSolid.male )}
                                     fontFamily={FontAwesomeSolid}
-                                    textColor={Bind.oneWay((x) => x.data === x.localViewModel.selectedItem
+                                    textColor={Bind.oneWay((x) => x.data === x.localViewModel.owner.selectedItem
                                         ? Colors.white
                                         : Colors.black )}
-                                    backgroundColor={Bind.oneWay((x) => x.data !== x.localViewModel.selectedItem
+                                    backgroundColor={Bind.oneWay((x) => x.data !== x.localViewModel.owner.selectedItem
                                         ? Colors.white
                                         : Colors.black )}
                                     />

@@ -16,7 +16,7 @@ export default class ListWithTemplates extends AtomXFContentPage {
 
         this.render(<XF.ContentPage title="List with Template Selector">
             <XF.ListView itemsSource={Bind.oneWay(() => this.viewModel.movies.value)}>
-                <WA.AtomTemplateSelector.TemplateSelector>
+                <WA.AtomTemplateSelector.templateSelector>
                     <WA.AtomTemplateSelector selector={(d: IMovie) => /horror/i.test(d.genre) ? 1 : 0}>
                         {/* Template 0 */}
                         <XF.DataTemplate>
@@ -33,7 +33,7 @@ export default class ListWithTemplates extends AtomXFContentPage {
                                 />
                         </XF.DataTemplate>
                     </WA.AtomTemplateSelector>
-                </WA.AtomTemplateSelector.TemplateSelector>
+                </WA.AtomTemplateSelector.templateSelector>
             </XF.ListView>
         </XF.ContentPage>);
     }
