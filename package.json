@@ -20,7 +20,7 @@
   "dependencies": {
     "@web-atoms/core": "^1.1.60",
     "@web-atoms/date-time": "^1.0.22",
-    "@web-atoms/font-awesome": "^1.0.17",
+    "@web-atoms/font-awesome": "^1.0.19",
     "@web-atoms/module-loader": "1.0.405",
     "@web-atoms/xf-controls": "1.0.95",
     "reflect-metadata": "^0.1.13"
