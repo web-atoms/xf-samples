@@ -5,6 +5,7 @@ import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 export default class AppHost extends AtomXFMasterDetailPage {
 
@@ -76,8 +77,8 @@ export default class AppHost extends AtomXFMasterDetailPage {
                             <XF.Label
                                 { ... XF.Grid.row(1) }
                                 { ... XF.Grid.column(1) }
-                                fontFamily={FontAwesomeRegular}
-                                text={FontAwesomeRegular.smile}
+                                fontFamily={FontAwesomeSolid}
+                                text={FontAwesomeSolid.male}
                                 />
                             <XF.Label
                                 { ... XF.Grid.row(1) }
