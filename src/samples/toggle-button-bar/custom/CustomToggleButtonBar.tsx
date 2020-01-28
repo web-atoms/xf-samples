@@ -25,7 +25,7 @@ export default class CustomToggleButtonBar extends AtomXFContentPage {
                         <AtomXFToggleButtonBar.itemTemplate>
                             <XF.DataTemplate>
                                 <XF.Label
-                                    fontFamily={FontAwesomeSolid}
+                                    fontFamily={FontAwesomeSolid.toString()}
                                     text={Bind.oneTime((x) =>
                                         /female/i.test(x.data.value)
                                         ? FontAwesomeSolid.female

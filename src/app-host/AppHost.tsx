@@ -1,11 +1,11 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
-import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 export default class AppHost extends AtomXFMasterDetailPage {
 
@@ -56,7 +56,7 @@ export default class AppHost extends AtomXFMasterDetailPage {
                             <WA.AtomToolbarItem>
                                 <WA.AtomToolbarItem.iconImageSource>
                                     <XF.FontImageSource
-                                        fontFamily={FontAwesomeRegular}
+                                        fontFamily={FontAwesomeRegular.toString()}
                                         glyph={FontAwesomeRegular.plusSquare}
                                         />
                                 </WA.AtomToolbarItem.iconImageSource>
