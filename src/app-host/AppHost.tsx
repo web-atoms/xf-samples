@@ -27,17 +27,27 @@ export default class AppHost extends AtomXFMasterDetailPage {
                     <XF.ContentPage title="Home">
                         <XF.ListView
                             isGroupingEnabled={true}
+                            rowHeight={50}
+                            margin = {0}
                             { ... WA.GroupBy.itemsSource(Bind.oneWay(() => this.viewModel.menuService.groupedMenus)) }>
                             <XF.ListView.groupHeaderTemplate>
                                 <XF.DataTemplate>
-                                    <XF.TextCell
-                                        text={Bind.oneWay((x) => x.data.label)}/>
+                                    <XF.ViewCell>
+                                        <XF.Grid  backgroundColor="#ccc">
+                                            <XF.Label textColor="#2e2e2e"
+                                                margin="10"
+                                                verticalOptions={"Center"}
+                                                text={Bind.oneWay((x) => x.data.label)}/>
+                                        </XF.Grid>
+                                    </XF.ViewCell>
                                 </XF.DataTemplate>
                             </XF.ListView.groupHeaderTemplate>
                             <XF.ListView.itemTemplate>
                                 <XF.DataTemplate>
                                     <XF.ViewCell>
-                                        <XF.Label text={Bind.oneWay((x) => x.data.label)}>
+                                        <XF.Label text={Bind.oneWay((x) => x.data.label)}
+                                            padding="10"
+                                            verticalOptions={"Center"}>
                                             <XF.Label.gestureRecognizers>
                                                 <XF.TapGestureRecognizer
                                                     command={ Bind.event((s) => s.data.click() ) }
