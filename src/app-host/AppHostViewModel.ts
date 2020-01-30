@@ -7,7 +7,11 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import addEditor from "../samples/editor/EditorSample";
+import addEntry from "../samples/entry/EntrySample";
 import addFormSamples from "../samples/form/FormSamples";
+import addImage from "../samples/image/ImageSample";
+import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import MenuService from "../service/menu-service/MenuService";
@@ -46,6 +50,10 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
+        addLabelSample(this.menuService);
+        addEntry(this.menuService);
+        addEditor(this.menuService);
+        addImage(this.menuService);
         addFormSamples(this.menuService);
         addListSamples(this.menuService);
 
