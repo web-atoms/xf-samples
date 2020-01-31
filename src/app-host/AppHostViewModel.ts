@@ -50,9 +50,9 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
-        addLabelSample(this.menuService);
-        addEntry(this.menuService);
-        addEditor(this.menuService);
+        // addLabelSample(this.menuService);
+        // addEntry(this.menuService);
+        // addEditor(this.menuService);
         addImage(this.menuService);
         addFormSamples(this.menuService);
         addListSamples(this.menuService);
