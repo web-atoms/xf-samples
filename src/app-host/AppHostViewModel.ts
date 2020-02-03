@@ -7,6 +7,9 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
+import addBox from "../samples/box/BoxViewSample";
+import addCarousel from "../samples/carousel-view/CarouselSample";
+import addDatePicker from "../samples/date-picker/DatePickerSample";
 import addEditor from "../samples/editor/EditorSample";
 import addEntry from "../samples/entry/EntrySample";
 import addFormSamples from "../samples/form/FormSamples";
@@ -55,9 +58,12 @@ export default class AppHostViewModel extends AtomViewModel {
         // addEntry(this.menuService);
         // addEditor(this.menuService);
         addFormSamples(this.menuService);
+        // addDatePicker(this.menuService);
         addGrid(this.menuService);
         addImage(this.menuService);
         addListSamples(this.menuService);
+        addCarousel(this.menuService);
+        addBox(this.menuService);
         addToggleButtonBar(this.menuService);
 
     }
