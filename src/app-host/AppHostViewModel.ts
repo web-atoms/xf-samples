@@ -10,6 +10,7 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import addEditor from "../samples/editor/EditorSample";
 import addEntry from "../samples/entry/EntrySample";
 import addFormSamples from "../samples/form/FormSamples";
+import addGrid from "../samples/grid/GridSample";
 import addImage from "../samples/image/ImageSample";
 import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
@@ -53,10 +54,10 @@ export default class AppHostViewModel extends AtomViewModel {
         // addLabelSample(this.menuService);
         // addEntry(this.menuService);
         // addEditor(this.menuService);
-        addImage(this.menuService);
         addFormSamples(this.menuService);
+        addGrid(this.menuService);
+        addImage(this.menuService);
         addListSamples(this.menuService);
-
         addToggleButtonBar(this.menuService);
 
     }
