@@ -21,6 +21,7 @@ import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar"
 import MenuService from "../service/menu-service/MenuService";
 import addSwitchSample from "../samples/switch/SwitchSample";
 import addTimePicker from "../samples/time-picker/TimePickerSample";
+import addAlertSample from "../samples/alert/AlertSample";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -69,7 +70,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addToggleButtonBar(this.menuService);
         addSwitchSample(this.menuService);
         addTimePicker(this.menuService);
-
+        addAlertSample(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
