@@ -12,6 +12,9 @@ export default class CarouselView extends AtomXFContentPage {
         this.viewModel = this.resolve(CarouselViewModel);
         this.render(<XF.ContentPage>
             <XF.CarouselView itemsSource={Bind.oneWay(() => this.viewModel.items)}>
+                <XF.CarouselView.itemsLayout>
+                    <XF.LinearItemsLayout orientation="Vertical" />
+                </XF.CarouselView.itemsLayout>
                 <XF.CarouselView.itemTemplate>
                     <XF.DataTemplate>
                         <XF.StackLayout>
@@ -34,6 +37,10 @@ export default class CarouselView extends AtomXFContentPage {
                     </XF.DataTemplate>
                 </XF.CarouselView.itemTemplate>
             </XF.CarouselView>
+            {/* <XF.IndicatorView itemsSourceBy="carouselView"
+                   indicatorColor="LightGray"
+                   selectedIndicatorColor="DarkGray"
+                   horizontalOptions="Center" /> */}
         </XF.ContentPage>);
     }
 }
