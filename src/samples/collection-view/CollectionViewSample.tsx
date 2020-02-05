@@ -2,6 +2,7 @@ import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPa
 import CollectionViewSampleViewModel from "./CollectionViewSampleViewModel";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import Bind from "@web-atoms/core/dist/core/Bind";
 
 export default class CollectionViewSample extends AtomXFContentPage {
 
@@ -12,9 +13,8 @@ export default class CollectionViewSample extends AtomXFContentPage {
 
         this.render(
             <XF.ContentPage>
-                <XF.CollectionView>
+                <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}>
                 <XF.CollectionView.itemTemplate>
-                    <XF.DataTemplate>
                     <XF.Grid Padding="10">
                         <XF.Grid.rowDefinitions>
                             <XF.RowDefinition Height="Auto" />
@@ -24,18 +24,15 @@ export default class CollectionViewSample extends AtomXFContentPage {
                             <XF.ColumnDefinition Width="Auto" />
                             <XF.ColumnDefinition Width="Auto" />
                         </XF.Grid.columnDefinitions>
-                        <XF.Image {...XF.Grid.rowSpan(2)}
-                            Aspect="AspectFill"
-                            HeightRequest="60"
-                            WidthRequest="60" />
                         <XF.Label {...XF.Grid.columnSpan(1)}
+                            text = "abcd"
                             FontAttributes="Bold" />
                         <XF.Label {...XF.Grid.row(1)}
+                            text = "abcd"
                             {...XF.Grid.column(1)}
                             FontAttributes="Italic"
                             VerticalOptions="End" />
                     </XF.Grid>
-                    </XF.DataTemplate>
                 </XF.CollectionView.itemTemplate>
                 </XF.CollectionView>
             </XF.ContentPage>

@@ -23,6 +23,7 @@ import addSwitchSample from "../samples/switch/SwitchSamplePage";
 import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
 import addAlertSample from "../samples/alert/AlertSamplePage";
 import addFrameSample from "../samples/frame/FrameSamplePage";
+import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -73,6 +74,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addTimePicker(this.menuService);
         addAlertSample(this.menuService);
         addFrameSample(this.menuService);
+        addCollectionViewSample(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
