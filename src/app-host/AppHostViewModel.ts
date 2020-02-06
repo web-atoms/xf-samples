@@ -17,6 +17,7 @@ import addGrid from "../samples/grid/GridSample";
 import addImage from "../samples/image/ImageSample";
 import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
+import addMenuItem from "../samples/menu-item/MenuSample";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import MenuService from "../service/menu-service/MenuService";
 
@@ -62,6 +63,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addGrid(this.menuService);
         addImage(this.menuService);
         addListSamples(this.menuService);
+        addMenuItem(this.menuService);
         addCarousel(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
