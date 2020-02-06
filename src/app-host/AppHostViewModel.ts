@@ -19,6 +19,7 @@ import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
+import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import MenuService from "../service/menu-service/MenuService";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
@@ -67,7 +68,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addCarousel(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
-
+        addToolbarItem(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {

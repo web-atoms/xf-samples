@@ -16,6 +16,7 @@ export default class CarouselView extends AtomXFContentPage {
                 <XF.CarouselView
                     currentItem={Bind.twoWays(() => this.viewModel.selectedItem)}
                     itemsSource={Bind.oneWay(() => this.viewModel.items)}>
+                    {/* itemsLayout can change set items layout in vertical/horizontal */}
                     {/* <XF.CarouselView.itemsLayout>
                         <XF.LinearItemsLayout orientation="Vertical" />
                     </XF.CarouselView.itemsLayout> */}
