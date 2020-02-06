@@ -1,9 +1,12 @@
 import MenuService from "../../service/menu-service/MenuService";
-import CollectionViewSample from "./CollectionViewSample";
-import CollectionViewHorizontalList from "./CollectionViewHorizontalSample";
+import CollectionViewSample, { CollectionViewHorizontalList, VerticalGridSample, HorizontalGridSample, HeaderFooterSample, GroupingSample } from "./CollectionViewSample";
 
 export default function addCollectionViewSample(ms: MenuService) {
     const collection = ms.addGroup("Collection");
-    collection.addLink("Collection View (Vertical)", CollectionViewSample);
-    collection.addLink("Collection View (Horizontal)", CollectionViewHorizontalList);
+    collection.addLink("Vertical List", CollectionViewSample);
+    collection.addLink("Horizontal List", CollectionViewHorizontalList);
+    collection.addLink("Vertical Grid", VerticalGridSample);
+    collection.addLink("Horizontal Grid", HorizontalGridSample);
+    collection.addLink("Header & Footer", HeaderFooterSample);
+    collection.addLink("Grouping", GroupingSample)
 }
