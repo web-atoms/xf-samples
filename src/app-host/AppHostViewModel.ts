@@ -17,7 +17,9 @@ import addGrid from "../samples/grid/GridSample";
 import addImage from "../samples/image/ImageSample";
 import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
+import addMenuItem from "../samples/menu-item/MenuSample";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
+import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import MenuService from "../service/menu-service/MenuService";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
 import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
@@ -67,6 +69,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addGrid(this.menuService);
         addImage(this.menuService);
         addListSamples(this.menuService);
+        addMenuItem(this.menuService);
         addCarousel(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
@@ -75,6 +78,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addAlertSample(this.menuService);
         addFrameSample(this.menuService);
         addCollectionViewSample(this.menuService);
+        addToolbarItem(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
