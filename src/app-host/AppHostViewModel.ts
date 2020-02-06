@@ -22,6 +22,10 @@ import addMenuItem from "../samples/menu-item/MenuSample";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import MenuService from "../service/menu-service/MenuService";
+import addSwitchSample from "../samples/switch/SwitchSamplePage";
+import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
+import addAlertSample from "../samples/alert/AlertSamplePage";
+import addFrameSample from "../samples/frame/FrameSamplePage";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -70,6 +74,10 @@ export default class AppHostViewModel extends AtomViewModel {
         addCarousel(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
+        addSwitchSample(this.menuService);
+        addTimePicker(this.menuService);
+        addAlertSample(this.menuService);
+        addFrameSample(this.menuService);
         addToolbarItem(this.menuService);
     }
 
