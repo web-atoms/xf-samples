@@ -1,20 +1,20 @@
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import CollectionViewSampleViewModel from "./CollectionViewSampleViewModel";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
-import XNode from "@web-atoms/core/dist/core/XNode";
 import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
 
-export default class CollectionViewSample extends AtomXFContentPage {
-
+export default class CollectionViewHorizontalList extends AtomXFContentPage {
+    
     viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
 
         this.render(
-            <XF.ContentPage title = "Vertical List">
+            <XF.ContentPage title = "Horizontal List">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}
-                    itemsLayout = "VerticalList">
+                    itemsLayout = "HorizontalList">
                 <XF.CollectionView.itemTemplate>
                     <XF.Grid Padding="10">
                         <XF.Grid.rowDefinitions>
@@ -32,12 +32,14 @@ export default class CollectionViewSample extends AtomXFContentPage {
                             WidthRequest="60" />
                         <XF.Label {...XF.Grid.column(1)}
                             text = {Bind.twoWays((x) => x.data.name)}
-                            FontAttributes="Bold" />
+                            FontAttributes="Bold"
+                            LineBreakMode="TailTruncation"/>
                         <XF.Label {...XF.Grid.row(1)}
                             {...XF.Grid.column(1)}
                             text = {Bind.twoWays((x) => x.data.location)}
                             FontAttributes="Italic"
-                            VerticalOptions="End" />
+                            VerticalOptions="End"
+                            LineBreakMode="TailTruncation"/>
                     </XF.Grid>
                 </XF.CollectionView.itemTemplate>
                 </XF.CollectionView>
