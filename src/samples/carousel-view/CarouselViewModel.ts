@@ -1,4 +1,4 @@
-import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
+import { AtomViewModel, Watch } from "@web-atoms/core/dist/view-model/AtomViewModel";
 
 export default class CarouselViewModel extends AtomViewModel {
 
@@ -9,4 +9,7 @@ export default class CarouselViewModel extends AtomViewModel {
         { label: "Item 4"},
         { label: "Item 5"}
     ];
+
+    public selectedItem = this.items[0];
+
 }
