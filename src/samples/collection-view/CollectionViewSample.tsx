@@ -1,12 +1,12 @@
+import Bind from "@web-atoms/core/dist/core/Bind";
+import XNode from "@web-atoms/core/dist/core/XNode";
+import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import CollectionViewSampleViewModel from "./CollectionViewSampleViewModel";
-import XF from "@web-atoms/xf-controls/dist/clr/XF";
-import XNode from "@web-atoms/core/dist/core/XNode";
-import Bind from "@web-atoms/core/dist/core/Bind";
 
 export default class CollectionViewSample extends AtomXFContentPage {
 
-    viewModel: CollectionViewSampleViewModel;
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
@@ -47,8 +47,8 @@ export default class CollectionViewSample extends AtomXFContentPage {
 }
 
 export class CollectionViewHorizontalList extends AtomXFContentPage {
-    
-    viewModel: CollectionViewSampleViewModel;
+
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
@@ -92,7 +92,7 @@ export class CollectionViewHorizontalList extends AtomXFContentPage {
 
 export class VerticalGridSample extends AtomXFContentPage {
 
-    viewModel: CollectionViewSampleViewModel;
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
@@ -100,7 +100,7 @@ export class VerticalGridSample extends AtomXFContentPage {
             <XF.ContentPage title = "Vertical Grid">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}>
                 <XF.CollectionView.itemsLayout>
-                    <XF.GridItemsLayout span = {2} 
+                    <XF.GridItemsLayout span = {2}
                         orientation = "Vertical"/>
                 </XF.CollectionView.itemsLayout>
                 <XF.CollectionView.itemTemplate>
@@ -137,7 +137,7 @@ export class VerticalGridSample extends AtomXFContentPage {
 }
 
 export class HorizontalGridSample extends AtomXFContentPage {
-    viewModel: CollectionViewSampleViewModel;
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
@@ -145,7 +145,7 @@ export class HorizontalGridSample extends AtomXFContentPage {
             <XF.ContentPage title = "Horizontal Grid">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}>
                 <XF.CollectionView.itemsLayout>
-                    <XF.GridItemsLayout span = {4} 
+                    <XF.GridItemsLayout span = {4}
                         orientation = "Horizontal"/>
                 </XF.CollectionView.itemsLayout>
                 <XF.CollectionView.itemTemplate>
@@ -183,7 +183,7 @@ export class HorizontalGridSample extends AtomXFContentPage {
 
 export class HeaderFooterSample extends AtomXFContentPage {
 
-    viewModel: CollectionViewSampleViewModel;
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
@@ -245,7 +245,7 @@ export class HeaderFooterSample extends AtomXFContentPage {
 
 export class GroupingSample extends AtomXFContentPage {
 
-    viewModel: CollectionViewSampleViewModel;
+    public viewModel: CollectionViewSampleViewModel;
 
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
