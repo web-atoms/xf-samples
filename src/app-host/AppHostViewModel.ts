@@ -8,25 +8,25 @@ import { AtomWindowViewModel } from "@web-atoms/core/dist/view-model/AtomWindowV
 import Load from "@web-atoms/core/dist/view-model/Load";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import addLayoutSample from "../samples/absolute-layout/LayoutSample";
+import addAlertSample from "../samples/alert/AlertSamplePage";
 import addBox from "../samples/box/BoxViewSample";
 import addCarousel from "../samples/carousel-view/CarouselSample";
+import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
 import addDatePicker from "../samples/date-picker/DatePickerSample";
 import addEditor from "../samples/editor/EditorSample";
 import addEntry from "../samples/entry/EntrySample";
 import addFormSamples from "../samples/form/FormSamples";
+import addFrameSample from "../samples/frame/FrameSamplePage";
 import addGrid from "../samples/grid/GridSample";
 import addImage from "../samples/image/ImageSample";
 import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
+import addSwitchSample from "../samples/switch/SwitchSamplePage";
+import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import MenuService from "../service/menu-service/MenuService";
-import addSwitchSample from "../samples/switch/SwitchSamplePage";
-import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
-import addAlertSample from "../samples/alert/AlertSamplePage";
-import addFrameSample from "../samples/frame/FrameSamplePage";
-import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
