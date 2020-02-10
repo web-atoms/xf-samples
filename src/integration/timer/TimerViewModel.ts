@@ -1,9 +1,9 @@
 import { IDisposable } from "@web-atoms/core/dist/core/types";
 import DISingleton from "@web-atoms/core/dist/di/DISingleton";
 import { Inject } from "@web-atoms/core/dist/di/Inject";
+import Action from "@web-atoms/core/dist/view-model/Action";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
-import Action from "@web-atoms/core/dist/view-model/Action";
 
 @DISingleton({ globalVar: "bridge.demoService"})
 class TimerService {
@@ -14,6 +14,8 @@ class TimerService {
     }
 
 }
+
+declare var bridge: any;
 
 export default class TimerViewModel extends AtomViewModel {
 
@@ -26,6 +28,7 @@ export default class TimerViewModel extends AtomViewModel {
 
     @Action()
     public start() {
+
         const r = this.timerService.createTimer(1000, (n) => {
             this.model = n;
         });

@@ -1,6 +1,7 @@
 import MenuService from "../../service/menu-service/MenuService";
 import CollectionViewSample, { CollectionViewHorizontalList, GroupingSample, HeaderFooterSample,
     HorizontalGridSample, VerticalGridSample } from "./CollectionViewSample";
+import SwipeCollectionViewSample from "./swipe/SwipeCollectionViewSample";
 
 export default function addCollectionViewSample(ms: MenuService) {
     const collection = ms.addGroup("Collection");
@@ -10,4 +11,5 @@ export default function addCollectionViewSample(ms: MenuService) {
     collection.addLink("Horizontal Grid", HorizontalGridSample);
     collection.addLink("Header & Footer", HeaderFooterSample);
     collection.addLink("Grouping", GroupingSample);
+    collection.addLink("Swipe example", SwipeCollectionViewSample);
 }
