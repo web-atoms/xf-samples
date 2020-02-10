@@ -7,7 +7,7 @@ import VerticalGridSample from "./vertical-grid/VerticalGridSample";
 import VerticalListSample from "./vertical-list/VerticalListSample";
 
 export default function addCollectionViewSample(ms: MenuService) {
-    const collection = ms.addGroup("Collection");
+    const collection = ms.addGroup("Collection View");
     collection.addLink("Vertical List", VerticalListSample);
     collection.addLink("Horizontal List", HorizontalListSample);
     collection.addLink("Vertical Grid", VerticalGridSample);
