@@ -1,4 +1,5 @@
 import MenuService from "../../service/menu-service/MenuService";
+import CheckBoxView from "../check-box/CheckBoxView";
 import DatePickerView from "../date-picker/DatePickerView";
 import EditorView from "../editor/EditorView";
 import EntryView from "../entry/EntryView";
@@ -11,6 +12,7 @@ export default function addFormSamples(ms: MenuService) {
     const form = ms.addGroup("Form");
     form.addLink("Simple Form", SimpleForm);
     form.addLink("Label", LabelView);
+    form.addLink("CheckBox", CheckBoxView);
     form.addLink("Entry", EntryView);
     form.addLink("Editor", EditorView);
     form.addLink("Date Picker", DatePickerView);

@@ -22,6 +22,7 @@ import addImage from "../samples/image/ImageSample";
 import addLabelSample from "../samples/label/LabelSample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
+import addScrollView from "../samples/scroll-view/Sample";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
 import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
@@ -73,6 +74,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addListSamples(this.menuService);
         addMenuItem(this.menuService);
         addCarousel(this.menuService);
+        addScrollView(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
         addSwitchSample(this.menuService);
