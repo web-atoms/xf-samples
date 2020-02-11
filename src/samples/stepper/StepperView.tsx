@@ -12,10 +12,10 @@ export default class StepperView extends AtomXFContentPage {
         this.viewModel = this.resolve(SliderViewModel);
         this.render(
             <XF.ContentPage>
-                <XF.StackLayout Margin="20">
-                    <XF.Stepper Maximum="360"
-                            Increment="30"
-                            HorizontalOptions="Center"
+                <XF.StackLayout margin="20">
+                    <XF.Stepper maximum={360}
+                            increment={30}
+                            horizontalOptions="Center"
                             value={Bind.twoWays(() => this.viewModel.slide)}/>
                     <XF.Label
                         horizontalOptions="Center"

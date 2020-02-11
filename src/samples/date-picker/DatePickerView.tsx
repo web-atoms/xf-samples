@@ -13,11 +13,11 @@ export default class DatePickerView extends AtomXFContentPage {
         this.render(
             <XF.ContentPage>
                 <XF.StackLayout>
-                    <XF.DatePicker MinimumDate="01/01/2018"
-                        MaximumDate="12/31/2018"
-                        HorizontalOptions="Center"
+                    <XF.DatePicker minimumDate="01/01/2018"
+                        maximumDate="12/31/2018"
+                        horizontalOptions="Center"
                         verticalOptions="Center"
-                        Date={Bind.twoWays(() => this.viewModel.date)} />
+                        date={Bind.twoWays(() => this.viewModel.date)} />
                     <XF.Label text={Bind.oneWay(() => this.viewModel.date)} />
                 </XF.StackLayout>
             </XF.ContentPage>

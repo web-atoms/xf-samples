@@ -7,12 +7,12 @@ export default class BoxView extends AtomXFContentPage {
     public create() {
         this.render(
             <XF.ContentPage>
-                <XF.BoxView Color="CornflowerBlue"
-                        CornerRadius="50"
-                        WidthRequest="160"
-                        HeightRequest="160"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"/>
+                <XF.BoxView color="CornflowerBlue"
+                        cornerRadius="50"
+                        widthRequest={160}
+                        heightRequest={160}
+                        verticalOptions="Center"
+                        horizontalOptions="Center"/>
 
             </XF.ContentPage>
         );
