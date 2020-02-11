@@ -2,7 +2,11 @@ import { Inject } from "@web-atoms/core/dist/di/Inject";
 import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 
-export default class AlertSampleViewModel extends AtomViewModel {
+export default class CustomPopupViewModel extends AtomViewModel {
+
+    public userName: string;
+
+    public password: string;
 
     @Inject private navigationService: NavigationService;
 
@@ -10,11 +14,8 @@ export default class AlertSampleViewModel extends AtomViewModel {
         super.init();
     }
 
-    public displayAlert() {
-        this.navigationService.alert("This is an alert", "Alert");
-    }
-
-    public displayAlertQuestion() {
-        this.navigationService.confirm("Would you like to save your data ?", "Save ?");
+    public save() {
+        this.navigationService
+        .alert( "name: " + this.userName + " password: " + this.password);
     }
 }
