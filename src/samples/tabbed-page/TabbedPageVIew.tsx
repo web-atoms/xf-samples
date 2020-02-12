@@ -1,15 +1,26 @@
 import XNode from "@web-atoms/core/dist/core/XNode";
+import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
-import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
-import SimpleForm from "../form/simple/SimpleForm";
-import List from "../list/list-view/List";
+import AtomXFTabbedPage from "@web-atoms/xf-controls/dist/pages/AtomXFTabbedPage";
 
-export default class TabbedPageView extends AtomXFContentPage {
+const Args = "WebAtoms.AtomX:Arguments" as any;
+
+export default class TabbedPageView extends AtomXFTabbedPage {
 
     public create() {
         this.render(
             <XF.TabbedPage>
-                <XF.TabbedPage.itemTemplate>
+                <XF.NavigationPage>
+                    <Args>
+                        <XF.ContentPage
+                            title="Tab 1">
+                            <XF.StackLayout>
+                                <XF.Label text="Tab 1 Content"/>
+                            </XF.StackLayout>
+                        </XF.ContentPage>
+                    </Args>
+                </XF.NavigationPage>
+                {/* <XF.TabbedPage.itemTemplate>
                     <XF.DataTemplate>
                         <XF.ContentPage title="Sample">
                             <XF.StackLayout padding="5, 25">
@@ -23,10 +34,10 @@ export default class TabbedPageView extends AtomXFContentPage {
                             </XF.StackLayout>
                         </XF.ContentPage>
                         {/* <SimpleForm></SimpleForm>
-                            <List></List>*/}
+                            <List></List>
                     </XF.DataTemplate>
-                </XF.TabbedPage.itemTemplate>
-            </XF.TabbedPage>
+                </XF.TabbedPage.itemTemplate > */}
+            </XF.TabbedPage >
         );
     }
 }
