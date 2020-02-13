@@ -1,4 +1,4 @@
-import MenuService from "../../service/menu-service/MenuService";
+import MenuService from "../../../../service/menu-service/MenuService";
 import ScrollViewSample from "./ScrollViewSample";
 
 export default function addScrollView(ms: MenuService) {

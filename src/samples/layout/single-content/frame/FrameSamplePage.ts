@@ -1,4 +1,4 @@
-import MenuService from "../../service/menu-service/MenuService";
+import MenuService from "../../../../service/menu-service/MenuService";
 import FrameSample from "./FrameSample";
 
 export default function addFrameSample(ms: MenuService) {

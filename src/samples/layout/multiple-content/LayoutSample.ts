@@ -1,8 +1,8 @@
-import MenuService from "../../service/menu-service/MenuService";
-import FlexLayoutView from "../flex-layout/FlexLayoutView";
-import GridView from "../grid/GridView";
-import StackLayoutView from "../stack-layout/StackLayoutView";
-import AbsoluteLayoutView from "./AbsoluteLayoutView";
+import MenuService from "../../../service/menu-service/MenuService";
+import AbsoluteLayoutView from "./absolute-layout/AbsoluteLayoutView";
+import FlexLayoutView from "./flex-layout/FlexLayoutView";
+import GridView from "./grid/GridView";
+import StackLayoutView from "./stack-layout/StackLayoutView";
 
 export default function addLayoutSample(ms: MenuService) {
     const layout = ms.addGroup("Layout");
