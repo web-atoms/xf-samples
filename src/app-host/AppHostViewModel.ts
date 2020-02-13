@@ -10,7 +10,8 @@ import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import addLayoutSample from "../samples/absolute-layout/LayoutSample";
 import addAlertSample from "../samples/alert/AlertSamplePage";
 import addBox from "../samples/box/BoxViewSample";
-import addCarousel from "../samples/carousel-view/CarouselSample";
+import addCarouselPage from "../samples/carousel/carousel-page/CarouselPageSample";
+import addCarousel from "../samples/carousel/carousel-view/CarouselSample";
 import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
 import addDatePicker from "../samples/date-picker/DatePickerSample";
 import addEditor from "../samples/editor/EditorSample";
@@ -30,7 +31,6 @@ import addTimePicker from "../samples/time-picker/TimePickerSamplePage";
 import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar";
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import MenuService from "../service/menu-service/MenuService";
-import addCarouselPage from "../samples/carousel-page/CarouselPageSample";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
