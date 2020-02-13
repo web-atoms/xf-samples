@@ -1,25 +1,34 @@
 import XNode from "@web-atoms/core/dist/core/XNode";
+import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
 import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFTabbedPage from "@web-atoms/xf-controls/dist/pages/AtomXFTabbedPage";
 
-const Args = "WebAtoms.AtomX:Arguments" as any;
+const Args = XNode.prepare("WebAtoms.AtomX:Arguments", true);
 
 export default class TabbedPageView extends AtomXFTabbedPage {
 
     public create() {
         this.render(
             <XF.TabbedPage>
-                <XF.NavigationPage>
-                    <Args>
-                        <XF.ContentPage
-                            title="Tab 1">
-                            <XF.StackLayout>
-                                <XF.Label text="Tab 1 Content"/>
-                            </XF.StackLayout>
-                        </XF.ContentPage>
-                    </Args>
-                </XF.NavigationPage>
+                <XF.ContentPage
+                    iconImageSource={<XF.FontImageSource
+                        fontFamily={FontAwesomeRegular.toString()}
+                        glyph={FontAwesomeRegular.user} />}
+                    title="Tab 1">
+                    <XF.StackLayout>
+                        <XF.Label text="Tab 1 Content"/>
+                    </XF.StackLayout>
+                </XF.ContentPage>
+                <XF.ContentPage
+                    iconImageSource={<XF.FontImageSource
+                    fontFamily={FontAwesomeRegular.toString()}
+                    glyph={FontAwesomeRegular.map} />}
+                    title="Tab 2">
+                    <XF.StackLayout>
+                        <XF.Label text="Tab 2 Content"/>
+                    </XF.StackLayout>
+                </XF.ContentPage>
                 {/* <XF.TabbedPage.itemTemplate>
                     <XF.DataTemplate>
                         <XF.ContentPage title="Sample">
