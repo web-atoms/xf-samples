@@ -15,8 +15,7 @@ import addCollectionViewSample from "../samples/collection-view/CollectionViewSa
 import addFormSamples from "../samples/form/FormSamples";
 import addImage from "../samples/image/ImageSample";
 import addLayoutSample from "../samples/layout/multiple-content/LayoutSample";
-import addFrameSample from "../samples/layout/single-content/frame/FrameSamplePage";
-import addScrollView from "../samples/layout/single-content/scroll-view/Sample";
+import addSingleContentSample from "../samples/layout/single-content/Sample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
@@ -62,26 +61,20 @@ export default class AppHostViewModel extends AtomViewModel {
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
 
-        // addLabelSample(this.menuService);
-        // addEntry(this.menuService);
-        // addEditor(this.menuService);
+        addFormSamples(this.menuService);
+        addSingleContentSample(this.menuService);
+        addLayoutSample(this.menuService);
+        addListSamples(this.menuService);
         addCarouselPage(this.menuService);
         addTabbedPage(this.menuService);
-        addFormSamples(this.menuService);
-        addLayoutSample(this.menuService);
-        // addDatePicker(this.menuService);
-        // addGrid(this.menuService);
         addImage(this.menuService);
-        addListSamples(this.menuService);
         addMenuItem(this.menuService);
         addCarousel(this.menuService);
-        addScrollView(this.menuService);
         addBox(this.menuService);
         addToggleButtonBar(this.menuService);
         addSwitchSample(this.menuService);
         addTimePicker(this.menuService);
         addAlertSample(this.menuService);
-        addFrameSample(this.menuService);
         addCollectionViewSample(this.menuService);
         addToolbarItem(this.menuService);
         addTableView(this.menuService);
