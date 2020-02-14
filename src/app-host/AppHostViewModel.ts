@@ -26,6 +26,7 @@ import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar"
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import addWebViewSample from "../samples/web-view/WebViewSample";
 import MenuService from "../service/menu-service/MenuService";
+import addRefreshSample from "../samples/refresh-view/RefreshViewSample";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -65,6 +66,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addSingleContentSample(this.menuService);
         addLayoutSample(this.menuService);
         addListSamples(this.menuService);
+        addRefreshSample(this.menuService);
         addCarouselPage(this.menuService);
         addTabbedPage(this.menuService);
         addImage(this.menuService);
