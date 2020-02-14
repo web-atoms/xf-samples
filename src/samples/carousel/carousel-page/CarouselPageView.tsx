@@ -1,9 +1,9 @@
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
-import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
+import AtomXFCarouselPage from "@web-atoms/xf-controls/dist/pages/AtomXFCarouselPage";
 // https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/carousel-page
 
-export default class CarouselPageView extends AtomXFContentPage {
+export default class CarouselPageView extends AtomXFCarouselPage {
 
     public create() {
         this.render(
