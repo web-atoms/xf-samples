@@ -18,7 +18,7 @@ export default class CustomPopupSample extends AtomXFContentPage {
                             widthRequest = {300} backgroundColor = "White">
                         <XF.Entry margin = "20,20,20,10" placeholder = "Enter Username"
                             text = {Bind.twoWays(() => this.viewModel.userName)}></XF.Entry>
-                        <XF.Entry margin = "20,0,20,0" placeholder = "Enter Username" isPassword = {true}
+                        <XF.Entry margin = "20,0,20,0" placeholder = "Enter Password" isPassword = {true}
                             text = {Bind.twoWays(() => this.viewModel.password)}></XF.Entry>
                         <XF.Button margin = "20,0,20,0" text = "Login"
                             command = {Bind.event(() => this.viewModel.save())}></XF.Button>
