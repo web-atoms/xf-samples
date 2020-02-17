@@ -1,4 +1,4 @@
-import MenuService from "../../service/menu-service/MenuService";
+import MenuService from "../../../service/menu-service/MenuService";
 import CarouselView from "./CarouselView";
 
 export default function addCarousel(ms: MenuService) {

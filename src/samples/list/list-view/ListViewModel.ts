@@ -9,6 +9,8 @@ export default class ListViewModel extends AtomViewModel {
 
     public movies: IPagedList<IMovie>;
 
+    public isListRefreshing: boolean = false;
+
     @Inject
     private movieService: MovieService;
 
@@ -29,5 +31,11 @@ export default class ListViewModel extends AtomViewModel {
 
     public async delete() {
         await this.navigationService.alert("Delete clicked");
+    }
+
+    // refresh method is used RefreshView page
+    public async refresh() {
+        this.movies.value.replace(this.movies.value.reverse());
+        this.isListRefreshing = false;
     }
 }

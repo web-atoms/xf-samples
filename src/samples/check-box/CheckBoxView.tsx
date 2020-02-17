@@ -14,7 +14,7 @@ export default class CheckBoxView extends AtomXFContentPage {
             <XF.ContentPage>
                 <XF.StackLayout>
                     <XF.StackLayout orientation="Horizontal">
-                        <XF.CheckBox IsChecked={Bind.twoWays(() => this.viewModel.isAgree)} />
+                        <XF.CheckBox isChecked={Bind.twoWays(() => this.viewModel.isAgree)} />
                         <XF.Label text="Agree the terms and condition" verticalTextAlignment="Center" />
                     </XF.StackLayout>
                     <XF.Label text={Bind.oneWay(() => this.viewModel.isAgree ? "Agree" : "Disagree")} />
