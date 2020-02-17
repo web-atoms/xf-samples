@@ -11,7 +11,7 @@ export default class ToolbarItemView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(ToolbarItemViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Toolbar Item Sample">
                 <XF.ContentPage.toolbarItems>
                     <XF.ToolbarItem text="Toolbar 1"
                         order="Primary"

@@ -6,7 +6,7 @@ export default class GridView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage  title="Grid Layout Sample">
                 <XF.Grid margin="20,35,20,20">
                     <XF.Grid.columnDefinitions>
                         <XF.ColumnDefinition width="0.5*" />

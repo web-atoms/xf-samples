@@ -10,7 +10,7 @@ export default class ComboBoxSample extends AtomXFContentPage {
     public viewModel: ToggleButtonBarViewModel;
 
     public create() {
-        this.render(<XF.ContentPage>
+        this.render(<XF.ContentPage  title="ComboBox Sample">
             <XF.StackLayout orientation="Vertical">
                 <AtomXFComboBox
                     showSearch={true}

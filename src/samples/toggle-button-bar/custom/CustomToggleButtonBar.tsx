@@ -17,7 +17,7 @@ export default class CustomToggleButtonBar extends AtomXFContentPage {
         this.viewModel = this.resolve(ToggleButtonBarViewModel);
 
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Custom Toggle Button Sample">
                 <XF.StackLayout>
                     <AtomXFToggleButtonBar
                         items={this.viewModel.genderList}

@@ -6,7 +6,7 @@ export default class ScrollViewSample extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Scroll View Sample">
                 <XF.ScrollView>
                     <XF.StackLayout>
                         <XF.BoxView backgroundColor="Red" heightRequest={600} widthRequest={150} />

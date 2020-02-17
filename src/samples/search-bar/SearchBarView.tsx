@@ -11,7 +11,7 @@ export default class SearchBarView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(SearchBarViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="SearchBox Sample">
                 <XF.StackLayout>
                     <XF.SearchBar
                         text={Bind.twoWays((x) => this.viewModel.searchText)}

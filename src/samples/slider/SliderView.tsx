@@ -11,7 +11,7 @@ export default class SliderView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(SliderViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Slider Sample">
                 <XF.StackLayout margin="100, 100, 100, 100">
                     <XF.Slider
                         minimum={0}

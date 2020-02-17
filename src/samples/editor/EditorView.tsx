@@ -10,7 +10,7 @@ export default class EditorView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(EditorViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Editor View Sample">
                 <XF.StackLayout>
                     <XF.Editor
                         text={Bind.twoWays(() => this.viewModel.value)}

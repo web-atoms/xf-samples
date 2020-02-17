@@ -11,7 +11,7 @@ export default class ButtonView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(ButtonViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Button Sample">
                 <XF.StackLayout>
                     <XF.Label text="Click the button" />
                     <XF.Button

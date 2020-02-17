@@ -11,7 +11,7 @@ export default class LabelView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(LabelViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Label Sample">
                 <XF.StackLayout margin="10,10,200,300">
                     <XF.Label text="Label Sample"
                             horizontalOptions="Center" />

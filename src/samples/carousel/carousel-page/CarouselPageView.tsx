@@ -6,7 +6,7 @@ export default class CarouselPageView extends AtomXFCarouselPage {
 
     public create() {
         this.render(
-            <XF.CarouselPage>
+            <XF.CarouselPage  title="Carousel Page Sample">
                 <XF.ContentPage>
                     <XF.StackLayout>
                         <XF.Label horizontalTextAlignment="Center"

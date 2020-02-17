@@ -12,7 +12,7 @@ export default class RefreshView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(RefreshViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Refresh View Sample">
                 <XF.RefreshView
                     refreshColor={Colors.blue}
                     isRefreshing={Bind.twoWays((x) => this.viewModel.isListRefreshing)}

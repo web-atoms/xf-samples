@@ -6,7 +6,7 @@ export default class ImageView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Image View Sample">
                 <XF.StackLayout margin="20,35,20,20">
                     <XF.Image source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Xamarin-logo.svg/1920px-Xamarin-logo.svg.png"
                         heightRequest={300} />

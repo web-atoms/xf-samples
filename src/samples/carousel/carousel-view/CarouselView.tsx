@@ -11,7 +11,7 @@ export default class CarouselView extends AtomXFContentPage {
 
     public create() {
         this.viewModel = this.resolve(CarouselViewModel);
-        this.render(<XF.ContentPage>
+        this.render(<XF.ContentPage title="Carousel View Sample">
             <XF.StackLayout padding={20}>
                 <XF.CarouselView
                     currentItem={Bind.twoWays(() => this.viewModel.selectedItem)}
