@@ -3,14 +3,14 @@ import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
-import ListViewModel from "../list/list-view/ListViewModel";
+import RefreshViewModel from "./RefreshViewModel";
 
 export default class RefreshView extends AtomXFContentPage {
 
-    public viewModel: ListViewModel;
+    public viewModel: RefreshViewModel;
 
     public create() {
-        this.viewModel = this.resolve(ListViewModel);
+        this.viewModel = this.resolve(RefreshViewModel);
         this.render(
             <XF.ContentPage>
                 <XF.RefreshView
