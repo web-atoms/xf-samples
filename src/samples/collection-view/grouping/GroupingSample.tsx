@@ -2,14 +2,14 @@ import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
-import CollectionViewSampleViewModel from "../CollectionViewSampleViewModel";
+import GroupingViewModel from "./GroupingViewModel";
 
 export default class GroupingSample extends AtomXFContentPage {
 
-    public viewModel: CollectionViewSampleViewModel;
+    public viewModel: GroupingViewModel;
 
     public create() {
-        this.viewModel = this.resolve(CollectionViewSampleViewModel);
+        this.viewModel = this.resolve(GroupingViewModel);
 
         this.render(
             <XF.ContentPage title = "Grouping Sample">
