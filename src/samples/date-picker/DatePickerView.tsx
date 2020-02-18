@@ -11,7 +11,7 @@ export default class DatePickerView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(DatePickerViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Date Picker Sample">
                 <XF.StackLayout>
                     <XF.DatePicker minimumDate="01/01/2018"
                         maximumDate="12/31/2018"

@@ -12,7 +12,7 @@ export default class GroupingSample extends AtomXFContentPage {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
 
         this.render(
-            <XF.ContentPage title = "Grouping">
+            <XF.ContentPage title = "Grouping Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.group)}
                     isGrouped = {true}
                     itemsLayout = "VerticalList">

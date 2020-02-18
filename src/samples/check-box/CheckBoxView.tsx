@@ -20,6 +20,6 @@ export default class CheckBoxView extends AtomXFContentPage {
                     <XF.Label text={Bind.oneWay(() => this.viewModel.isAgree ? "Agree" : "Disagree")} />
                 </XF.StackLayout>
             </XF.ContentPage>
-        )
+        );
     }
 }

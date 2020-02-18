@@ -12,7 +12,7 @@ export default class VerticalListSample extends AtomXFContentPage {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
 
         this.render(
-            <XF.ContentPage title = "Vertical List">
+            <XF.ContentPage title = "Vertical List Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}
                     itemsLayout = "VerticalList">
                 <XF.CollectionView.itemTemplate>

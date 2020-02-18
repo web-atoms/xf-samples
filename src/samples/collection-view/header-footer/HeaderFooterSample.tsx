@@ -12,7 +12,7 @@ export default class HeaderFooterSample extends AtomXFContentPage {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
 
         this.render(
-            <XF.ContentPage title = "Header and Footer">
+            <XF.ContentPage title = "Header and Footer Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}
                     itemsLayout = "VerticalList">
                         <XF.CollectionView.headerTemplate>

@@ -11,7 +11,7 @@ export default class VerticalGridSample extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
         this.render(
-            <XF.ContentPage title = "Vertical Grid">
+            <XF.ContentPage title = "Vertical Grid Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}>
                 <XF.CollectionView.itemsLayout>
                     <XF.GridItemsLayout span = {2}

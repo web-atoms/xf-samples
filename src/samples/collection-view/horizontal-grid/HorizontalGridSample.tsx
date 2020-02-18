@@ -10,7 +10,7 @@ export default class HorizontalGridSample extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
         this.render(
-            <XF.ContentPage title = "Horizontal Grid">
+            <XF.ContentPage title = "Horizontal Grid Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}>
                 <XF.CollectionView.itemsLayout>
                     <XF.GridItemsLayout span = {4}

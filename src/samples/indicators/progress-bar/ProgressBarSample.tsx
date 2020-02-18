@@ -9,7 +9,7 @@ export default class ProgressBarSample extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(ProgressBarViewModel);
         this.render(
-            <XF.ContentPage title = "Progress Bar">
+            <XF.ContentPage title = "Progress Bar Sample">
                 <XF.StackLayout>
                     <XF.ProgressBar progress = {0.5}/>
                     <XF.ProgressBar progress = {0.5} progressColor = "orange"/>

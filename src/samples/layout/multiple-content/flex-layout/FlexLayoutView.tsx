@@ -6,7 +6,7 @@ export default class FlexLayoutView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage  title="Flex Layout Sample">
                 <XF.FlexLayout Direction="Column">
 
                     <XF.Label text="HEADER"

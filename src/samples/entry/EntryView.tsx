@@ -10,7 +10,7 @@ export default class EntryView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(EntryViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Entry View Sample">
                 <XF.StackLayout>
                     <XF.Entry
                         text={Bind.twoWays(() => this.viewModel.model.username)}

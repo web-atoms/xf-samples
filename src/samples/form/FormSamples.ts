@@ -2,6 +2,7 @@ import MenuService from "../../service/menu-service/MenuService";
 import ButtonView from "../button/ButtonView";
 import ImageButtonView from "../button/image-button/ImageButtonView";
 import CheckBoxView from "../check-box/CheckBoxView";
+import ComboBoxSample from "../combo-box/ComboBoxSample";
 import DatePickerView from "../date-picker/DatePickerView";
 import EditorView from "../editor/EditorView";
 import EntryView from "../entry/EntryView";
@@ -24,4 +25,5 @@ export default function addFormSamples(ms: MenuService) {
     form.addLink("Date Picker", DatePickerView);
     form.addLink("Slider", SliderView);
     form.addLink("Stepper", StepperView);
+    form.addLink("ComboBox", ComboBoxSample);
 }

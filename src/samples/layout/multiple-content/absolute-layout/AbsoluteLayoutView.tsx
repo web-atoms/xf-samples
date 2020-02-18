@@ -6,7 +6,7 @@ export default class AbsoluteLayoutView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Absolute Layout Sample">
                 <XF.ContentPage.content>
                     <XF.AbsoluteLayout>
                         <XF.Label text="I'm centered on iPhone 4 but no other device"

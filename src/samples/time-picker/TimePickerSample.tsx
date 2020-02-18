@@ -11,7 +11,7 @@ export default class TimePickerSample extends AtomXFContentPage {
         this.viewModel = this.resolve(TimePickerViewModel);
 
         this.render(
-            <XF.ContentPage title = "Time Picker">
+            <XF.ContentPage title="Time Picker Sample">
                 <XF.StackLayout>
                     <XF.Entry placeholder = "Enter the event to be reminded of"/>
                     <XF.Label text = "Select the time below to be reminded at."/>

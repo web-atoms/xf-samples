@@ -12,7 +12,7 @@ export default class HorizontalListSample extends AtomXFContentPage {
         this.viewModel = this.resolve(CollectionViewSampleViewModel);
 
         this.render(
-            <XF.ContentPage title = "Horizontal List">
+            <XF.ContentPage title = "Horizontal List Sample">
                 <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}
                     itemsLayout = "HorizontalList">
                 <XF.CollectionView.itemTemplate>

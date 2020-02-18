@@ -11,7 +11,7 @@ export default class ActivityIndicatorSample extends AtomXFContentPage {
         this.viewModel = this.resolve(ActivityIndicatorViewModel);
 
         this.render(
-            <XF.ContentPage title = "Activity Indicator">
+            <XF.ContentPage title = "Activity Indicator Sample">
                 <XF.StackLayout>
                     <XF.ActivityIndicator isRunning = {true}/>
                     <XF.ActivityIndicator isRunning = {true} color = "orange"/>

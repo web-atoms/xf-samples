@@ -11,7 +11,7 @@ export default class StepperView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(StepperViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Stepper Sample">
                 <XF.StackLayout margin="20">
                     <XF.Stepper maximum={360}
                             increment={30}

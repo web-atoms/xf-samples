@@ -6,7 +6,7 @@ export default class ContentView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentView>
+            <XF.ContentView title="Content View Sample">
                 <XF.StackLayout padding={10}>
                     <XF.Label text="Item 1" />
                     <XF.Label text="Item 2" />

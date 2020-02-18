@@ -6,7 +6,7 @@ export default class StackLayoutView extends AtomXFContentPage {
 
     public create() {
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="Stack Layout Sample">
                 <XF.StackLayout horizontalOptions="Center">
                     <XF.StackLayout orientation="Horizontal"
                         margin={20}>
