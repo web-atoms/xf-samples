@@ -11,7 +11,8 @@ export default class CustomPopupSample extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(CustomPopupViewModel);
         this.render(
-            <XF.ContentPage backgroundColor = "#C0808080" padding = "10,0" isVisible = {true}>
+            <XF.ContentPage backgroundColor = "#C0808080" padding = "10,0" isVisible = {true}
+                title = "Custom popup">
                 <XF.AbsoluteLayout layoutFlags = "All" layoutBounds = "0,0,1,1"
                     verticalOptions = "Center" horizontalOptions = "Center">
                     <XF.StackLayout orientation = "Vertical" heightRequest = {200}

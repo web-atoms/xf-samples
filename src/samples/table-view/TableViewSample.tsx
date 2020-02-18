@@ -12,7 +12,7 @@ export default class TableViewSample extends AtomXFContentPage {
         this.viewModel = this.resolve(TableViewModel);
 
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title = "Table View">
                 <XF.TableView>
                     <XF.TableRoot>
                         <XF.TableSection>

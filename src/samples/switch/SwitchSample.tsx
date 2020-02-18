@@ -12,7 +12,7 @@ export default class SwitchSample extends AtomXFContentPage {
         this.viewModel = this.resolve(SwitchViewModel);
 
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title = "Switch">
                 <XF.StackLayout>
                     <XF.Switch isToggled = {Bind.twoWays(() => this.viewModel.switchStatus)}/>
                     <XF.Label text = {Bind.twoWays(() => this.viewModel.status ? "On" : "Off")}/>
