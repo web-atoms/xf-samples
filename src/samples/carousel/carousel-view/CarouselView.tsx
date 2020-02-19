@@ -42,14 +42,12 @@ export default class CarouselView extends AtomXFContentPage {
                         </XF.DataTemplate>
                     </XF.CarouselView.itemTemplate>
                 </XF.CarouselView>
-                <XF.Label text={Bind.oneWay(() =>
-                    this.viewModel.items.indexOf(this.viewModel.selectedItem))}></XF.Label>
-                <XF.IndicatorView
+                {/* <XF.IndicatorView
                     itemsSource={Bind.oneWay(() => this.viewModel.items)}
                     position={Bind.oneWay(() => this.viewModel.items.indexOf(this.viewModel.selectedItem))}
                     indicatorColor="LightGray"
                     selectedIndicatorColor="DarkGray"
-                    horizontalOptions="Center" />
+                    horizontalOptions="Center" /> */}
             </XF.StackLayout>
         </XF.ContentPage>);
     }

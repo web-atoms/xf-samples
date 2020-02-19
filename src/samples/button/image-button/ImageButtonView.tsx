@@ -11,15 +11,13 @@ export default class ImageButtonView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(ButtonViewModel);
         this.render(
-            <XF.ContentPage title="Image Button">
+            <XF.ContentPage title="ImageButton Demo">
                 <XF.StackLayout>
-                    <XF.Label text="Image button"
-                        fontSize={50}
+                    <XF.Label text="Image Button"
+                        fontSize={30}
                         fontAttributes="Bold"
                         horizontalOptions="Center" />
                     <XF.ImageButton
-                        margin={50}
-                        padding={10}
                         source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Xamarin-logo.svg/1920px-Xamarin-logo.svg.png"
                         command={Bind.event((s, e) => this.viewModel.clickEvent("Image-button"))}
                         />

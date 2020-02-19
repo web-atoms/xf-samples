@@ -13,8 +13,13 @@ export default class ButtonView extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title="Button Sample">
                 <XF.StackLayout>
-                    <XF.Label text="Click the button" />
+                    <XF.Label text="Click the button"
+                        fontSize={30}
+                        fontAttributes="Bold"
+                        horizontalOptions="Center" />
                     <XF.Button
+                        margin={50}
+                        padding={10}
                         text="Button Demo"
                         command={Bind.event((s, e) => this.viewModel.clickEvent("Button"))} />
                 </XF.StackLayout>

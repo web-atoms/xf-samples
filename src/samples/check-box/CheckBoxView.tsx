@@ -11,13 +11,16 @@ export default class CheckBoxView extends AtomXFContentPage {
     public create() {
         this.viewModel = this.resolve(CheckBoxSampleViewModel);
         this.render(
-            <XF.ContentPage>
+            <XF.ContentPage title="CheckBox Sample">
                 <XF.StackLayout>
                     <XF.StackLayout orientation="Horizontal">
                         <XF.CheckBox isChecked={Bind.twoWays(() => this.viewModel.isAgree)} />
-                        <XF.Label text="Agree the terms and condition" verticalTextAlignment="Center" />
+                        <XF.Label text="Agree the terms and condition"
+                            verticalTextAlignment="Center"
+                            fontSize={20} />
                     </XF.StackLayout>
-                    <XF.Label text={Bind.oneWay(() => this.viewModel.isAgree ? "Agree" : "Disagree")} />
+                    <XF.Label text={Bind.oneWay(() => "Selected " + (this.viewModel.isAgree ? "Agree" : "Disagree"))}
+                        fontSize={20} />
                 </XF.StackLayout>
             </XF.ContentPage>
         );
