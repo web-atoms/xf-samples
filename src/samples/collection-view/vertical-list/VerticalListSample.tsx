@@ -3,13 +3,14 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import CollectionViewSampleViewModel from "../CollectionViewSampleViewModel";
+import VerticalListViewModel from "./VerticalListViewModel";
 
 export default class VerticalListSample extends AtomXFContentPage {
 
-    public viewModel: CollectionViewSampleViewModel;
+    public viewModel: VerticalListViewModel;
 
     public create() {
-        this.viewModel = this.resolve(CollectionViewSampleViewModel);
+        this.viewModel = this.resolve(VerticalListViewModel);
 
         this.render(
             <XF.ContentPage title = "Vertical List Sample">
