@@ -16,7 +16,6 @@ export default class ComboBoxSample extends AtomXFContentPage {
                 <AtomXFComboBox
                     showSearch={true}
                     items={Bind.oneWay(() => this.viewModel.genderList)}
-                    valuePath="value"
                     value={Bind.twoWays(() => this.viewModel.gender)}
                     />
                 <XF.Label
