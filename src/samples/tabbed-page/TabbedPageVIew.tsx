@@ -13,7 +13,7 @@ export default class TabbedPageView extends AtomXFTabbedPage {
 
     public create() {
         this.render(
-            <XF.TabbedPage
+            <XF.TabbedPage title="Tabbed Page Sample"
                 selectedTabColor={Colors.black}
                 unselectedTabColor={Colors.grey}>
                 <XF.ContentPage
