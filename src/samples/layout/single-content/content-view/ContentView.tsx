@@ -7,8 +7,8 @@ export default class ContentView extends AtomContentView {
 
     public create() {
         this.render(
-            <XF.ContentView backgroundColor={Colors.grey}>
-                <XF.StackLayout padding={10} backgroundColor={Colors.white}>
+            <XF.ContentView>
+                <XF.StackLayout padding={10}>
                     <XF.Label text="Item 1" fontSize={20} />
                     <XF.Label text="Item 2" fontSize={20} />
                     <XF.Label text="Item 3" fontSize={20} />

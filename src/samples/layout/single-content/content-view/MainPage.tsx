@@ -8,7 +8,7 @@ export default class MainPage extends AtomXFContentPage {
     public create() {
         this.render(
             <XF.ContentPage title="Content View Sample">
-                    <ContentView></ContentView>
+                <ContentView></ContentView>
             </XF.ContentPage>
         );
     }
