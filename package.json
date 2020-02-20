@@ -22,7 +22,7 @@
     "@web-atoms/date-time": "^1.0.22",
     "@web-atoms/font-awesome": "^1.0.19",
     "@web-atoms/module-loader": "^1.0.407",
-    "@web-atoms/xf-controls": "^1.0.109",
+    "@web-atoms/xf-controls": "^1.0.113",
     "reflect-metadata": "^0.1.13"
   }
 }
