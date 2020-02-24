@@ -18,6 +18,8 @@ import addLayoutSample from "../samples/layout/multiple-content/LayoutSample";
 import addSingleContentSample from "../samples/layout/single-content/Sample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
+import addPopupSample from "../samples/popup/PopupSample";
+import addRefreshSample from "../samples/refresh-view/RefreshViewSample";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
 import addTabbedPage from "../samples/tabbed-page/TabbedPageSample";
 import addTableView from "../samples/table-view/TableViewSamplePage";
@@ -26,7 +28,6 @@ import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar"
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import addWebViewSample from "../samples/web-view/WebViewSample";
 import MenuService from "../service/menu-service/MenuService";
-import addRefreshSample from "../samples/refresh-view/RefreshViewSample";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -81,6 +82,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addToolbarItem(this.menuService);
         addTableView(this.menuService);
         addWebViewSample(this.menuService);
+        addPopupSample(this.menuService);
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
