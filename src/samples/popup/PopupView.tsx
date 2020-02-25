@@ -8,16 +8,7 @@ export default class PopupView extends AtomXFPopupPage {
 
     public create() {
         this.render(
-            <PopupPage title="Filter">
-                <XF.Grid>
-                    <XF.Grid.rowDefinitions>
-                        <XF.RowDefinition />
-                        <XF.RowDefinition />
-                    </XF.Grid.rowDefinitions>
-                    <XF.Grid.columnDefinitions>
-                        <XF.ColumnDefinition />
-                        <XF.ColumnDefinition />
-                    </XF.Grid.columnDefinitions>
+            <PopupPage title="Popup Sample">
 
                     <XF.StackLayout padding="20"
                         backgroundColor={Colors.white}
@@ -27,7 +18,6 @@ export default class PopupView extends AtomXFPopupPage {
                         <XF.Label text="Label 2" />
                         <XF.Label text="Label 3" />
                     </XF.StackLayout>
-                </XF.Grid>
             </PopupPage>
         )
     }
