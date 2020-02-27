@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using WebAtoms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,29 +27,33 @@ namespace WebAtomsDemo
 				"SwipeView_Experimental"
 			});
 
+			AtomDevice.Instance.BeginInvokeOnMainThread(InitAsync);
+		}
+
+		private async Task InitAsync()
+		{
 			string packageName = "";
 			string root = "";
 
-			 //packageName = "@c8private/apps";
 			packageName = "@web-atoms/xf-samples";
-			// root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.51/";
-			root = "http://192.168.0.6:8080/";			
-		
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.52/";
+
+			var jsView = "@web-atoms/xf-samples/dist/Index";
+			var packedView = "dist/Index.pack.js";
+
 
 			var bridge = new AppBridge();
+			await bridge.InitAsync(root, packageName, packedView, designMode: false, debug: false);
+			var view = await bridge.CreateView(jsView);
 
+			Current.MainPage = view as Page;
+
+			// Enable Refresh while debugging
 			bridge.RefreshEvent += (s, e) =>
 			{
-				AtomDevice.Instance.BeginInvokeOnMainThread(async () =>
-				{
-					await bridge.CreateView(root, packageName, "@web-atoms/xf-samples/dist/Index", packed: false, debug: true, designMode: true);
-				});
+				AtomDevice.Instance.BeginInvokeOnMainThread(InitAsync);
 			};
-
-			bridge.Refresh();
-
 		}
-
 		protected override void OnStart ()
 		{
 			// Handle when your app starts
