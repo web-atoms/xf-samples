@@ -1,4 +1,5 @@
 import { Inject } from "@web-atoms/core/dist/di/Inject";
+import { NavigationService } from "@web-atoms/core/dist/services/NavigationService";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import MovieService, { IMovie, IPagedList } from "../../../service/http/MovieService";
 
@@ -10,6 +11,9 @@ export default class ListViewModel extends AtomViewModel {
 
     @Inject
     private movieService: MovieService;
+
+    @Inject
+    private navigationService: NavigationService;
 
     /**
      * You must initialize your model by calling web services in init method
