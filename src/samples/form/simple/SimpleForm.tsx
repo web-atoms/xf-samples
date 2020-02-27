@@ -1,8 +1,8 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode, { RootObject } from "@web-atoms/core/dist/core/XNode";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
-import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import X from "@web-atoms/xf-controls/dist/clr/X";
+import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import SimpleFormViewModel from "./SimpleFormViewModel";
 
