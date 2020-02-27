@@ -31,7 +31,7 @@ namespace WebAtomsDemo
 
 			 //packageName = "@c8private/apps";
 			packageName = "@web-atoms/xf-samples";
-			// root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.37/";
+			// root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.51/";
 			root = "http://192.168.0.6:8080/";			
 		
 
