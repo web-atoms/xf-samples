@@ -6,6 +6,7 @@ import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
+import X from "@web-atoms/xf-controls/dist/clr/X";
 
 export default class AppHost extends AtomXFMasterDetailPage {
 
@@ -61,7 +62,9 @@ export default class AppHost extends AtomXFMasterDetailPage {
                     </XF.ContentPage>
                 </XF.MasterDetailPage.master>
                 <XF.MasterDetailPage.detail>
-                    <XF.ContentPage title="Web Atoms Demo">
+                    <XF.NavigationPage>
+                        <X.Arguments>
+                            <XF.ContentPage title="Web Atoms Demo">
                         <XF.ContentPage.toolbarItems>
                             <WA.AtomToolbarItem>
                                 <WA.AtomToolbarItem.iconImageSource>
@@ -96,6 +99,8 @@ export default class AppHost extends AtomXFMasterDetailPage {
                                 text={Bind.oneWay(() => this.viewModel.message)}/>
                         </XF.Grid>
                     </XF.ContentPage>
+                        </X.Arguments>
+                    </XF.NavigationPage>
                 </XF.MasterDetailPage.detail>
             </XF.MasterDetailPage>
         );

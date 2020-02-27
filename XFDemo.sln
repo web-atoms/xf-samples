@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BBD8F94C-DF9C-4227-9F62-ADDF35D05CA7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KeyGen", "KeyGen", "{B67B4A4D-3D42-4A1D-9190-7CC7AD384A0B}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WebAtomsDemo", "xf\WebAtomsDemo\WebAtomsDemo.shproj", "{3F5F3B46-1AD4-4123-A272-D8810BABB80B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAtomsDemo.Android", "xf\WebAtomsDemo.Android\WebAtomsDemo.Android.csproj", "{39D33EA7-F153-41C0-8C1D-7E00D739C330}"
