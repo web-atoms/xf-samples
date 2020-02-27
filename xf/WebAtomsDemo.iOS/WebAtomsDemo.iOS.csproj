@@ -174,7 +174,7 @@
       <Version>4.3.2</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Xamarin.Forms">
-      <Version>1.4.49</Version>
+      <Version>1.4.50</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.3.1</Version>
