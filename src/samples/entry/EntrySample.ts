@@ -3,5 +3,5 @@ import EntryView from "./EntryView";
 
 export default function addEntry(ms: MenuService) {
     const entry = ms.addGroup("Entry");
-    entry.addLink("Entry", EntryView);
+    entry.addTabLink("Entry", EntryView);
 }

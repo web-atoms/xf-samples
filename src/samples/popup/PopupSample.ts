@@ -3,5 +3,5 @@ import PopupCallingPage from "./PopupCallingPage";
 
 export default function addPopupSample(ms: MenuService) {
     const popup = ms.addGroup("Popup Sample");
-    popup.addLink("Popup", PopupCallingPage);
+    popup.addTabLink("Popup", PopupCallingPage);
 }

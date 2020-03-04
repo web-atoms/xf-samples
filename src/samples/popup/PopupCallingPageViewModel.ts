@@ -8,11 +8,14 @@ export default class PopupCallingPageViewModel extends AtomViewModel {
     @Inject
     private navigationService: NavigationService;
 
-    public clickEvent(str: string) {
-        this.navigationService.openPage(
+    public async clickEvent(str: string) {
+        const r = await this.navigationService.openPage(
             PopupView,
             {},
             {clearHistory: false}
         );
+
+        // tslint:disable-next-line: no-console
+        console.log(r);
     }
 }

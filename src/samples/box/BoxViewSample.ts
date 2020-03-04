@@ -3,5 +3,5 @@ import BoxView from "./BoxView";
 
 export default function addBox(ms: MenuService) {
     const box = ms.addGroup("Box");
-    box.addLink("Box View", BoxView);
+    box.addTabLink("Box View", BoxView);
 }

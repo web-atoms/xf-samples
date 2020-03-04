@@ -3,5 +3,5 @@ import RefreshView from "./RefreshView";
 
 export default function addRefreshSample(ms: MenuService) {
     const rs = ms.addGroup("Refresh-View");
-    rs.addLink("Refresh View", RefreshView);
+    rs.addTabLink("Refresh View", RefreshView);
 }

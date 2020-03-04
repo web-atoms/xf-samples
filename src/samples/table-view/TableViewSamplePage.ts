@@ -3,5 +3,5 @@ import TableViewSample from "./TableViewSample";
 
 export default function addTableView(ms: MenuService) {
     const table = ms.addGroup("Table");
-    table.addLink("Table View", TableViewSample);
+    table.addTabLink("Table View", TableViewSample);
 }

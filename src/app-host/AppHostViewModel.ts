@@ -61,7 +61,13 @@ export default class AppHostViewModel extends AtomViewModel {
     public async load() {
 
         this.registerDisposable(
-            this.navigationService.registerNavigationHook( (url, options) => this.openPage(url, options) ));
+            this.navigationService.registerNavigationHook( (url, options) => {
+                console.log(JSON.stringify(options));
+                if (!options) { return; }
+                if (!options.target) { return; }
+                if (options.target && options.target !== "app") { return; }
+                return this.openPage(url, options);
+            } ));
 
         addFormSamples(this.menuService);
         addSingleContentSample(this.menuService);
@@ -86,8 +92,6 @@ export default class AppHostViewModel extends AtomViewModel {
     }
 
     public async openPage(url: AtomUri, options: IPageOptions) {
-        if (!options) { return; }
-        if (options.target && options.target !== "root") { return; }
 
         const { view, disposables } =
             await AtomLoader.loadView<AtomXFControl>(url, this.app, true, () => new AtomWindowViewModel(this.app));
