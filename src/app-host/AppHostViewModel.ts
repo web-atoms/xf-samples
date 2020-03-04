@@ -62,7 +62,6 @@ export default class AppHostViewModel extends AtomViewModel {
 
         this.registerDisposable(
             this.navigationService.registerNavigationHook( (url, options) => {
-                console.log(JSON.stringify(options));
                 if (!options) { return; }
                 if (!options.target) { return; }
                 if (options.target && options.target !== "app") { return; }
