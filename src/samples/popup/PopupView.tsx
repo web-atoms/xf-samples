@@ -1,3 +1,4 @@
+import Bind from "@web-atoms/core/dist/core/Bind";
 import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import RgPluginsPopup from "@web-atoms/xf-controls/dist/clr/RgPluginsPopup";
@@ -17,8 +18,12 @@ export default class PopupView extends AtomXFPopupPage {
                         <XF.Label text="Label 1" />
                         <XF.Label text="Label 2" />
                         <XF.Label text="Label 3" />
+                        <XF.Button
+                            text="Close"
+                            command={Bind.event(() => this.viewModel.close("Closed"))}
+                            />
                     </XF.StackLayout>
             </RgPluginsPopup.PopupPage>
-        )
+        );
     }
 }

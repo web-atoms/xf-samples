@@ -4,6 +4,6 @@ import CustomPopupSample from "./custom-popup/CustomPopupSample";
 
 export default function addAlertSample(ms: MenuService) {
     const alert = ms.addGroup("Alert");
-    alert.addLink("Alert", AlertSample);
-    alert.addLink("Custom popup", CustomPopupSample);
+    alert.addTabLink("Alert", AlertSample);
+    alert.addTabLink("Custom popup", CustomPopupSample);
 }

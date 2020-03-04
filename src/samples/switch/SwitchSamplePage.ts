@@ -3,5 +3,5 @@ import SwitchSample from "./SwitchSample";
 
 export default function addSwitchSample(ms: MenuService) {
     const s = ms.addGroup("Switch");
-    s.addLink("Switch", SwitchSample);
+    s.addTabLink("Switch", SwitchSample);
 }

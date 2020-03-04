@@ -3,5 +3,5 @@ import SliderView from "./SliderView";
 
 export default function addSlider(ms: MenuService) {
     const s = ms.addGroup("Slider");
-    s.addLink("Slider", SliderView);
+    s.addTabLink("Slider", SliderView);
 }

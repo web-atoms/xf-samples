@@ -3,5 +3,5 @@ import EditorView from "./EditorView";
 
 export default function addEditor(ms: MenuService) {
     const editor = ms.addGroup("Editor");
-    editor.addLink("Editor", EditorView);
+    editor.addTabLink("Editor", EditorView);
 }
