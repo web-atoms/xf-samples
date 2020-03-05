@@ -28,6 +28,7 @@
                 "${env:APPDATA}/npm/node_modules/@web-atoms/dev-server/index.js"
                 // "--inspect",
                 // "D:/git/GitHub/web-atoms/dev-server/index.js",
+                // "D:/git/akash/github/web-atoms/dev-server/index.js"
             ],
             "problemMatcher": []
         }
