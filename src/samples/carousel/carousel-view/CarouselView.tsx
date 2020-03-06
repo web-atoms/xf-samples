@@ -16,7 +16,6 @@ export default class CarouselView extends AtomXFContentPage {
                 <XF.CarouselView
                     currentItem={Bind.twoWays(() => this.viewModel.selectedItem)}
                     itemsSource={Bind.oneWay(() => this.viewModel.items)}>
-                    {/* itemsLayout can change set items layout in vertical/horizontal */}
                     {/* <XF.CarouselView.itemsLayout>
                         <XF.LinearItemsLayout orientation="Vertical" />
                     </XF.CarouselView.itemsLayout> */}
@@ -42,12 +41,6 @@ export default class CarouselView extends AtomXFContentPage {
                         </XF.DataTemplate>
                     </XF.CarouselView.itemTemplate>
                 </XF.CarouselView>
-                {/* <XF.IndicatorView
-                    itemsSource={Bind.oneWay(() => this.viewModel.items)}
-                    position={Bind.oneWay(() => this.viewModel.items.indexOf(this.viewModel.selectedItem))}
-                    indicatorColor="LightGray"
-                    selectedIndicatorColor="DarkGray"
-                    horizontalOptions="Center" /> */}
             </XF.StackLayout>
         </XF.ContentPage>);
     }
