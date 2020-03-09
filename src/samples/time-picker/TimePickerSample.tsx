@@ -15,7 +15,7 @@ export default class TimePickerSample extends AtomXFContentPage {
                 <XF.StackLayout>
                     <XF.Entry placeholder = "Enter the event to be reminded of"/>
                     <XF.Label text = "Select the time below to be reminded at."/>
-                    <XF.TimePicker time = "12:00:00" format = "T"/>
+                    <XF.TimePicker time = "00.11:00:00" format = "T" />
                 </XF.StackLayout>
             </XF.ContentPage>
         );
