@@ -14,9 +14,11 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm install -g typescript
+      - run: npm install -g typescript@3.7.3
+      - run: npm install -D @web-atoms/pack
       - run: npm install
       - run: tsc
+      - run: node ./node_modules/@web-atoms/pack/index.js .
       - run: npm run test
       - run: npm publish --access public
         env:
