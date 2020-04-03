@@ -3,5 +3,5 @@ import ToolbarItemView from "./ToolbarItemView";
 
 export default function addToolbarItem(ms: MenuService) {
     const ti = ms.addGroup("ToolbarItem");
-    ti.addLink("ToolbarItem", ToolbarItemView);
+    ti.addTabLink("ToolbarItem", ToolbarItemView);
 }

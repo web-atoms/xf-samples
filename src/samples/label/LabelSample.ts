@@ -3,5 +3,5 @@ import LabelView from "./LabelView";
 
 export default function addLabelSample(ms: MenuService) {
     const label = ms.addGroup("Label");
-    label.addLink("Label", LabelView);
+    label.addTabLink("Label", LabelView);
 }

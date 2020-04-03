@@ -59,7 +59,7 @@ export default class MenuService {
         const nav: NavigationService = this.app.resolve(NavigationService);
         const p = pageParameters || {};
         p.title = p.title || label;
-        const m = this.create(label, () => nav.openPage(pageSrc, p, {clearHistory: true}), icon);
+        const m = this.create(label, () => nav.openPage(pageSrc, p, { ... options , clearHistory: true}), icon);
         return m;
     }
 

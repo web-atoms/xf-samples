@@ -3,5 +3,5 @@ import CarouselView from "./CarouselView";
 
 export default function addCarousel(ms: MenuService) {
     const c = ms.addGroup("Carousel");
-    c.addLink("Carousel", CarouselView);
+    c.addTabLink("Carousel", CarouselView);
 }
