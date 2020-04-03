@@ -6,7 +6,7 @@ import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import SimpleFormViewModel from "../simple/SimpleFormViewModel";
 
-export default class SimpleForm extends AtomXFContentPage {
+export default class CustomForm extends AtomXFContentPage {
 
     public viewModel: SimpleFormViewModel;
 
