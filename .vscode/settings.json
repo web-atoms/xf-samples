@@ -4,5 +4,6 @@
         "downlevel",
         "postversion",
         "xnode"
-    ]
+    ],
+    "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"]
 }
