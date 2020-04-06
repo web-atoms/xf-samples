@@ -23,12 +23,10 @@
         },
         {
             "label": "Web Atoms Dev Server",
-            "command": "node",
+            "type": "shell",
+            "command": "wads",
             "args": [
-                "${env:APPDATA}/npm/node_modules/@web-atoms/dev-server/index.js"
-                // "--inspect",
-                // "D:/git/GitHub/web-atoms/dev-server/index.js",
-                // "D:/git/akash/github/web-atoms/dev-server/index.js"
+                // "https://remote-server-api-url-for-proxy"
             ],
             "problemMatcher": []
         }
