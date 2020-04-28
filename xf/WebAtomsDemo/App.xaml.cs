@@ -36,7 +36,7 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.65/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.66/";
 
 			var jsView = "@web-atoms/xf-samples/dist/Index";
 			var packedView = "dist/Index.pack.js";
