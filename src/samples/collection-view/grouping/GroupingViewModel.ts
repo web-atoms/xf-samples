@@ -1,12 +1,17 @@
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 
 export default class GroupingViewModel extends AtomViewModel {
-    public group: IGroupModel[] = [];
+    public get group() {
+        const a = [];
+        for (const iterator of this.items) {
+            const list = iterator.list;
+            (list as any).key = iterator;
+            a.push(list);
+        }
+        return a;
+    }
 
-    public async init(): Promise<any> {
-        super.init();
-
-        this.group.addAll([
+    public items = [
         {
             name: "Bears",
             list: [
@@ -39,7 +44,6 @@ export default class GroupingViewModel extends AtomViewModel {
                 location: "Central and East Africa",
                 image: "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg"
             }]
-        }]);
-    }
-
+        }
+    ];
 }

@@ -13,13 +13,16 @@ export default class HeaderFooterSample extends AtomXFContentPage {
 
         this.render(
             <XF.ContentPage title = "Header and Footer Sample">
-                <XF.CollectionView itemsSource = {Bind.oneWay(() => this.viewModel.list)}
+                <XF.CollectionView
+                    header={ ({ label: "Monkeys" }) }
+                    footer={ ({ label: "Friends of Xamarin Monkey" }) }
+                    itemsSource = {Bind.oneWay(() => this.viewModel.list)}
                     itemsLayout = "VerticalList">
                         <XF.CollectionView.headerTemplate>
                             <XF.DataTemplate>
                             <XF.StackLayout backgroundColor="LightGray">
                                 <XF.Label Margin="10,0,0,0"
-                                    text="Monkeys"
+                                    text={Bind.oneWay((x) => x.data.label)}
                                     FontSize="Small"
                                     fontAttributes="Bold" />
                             </XF.StackLayout>
@@ -29,7 +32,7 @@ export default class HeaderFooterSample extends AtomXFContentPage {
                             <XF.DataTemplate>
                             <XF.StackLayout BackgroundColor="LightGray">
                                 <XF.Label Margin="10,0,0,0"
-                                       text="Friends of Xamarin Monkey"
+                                       text={Bind.oneWay((x) => x.data.label)}
                                        FontSize="Small"
                                        fontAttributes="Bold" />
                             </XF.StackLayout>
