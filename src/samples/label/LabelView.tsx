@@ -26,7 +26,7 @@ export default class LabelView extends AtomXFContentPage {
                             fontSize="14">
                         <XF.Label.formattedText>
                             <XF.FormattedString>
-                                <XF.Span text="        'Web Atoms' is an advanced MVVM framework to write cross platform applications in "/>
+                                <XF.Span text="'Web Atoms' is an advanced MVVM framework to write cross platform applications in "/>
                                 <XF.Span text="HTML5 "
                                     textColor="red"/>
                                 <XF.Span text="and "/>
@@ -42,8 +42,7 @@ export default class LabelView extends AtomXFContentPage {
                             </XF.FormattedString>
                         </XF.Label.formattedText>
                     </XF.Label>
-                    <XF.Label text="        Also everything is transpiled into JavaScript, your View Model and Services remain in JavaScript and in browser it works flawlessly."/>
-                    <XF.Label text="        In Xamarin.Forms, Web Atoms package written C# helps you easily host JavaScript modules inside an application and entire User Interface is hosed via JavaScript."/>
+                    <XF.Label text="Also everything is transpiled into JavaScript, your View Model and Services remain in JavaScript and in browser it works flawlessly."/>
                     <XF.Label text="Benefits of Web Atoms with Xamarin.Forms"
                             fontSize="20"
                             textColor="#111"
