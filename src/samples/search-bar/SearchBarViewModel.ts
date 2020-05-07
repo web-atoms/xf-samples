@@ -21,7 +21,7 @@ export default class SearchBarViewModel extends AtomViewModel {
     }
 
     public search() {
-        this.movies.value.replace(this.searchFromList.filter((x) => x.name.search(this.searchText) > -1
+        this.movies.value.replace(this.searchFromList.filter((x) => x.name.toLowerCase().search(this.searchText.toLowerCase()) > -1
             || this.searchText === ""));
     }
 

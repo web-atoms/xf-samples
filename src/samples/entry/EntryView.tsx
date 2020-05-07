@@ -11,13 +11,15 @@ export default class EntryView extends AtomXFContentPage {
         this.viewModel = this.resolve(EntryViewModel);
         this.render(
             <XF.ContentPage title="Entry View Sample">
-                <XF.StackLayout>
+                <XF.StackLayout padding="10">
+                    <XF.Label text="First Name:"
+                        textColor="Black"></XF.Label>
                     <XF.Entry
                         text={Bind.twoWays(() => this.viewModel.model.username)}
-                        placeholder="Some Text">
+                        placeholder="Enter First Name">
                     </XF.Entry>
-                    <XF.Label text={Bind.oneWay(() => this.viewModel.model.username)}
-                        horizontalOptions="Center" />
+                    <XF.Label text={Bind.oneWay(() => `First name is ${this.viewModel.model.username}`)}
+                        textColor="Maroon" />
                 </XF.StackLayout>
             </XF.ContentPage>
         );

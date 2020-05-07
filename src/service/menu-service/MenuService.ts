@@ -21,12 +21,9 @@ export default class MenuService {
     public get groupedMenus() {
         const a = [];
         for (const iterator of this.menus) {
-            const g = [] as any;
+            const g = iterator.children as any;
             g.key = iterator;
             a.push(g);
-            for (const child of iterator.children) {
-                g.push(child);
-            }
         }
         return a;
     }
