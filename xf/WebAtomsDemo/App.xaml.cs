@@ -36,14 +36,24 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.73/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.78/";
+			// enable following for local testing
+			// root = "http://192.168.0.5:8080";
 
 			var jsView = "@web-atoms/xf-samples/dist/Index";
 			var packedView = "dist/Index.pack.js";
 
 
 			var bridge = new AppBridge();
-			await bridge.InitAsync(root, packageName, packedView, designMode: true, debug: false);
+			await bridge.InitAsync(
+				root, 
+				packageName, 
+				packedView, 
+				// mock views 
+				designMode: true,
+				// enable debugging in Chrome for Android
+				// and auto refresh changes
+				debug: false);
 			var view = await bridge.CreateView(jsView);
 
 			Current.MainPage = view as Page;

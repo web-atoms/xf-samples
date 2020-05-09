@@ -15,6 +15,7 @@ export default class GroupingSample extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title = "Grouping Sample">
                 <XF.CollectionView
+                    itemSizingStrategy="MeasureAllItems"
                     { ... WA.GroupBy.itemsSource(Bind.oneWay(() => this.viewModel.group)) }
                     isGrouped = {true}
                     itemsLayout = "VerticalList">

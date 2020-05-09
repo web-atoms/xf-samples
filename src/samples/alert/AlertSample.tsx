@@ -15,9 +15,9 @@ export default class AlertSample extends AtomXFContentPage {
             <XF.ContentPage title = "Alert Sample">
                 <XF.StackLayout>
                     <XF.Button text = "Display alert"
-                        command = {Bind.event((x) => x.viewModel.displayAlert())}></XF.Button>
+                        command = {Bind.event(() => this.viewModel.displayAlert())}></XF.Button>
                     <XF.Button text = "Display alert question"
-                        command = {Bind.event((x) => x.viewModel.displayAlertQuestion())}></XF.Button>
+                        command = {Bind.event(() => this.viewModel.displayAlertQuestion())}></XF.Button>
                 </XF.StackLayout>
             </XF.ContentPage>
         );
