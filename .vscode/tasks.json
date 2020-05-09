@@ -21,13 +21,13 @@
             "tsconfig": "tsconfig.json",
             "option": "watch",
         },
-        {
-            "label": "Web Atoms Tester",
-            "command": "node",
-            "args": [
-                "D:/git/akash/github/web-atoms/dev-server/index.js"
-            ]
-        },
+        // {
+        //     "label": "Web Atoms Tester",
+        //     "command": "node",
+        //     "args": [
+        //         "D:/git/akash/github/web-atoms/dev-server/index.js"
+        //     ]
+        // },
         {
             "label": "Web Atoms Dev Server",
             "type": "shell",
