@@ -6,6 +6,7 @@ import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFTabbedPage from "@web-atoms/xf-controls/dist/pages/AtomXFTabbedPage";
 import SimpleForm from "../form/simple/SimpleForm";
 import List from "../list/list-view/List";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 const Args = XNode.prepare("WebAtoms.AtomX:Arguments", true);
 
@@ -23,8 +24,12 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                             fontFamily={FontAwesomeRegular.toString()}
                             glyph={FontAwesomeRegular.user}/>
                     </XF.ContentPage.iconImageSource>
-                    <XF.StackLayout>
+                    <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 1 Content"/>
+                        <XF.FontImageSource
+                            fontFamily={FontAwesomeSolid.toString()}
+                            glyph={FontAwesomeSolid.gem}
+                            size="20" />
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <XF.ContentPage
@@ -34,8 +39,12 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                             fontFamily={FontAwesomeRegular.toString()}
                             glyph={FontAwesomeRegular.map}/>
                     </XF.ContentPage.iconImageSource>
-                    <XF.StackLayout>
+                    <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 2 Content"/>
+                        <XF.FontImageSource
+                            fontFamily={FontAwesomeSolid.toString()}
+                            glyph={FontAwesomeSolid.globe}
+                            size="20" />
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <SimpleForm>
