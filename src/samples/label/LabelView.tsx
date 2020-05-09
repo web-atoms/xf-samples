@@ -12,18 +12,28 @@ export default class LabelView extends AtomXFContentPage {
         this.viewModel = this.resolve(LabelViewModel);
         this.render(
             <XF.ContentPage title="Label Sample">
-                <XF.StackLayout margin="10,10,200,300">
-                    <XF.Label text="Label Sample"
+                <XF.ScrollView>
+                <XF.StackLayout margin="10">
+                    <XF.Label text="Introduction"
+                            fontSize="25"
+                            textColor="#111"
                             horizontalOptions="Center" />
-                    <XF.Label lineBreakMode="WordWrap">
+                    <XF.Label text="What is web atoms?"
+                            fontSize="20"
+                            textColor="#111"
+                            horizontalOptions="Start" />
+                    <XF.Label lineBreakMode="WordWrap"
+                            fontSize="14">
                         <XF.Label.formattedText>
                             <XF.FormattedString>
-                                <XF.Span text="TEXT MESSAGE"/>
-                                <XF.Span text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a tincidunt sem. Phasellus mollis sit amet turpis in rutrum. Sed aliquam ac urna id scelerisque. "
+                                <XF.Span text="'Web Atoms' is an advanced MVVM framework to write cross platform applications in "/>
+                                <XF.Span text="HTML5 "
                                     textColor="red"/>
-                                <XF.Span text="Nullam feugiat sodales elit, et maximus nibh vulputate id."/>
-
-                                <XF.Span text="Click me">
+                                <XF.Span text="and "/>
+                                <XF.Span text="Xamarin.Forms."
+                                    textColor="red"/>
+                                <XF.Span text=" Unlike other frameworks, Web Atoms lets you divide User Interface logic in strict MVVM fashion and separates View in HTML5 and Xaml. Benefit of separating User interface logic in ViewModel is you can individually unit test view model to make sure your logic is consistent across platforms. "/>
+                                <XF.Span text="Click me" textDecorations="Underline" textColor="Blue">
                                     <XF.Span.gestureRecognizers>
                                         <XF.TapGestureRecognizer command={Bind.event(
                                             (s, e) => this.viewModel.labelClick())}/>
@@ -32,7 +42,18 @@ export default class LabelView extends AtomXFContentPage {
                             </XF.FormattedString>
                         </XF.Label.formattedText>
                     </XF.Label>
+                    <XF.Label text="Also everything is transpiled into JavaScript, your View Model and Services remain in JavaScript and in browser it works flawlessly."/>
+                    <XF.Label text="Benefits of Web Atoms with Xamarin.Forms"
+                            fontSize="20"
+                            textColor="#111"
+                            horizontalOptions="Start" />
+                    <XF.Label text="1. Write TSX instead of XAML" />
+                    <XF.Label text="2. Small application download size" />
+                    <XF.Label text="3. Dynamic Module Loading from web" />
+                    <XF.Label text="4. Reuse existing NuGet components by exposing via services" />
+                    <XF.Label text="5. Host javascript on server with instant updates to apps" />
                 </XF.StackLayout>
+                </XF.ScrollView>
             </XF.ContentPage>
         );
     }

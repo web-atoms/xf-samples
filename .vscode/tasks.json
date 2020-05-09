@@ -22,13 +22,18 @@
             "option": "watch",
         },
         {
-            "label": "Web Atoms Dev Server",
+            "label": "Web Atoms Tester",
             "command": "node",
             "args": [
-                "${env:APPDATA}/npm/node_modules/@web-atoms/dev-server/index.js"
-                // "--inspect",
-                // "D:/git/GitHub/web-atoms/dev-server/index.js",
-                // "D:/git/akash/github/web-atoms/dev-server/index.js"
+                "D:/git/akash/github/web-atoms/dev-server/index.js"
+            ]
+        },
+        {
+            "label": "Web Atoms Dev Server",
+            "type": "shell",
+            "command": "wads",
+            "args": [
+                // "https://remote-server-api-url-for-proxy"
             ],
             "problemMatcher": []
         }

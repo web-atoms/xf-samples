@@ -21,7 +21,11 @@ export default class ButtonView extends AtomXFContentPage {
                         margin={50}
                         padding={10}
                         text="Button Demo"
-                        command={Bind.event((s, e) => this.viewModel.clickEvent("Button"))} />
+                        command={Bind.event((s, e) => this.viewModel.clickEvent("Button"))} 
+                        borderRadius="5"
+                        backgroundColor="#ff5733"
+                        borderColor="#ff5733"
+                        textColor="white"/>
                 </XF.StackLayout>
             </XF.ContentPage>
         );

@@ -173,8 +173,11 @@
     <PackageReference Include="System.Net.WebSockets.Client">
       <Version>4.3.2</Version>
     </PackageReference>
+    <PackageReference Include="WebAtoms.Core">
+      <Version>1.4.95</Version>
+    </PackageReference>
     <PackageReference Include="WebAtoms.Xamarin.Forms">
-      <Version>1.4.52</Version>
+      <Version>1.4.95</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.0</Version>

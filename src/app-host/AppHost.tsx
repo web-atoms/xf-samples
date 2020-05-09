@@ -7,6 +7,7 @@ import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
 import X from "@web-atoms/xf-controls/dist/clr/X";
+import Home from "./home/Home";
 
 export default class AppHost extends AtomXFMasterDetailPage {
 
@@ -27,6 +28,7 @@ export default class AppHost extends AtomXFMasterDetailPage {
                 <XF.MasterDetailPage.master>
                     <XF.ContentPage title="Home">
                         <XF.ListView
+                            cachingStrategy="RecycleElement"
                             isGroupingEnabled={true}
                             rowHeight={50}
                             margin = {0}
@@ -64,41 +66,7 @@ export default class AppHost extends AtomXFMasterDetailPage {
                 <XF.MasterDetailPage.detail>
                     <XF.NavigationPage>
                         <X.Arguments>
-                            <XF.ContentPage title="Web Atoms Demo">
-                        <XF.ContentPage.toolbarItems>
-                            <WA.AtomToolbarItem>
-                                <WA.AtomToolbarItem.iconImageSource>
-                                    <XF.FontImageSource
-                                        fontFamily={FontAwesomeRegular.toString()}
-                                        glyph={FontAwesomeRegular.plusSquare}
-                                        />
-                                </WA.AtomToolbarItem.iconImageSource>
-                            </WA.AtomToolbarItem>
-                        </XF.ContentPage.toolbarItems>
-                        <XF.Grid>
-                            <XF.Grid.rowDefinitions>
-                                <XF.RowDefinition/>
-                                <XF.RowDefinition height="Auto"/>
-                                <XF.RowDefinition/>
-                            </XF.Grid.rowDefinitions>
-                            <XF.Grid.columnDefinitions>
-                                <XF.ColumnDefinition/>
-                                <XF.ColumnDefinition width="50"/>
-                                <XF.ColumnDefinition width="Auto"/>
-                                <XF.ColumnDefinition/>
-                            </XF.Grid.columnDefinitions>
-                            <XF.Label
-                                { ... XF.Grid.row(1) }
-                                { ... XF.Grid.column(1) }
-                                fontFamily={FontAwesomeSolid}
-                                text={FontAwesomeSolid.male}
-                                />
-                            <XF.Label
-                                { ... XF.Grid.row(1) }
-                                { ... XF.Grid.column(2) }
-                                text={Bind.oneWay(() => this.viewModel.message)}/>
-                        </XF.Grid>
-                    </XF.ContentPage>
+                            <Home/>
                         </X.Arguments>
                     </XF.NavigationPage>
                 </XF.MasterDetailPage.detail>

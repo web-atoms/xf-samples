@@ -11,7 +11,9 @@ export default class EditorView extends AtomXFContentPage {
         this.viewModel = this.resolve(EditorViewModel);
         this.render(
             <XF.ContentPage title="Editor View Sample">
-                <XF.StackLayout>
+                <XF.StackLayout padding="10">
+                    <XF.Label text="Address:"
+                        textColor="Black"></XF.Label>
                     <XF.Editor
                         text={Bind.twoWays(() => this.viewModel.value)}
                         placeholder="Multi-line text editor"
@@ -20,7 +22,8 @@ export default class EditorView extends AtomXFContentPage {
                         IsSpellCheckEnabled="false"
                         IsTextPredictionEnabled="false">
                     </XF.Editor>
-                    <XF.Label text={Bind.oneWay(() => this.viewModel.value)}></XF.Label>
+                    <XF.Label text={Bind.oneWay(() => `Address is ${this.viewModel.value}`)}
+                        textColor="Maroon" />
                 </XF.StackLayout>
             </XF.ContentPage>
         );

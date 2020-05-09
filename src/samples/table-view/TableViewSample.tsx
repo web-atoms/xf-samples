@@ -14,14 +14,14 @@ export default class TableViewSample extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title = "Table View Sample">
                 <XF.TableView>
-                    <XF.TableRoot>
-                        <XF.TableSection>
-                            <XF.ViewCell>
-                            <XF.SwitchCell text = "New Voice Mail" />
-                            <XF.SwitchCell text = "New Mail" On="true" />
-                            </XF.ViewCell>
-                        </XF.TableSection>
-                    </XF.TableRoot>
+                    <XF.TableSection title = "Switch Section">
+                        <XF.SwitchCell text = "Off State"/>
+                        <XF.SwitchCell text = "On State" on = "true"/>
+                    </XF.TableSection>
+                    <XF.TableSection title = "Entry Section">
+                        <XF.EntryCell label = "Username" placeholder = "enter username" horizontalTextAlignment = "Center"/>
+                        <XF.EntryCell label = "Password" placeholder = "enter password" horizontalTextAlignment = "Center"/>
+                    </XF.TableSection>
                 </XF.TableView>
             </XF.ContentPage>
         );

@@ -28,6 +28,7 @@ import addToggleButtonBar from "../samples/toggle-button-bar/addToggleButtonBar"
 import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import addWebViewSample from "../samples/web-view/WebViewSample";
 import MenuService from "../service/menu-service/MenuService";
+import Home from "./home/Home";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -66,6 +67,9 @@ export default class AppHostViewModel extends AtomViewModel {
                 return this.openPage(url, options);
             } ));
 
+        const homeGroup = this.menuService.addGroup("Home");
+        homeGroup.addTabLink("Home", Home);
+
         addFormSamples(this.menuService);
         addSingleContentSample(this.menuService);
         addLayoutSample(this.menuService);
@@ -96,9 +100,6 @@ export default class AppHostViewModel extends AtomViewModel {
         (view as any)._$_url = urlString;
 
         this.currentPage = view;
-
-        // tslint:disable-next-line: no-console
-        console.log("Page created");
 
         await bridge.navigationService.pushPageAsync(this.owner.element, view.element, options.clearHistory || false);
 

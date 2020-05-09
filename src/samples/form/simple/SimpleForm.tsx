@@ -27,45 +27,40 @@ export default class SimpleForm extends AtomXFContentPage {
 
         this.viewModel = this.resolve(SimpleFormViewModel);
 
-        this.render(<XF.ContentPage title="Simple Form" padding="10">
+        this.render(<XF.ContentPage title="Simple Form" backgroundColor="White" padding="10">
             <WA.AtomForm>
-                <WA.AtomForm.fieldStyle>
-                    <XF.ControlTemplate>
-                        <XF.Grid>
-                            <XF.Grid.rowDefinitions>
-                                <XF.RowDefinition height="Auto"/>
-                                <XF.RowDefinition/>
-                                <XF.RowDefinition height="Auto"/>
-                            </XF.Grid.rowDefinitions>
-                            <XF.Label
-                                text={X.TemplateBinding("Label")}
-                                textColor="Green"
-                                />
-                            <XF.ContentPresenter
-                                { ... XF.Grid.row(1)}
-                                />
-                        </XF.Grid>
-                    </XF.ControlTemplate>
-                </WA.AtomForm.fieldStyle>
                 <WA.AtomField
                     label="Username:"
                     isRequired={true}
-                    error={Bind.oneWay(() => this.viewModel.errorUsername)}>
-                    <XF.Entry text={Bind.twoWays(() => this.viewModel.model.username)}/>
+                    error={Bind.oneWay(() => this.viewModel.errorUsername)}
+                    labelColor="#2e2e2e">
+                    <XF.Entry
+                        text={Bind.twoWays(() => this.viewModel.model.username)}
+                        placeholder="Enter Username"
+                        placeholderColor="#aaa"
+                        textColor="#2e2e2e"/>
                 </WA.AtomField>
                 <WA.AtomField
                     label="Password"
                     isRequired={true}
                     error={Bind.oneWay(() => this.viewModel.errorPassword)}
+                    labelColor="#2e2e2e"
                     >
                     <XF.Entry
                         isPassword={true}
                         text={Bind.twoWays(() => this.viewModel.model.password)}
+                        placeholder="Enter Password"
+                        placeholderColor="#aaa"
+                        textColor="#2e2e2e"
                     />
                 </WA.AtomField>
                 <XF.Button
                     command={Bind.event((s, e) => this.viewModel.signup())}
-                    text="Signup"/>
+                    text="Signup"
+                    borderRadius="5"
+                    backgroundColor="#ff5733"
+                    borderColor="#ff5733"
+                    textColor="white"/>
             </WA.AtomForm>
         </XF.ContentPage>);
     }
