@@ -22,7 +22,7 @@
     "@web-atoms/date-time": "^1.0.23",
     "@web-atoms/font-awesome": "^1.0.20",
     "@web-atoms/module-loader": "^1.0.428",
-    "@web-atoms/xf-controls": "^1.0.127",
+    "@web-atoms/xf-controls": "^1.0.128",
     "reflect-metadata": "^0.1.13"
   },
   "bundledDependencies": [
