@@ -22,7 +22,7 @@ namespace WebAtomsDemo.Services
         {
             var r = new TimerRegistration {};
             Device.StartTimer(TimeSpan.FromMilliseconds(milliSeconds), () => {
-                action.InvokeFunction(null, context.Convert(r.Value));
+                action.InvokeFunction(null, context.CreateNumber(r.Value));
                 r.Value++;
                 return !r.Disposed;
             });
