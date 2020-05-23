@@ -44,7 +44,7 @@ export default class AtomStyleSheetSample extends AtomXFContentPage {
         this.render(<XF.ContentPage
 
             // apply root class name to root of this page
-            styleClass={this.controlStyle.root.className}
+            styleClass={this.controlStyle.name}
             >
 
             <XF.StackLayout>

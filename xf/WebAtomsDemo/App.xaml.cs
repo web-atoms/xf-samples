@@ -36,7 +36,7 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.0.78/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.1.6/";
 			// enable following for local testing
 			// root = "http://192.168.0.5:8080";
 

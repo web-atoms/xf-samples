@@ -1665,6 +1665,7 @@ namespace WebAtomsDemo.Droid
 			global::WebAtoms.XF.Resource.Style.Animation_AppCompat_DropDownUp = global::WebAtomsDemo.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::WebAtoms.XF.Resource.Style.Animation_AppCompat_Tooltip = global::WebAtomsDemo.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::WebAtoms.XF.Resource.Style.Animation_Design_BottomSheetDialog = global::WebAtomsDemo.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::WebAtoms.XF.Resource.Style.AppCompatDialogStyle = global::WebAtomsDemo.Droid.Resource.Style.AppCompatDialogStyle;
 			global::WebAtoms.XF.Resource.Style.Base_AlertDialog_AppCompat = global::WebAtomsDemo.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::WebAtoms.XF.Resource.Style.Base_AlertDialog_AppCompat_Light = global::WebAtomsDemo.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::WebAtoms.XF.Resource.Style.Base_Animation_AppCompat_Dialog = global::WebAtomsDemo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -1857,7 +1858,8 @@ namespace WebAtomsDemo.Droid
 			global::WebAtoms.XF.Resource.Style.CardView_Dark = global::WebAtomsDemo.Droid.Resource.Style.CardView_Dark;
 			global::WebAtoms.XF.Resource.Style.CardView_Light = global::WebAtomsDemo.Droid.Resource.Style.CardView_Light;
 			global::WebAtoms.XF.Resource.Style.collectionViewStyle = global::WebAtomsDemo.Droid.Resource.Style.collectionViewStyle;
-			global::WebAtoms.XF.Resource.Style.NestedScrollBarStyle = global::WebAtomsDemo.Droid.Resource.Style.NestedScrollBarStyle;
+			global::WebAtoms.XF.Resource.Style.MainTheme = global::WebAtomsDemo.Droid.Resource.Style.MainTheme;
+			global::WebAtoms.XF.Resource.Style.MainTheme_Base = global::WebAtomsDemo.Droid.Resource.Style.MainTheme_Base;
 			global::WebAtoms.XF.Resource.Style.Platform_AppCompat = global::WebAtomsDemo.Droid.Resource.Style.Platform_AppCompat;
 			global::WebAtoms.XF.Resource.Style.Platform_AppCompat_Light = global::WebAtomsDemo.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::WebAtoms.XF.Resource.Style.Platform_MaterialComponents = global::WebAtomsDemo.Droid.Resource.Style.Platform_MaterialComponents;
