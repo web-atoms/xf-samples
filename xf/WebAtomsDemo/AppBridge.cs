@@ -14,12 +14,9 @@ namespace WebAtomsDemo
     public class AppBridge : AtomBridge
     {
 
-        static AppBridge() {
+        public UrlService UrlService => DependencyService.Get<UrlService>();
 
-            RegisterService("urlService", DependencyService.Get<UrlService>());
-            RegisterService("demoService", DependencyService.Get<DemoService>());
-
-        }
+        public DemoService DemoService => DependencyService.Get<DemoService>();
 
     }
 
