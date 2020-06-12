@@ -1,2 +1,10 @@
 node_modules
 xf
+.github
+.vs
+.vscode
+generated-cert-1
+package-lock.json
+tslint.json
+tsconfig.json
+XFDemo.sln
