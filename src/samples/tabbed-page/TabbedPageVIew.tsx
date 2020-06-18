@@ -26,10 +26,15 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                     </XF.ContentPage.iconImageSource>
                     <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 1 Content"/>
-                        <XF.FontImageSource
-                            fontFamily={FontAwesomeSolid.toString()}
-                            glyph={FontAwesomeSolid.gem}
-                            size="20" />
+                        <XF.Image>
+                            <XF.Image.source>
+                                <XF.FontImageSource
+                                    color="#000000"
+                                    fontFamily={FontAwesomeSolid.toString()}
+                                    glyph={FontAwesomeSolid.gem}
+                                    size="20" />
+                            </XF.Image.source>
+                        </XF.Image>
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <XF.ContentPage
@@ -41,10 +46,15 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                     </XF.ContentPage.iconImageSource>
                     <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 2 Content"/>
-                        <XF.FontImageSource
-                            fontFamily={FontAwesomeSolid.toString()}
-                            glyph={FontAwesomeSolid.globe}
-                            size="20" />
+                        <XF.Image>
+                            <XF.Image.source>
+                                <XF.FontImageSource
+                                    color="#000000"
+                                    fontFamily={FontAwesomeSolid.toString()}
+                                    glyph={FontAwesomeSolid.globe}
+                                    size="20" />
+                            </XF.Image.source>
+                        </XF.Image>
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <SimpleForm>
