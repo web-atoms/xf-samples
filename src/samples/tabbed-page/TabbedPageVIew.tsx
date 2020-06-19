@@ -1,12 +1,12 @@
 import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFTabbedPage from "@web-atoms/xf-controls/dist/pages/AtomXFTabbedPage";
 import SimpleForm from "../form/simple/SimpleForm";
 import List from "../list/list-view/List";
-import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 const Args = XNode.prepare("WebAtoms.AtomX:Arguments", true);
 
