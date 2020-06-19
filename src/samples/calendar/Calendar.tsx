@@ -19,16 +19,17 @@ export default class Calendar extends AtomXFContentPage {
         this.render(<XF.ContentPage title="Calendar">
             <XF.Grid>
                 <XF.Grid.rowDefinitions>
-                    <XF.RowDefinition height="Auto"/>
                     <XF.RowDefinition/>
+                    <XF.RowDefinition height="Auto"/>
+                    <XF.RowDefinition />
                 </XF.Grid.rowDefinitions>
-                <XF.Label
-                    text={Bind.oneWay(() => this.date.toLocaleDateString())}
-                />
                 <AtomXFCalendar
-                    { ... XF.Grid.row(1) }
                     selectedDate={Bind.twoWays(() => this.date)}
                     />
+                <XF.Label
+                    { ... XF.Grid.row(1) }
+                    text={Bind.oneWay(() => this.date.toLocaleDateString())}
+                />
             </XF.Grid>
         </XF.ContentPage>);
     }

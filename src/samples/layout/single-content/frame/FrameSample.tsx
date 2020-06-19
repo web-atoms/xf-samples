@@ -15,7 +15,8 @@ export default class FrameSample extends AtomXFContentPage {
                 <XF.Button text = "Open Page"
                     command = {Bind.event(() => { this.viewModel.changeFrame(); })}/>
                 <XF.StackLayout>
-                    <XF.Frame source = {AlertSample}>
+                    <XF.Frame>
+                        <AlertSample></AlertSample>
                     </XF.Frame>
                 </XF.StackLayout>
             </XF.ContentPage>
