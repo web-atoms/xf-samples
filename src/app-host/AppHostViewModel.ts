@@ -89,7 +89,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addAlertSample(this.menuService);
         addCollectionViewSample(this.menuService);
         addToolbarItem(this.menuService);
-        // addTableView(this.menuService);
+        addTableView(this.menuService);
         addWebViewSample(this.menuService);
         addPopupSample(this.menuService);
     }
