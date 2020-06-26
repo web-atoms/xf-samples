@@ -36,9 +36,9 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.1.10/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.1.16/";
 			// enable following for local testing
-			// root = "http://192.168.0.5:8080";
+			// root = "http://192.168.0.6:8080";
 
 			var jsView = "@web-atoms/xf-samples/dist/Index";
 			var packedView = "dist/Index.pack.js";
