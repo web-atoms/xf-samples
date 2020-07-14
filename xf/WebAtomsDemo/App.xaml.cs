@@ -13,19 +13,19 @@ namespace WebAtomsDemo
 		{
 			InitializeComponent();
 
-            // MainPage = new MainPage();
+			// Enable your flags here!
+			Device.SetFlags(new[] {
+				"Shapes_Experimental",
+				"SwipeView_Experimental"
+			});
+			// MainPage = new MainPage();
 
-            MainPage = new NavigationPage( new ContentPage {
+			MainPage = new NavigationPage( new ContentPage {
                 Title = "Loading..",
                 Content = new Label {
                     Text = "Loading..."
                 }
             });
-
-			// Enable your flags here!
-			Device.SetFlags(new[] {
-				"SwipeView_Experimental"
-			});
 
 			AtomDevice.Instance.BeginInvokeOnMainThread(InitAsync);
 		}
@@ -36,7 +36,7 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.1.16/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@1.1.19/";
 			// enable following for local testing
 			// root = "http://192.168.0.6:8080";
 
