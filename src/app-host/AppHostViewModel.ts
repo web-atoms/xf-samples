@@ -13,6 +13,7 @@ import addCalendarSamples from "../samples/calendar/calendarSamples";
 import addCarouselPage from "../samples/carousel/carousel-page/CarouselPageSample";
 import addCarousel from "../samples/carousel/carousel-view/CarouselSample";
 import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
+import addDatabaseSamples from "../samples/database/addDatabaseSamples";
 import addFormSamples from "../samples/form/FormSamples";
 import addImage from "../samples/image/ImageSample";
 import addLayoutSample from "../samples/layout/multiple-content/LayoutSample";
@@ -72,6 +73,7 @@ export default class AppHostViewModel extends AtomViewModel {
         homeGroup.addTabLink("Home", Home);
 
         addFormSamples(this.menuService);
+        addDatabaseSamples(this.menuService);
         addCalendarSamples(this.menuService);
         addSingleContentSample(this.menuService);
         addLayoutSample(this.menuService);
