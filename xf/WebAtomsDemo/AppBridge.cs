@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
 using WebAtoms;
+using WebAtoms.Sqlite;
 using WebAtomsDemo.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(WebAtomsDemo.UrlService))]
+
+[assembly: Dependency(typeof(WebAtoms.Sqlite.DatabaseService))]
 
 namespace WebAtomsDemo
 {
@@ -17,6 +20,11 @@ namespace WebAtomsDemo
         public UrlService UrlService => DependencyService.Get<UrlService>();
 
         public DemoService DemoService => DependencyService.Get<DemoService>();
+
+        /// <summary>
+        ///  This enables `bridge.database` sqlite
+        /// </summary>
+        public DatabaseService Database => DependencyService.Get<DatabaseService>();
 
     }
 
