@@ -10,7 +10,7 @@ import RowEditor from "./row-editor/RowEditor";
 
 export default class WebSqlViewModel extends AtomViewModel {
 
-    public rows: any[];
+    public rows: any[] = [];
 
     public selectedRow: any = null;
 
@@ -41,9 +41,10 @@ export default class WebSqlViewModel extends AtomViewModel {
     public async addRow() {
         const model = await this.navigationService.openPage(RowEditor, { model: {} }) as any;
         await this.database.transactionAsync(async (tx) => {
-            await tx.insertAsync("Customers", model);
-            const r = await tx.executeSqlAsync("SELECT * FROM Customers", []);
-            this.rows = r.rows;
+            const c = await tx.insertAsync("Customers", model);
+            model.id = c.insertId;
+            this.rows.add(model);
+            this.selectedRow = model;
         });
     }
 
@@ -65,6 +66,7 @@ export default class WebSqlViewModel extends AtomViewModel {
             await  tx.deleteAsync("Customers", filter);
             const r = await tx.executeSqlAsync("SELECT * FROM Customers", []);
             this.rows = r.rows;
+            this.selectedRow = null;
         });
     }
 }
