@@ -46,9 +46,11 @@ export default class MenuItem {
         this.children = new AtomList();
     }
 
-    public click(): any {
+    public click(fromHome?: boolean): any {
         // this is hack as MasterDetailPage's IsPresented is set only property
-        this.menuService.isOpen = true;
+        if (!fromHome) {
+            this.menuService.isOpen = true;
+        }
         const r = this.action(this);
         this.menuService.isOpen = false;
         return r;

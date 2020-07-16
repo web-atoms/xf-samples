@@ -52,7 +52,7 @@ export default class Home extends AtomXFContentPage {
                                     verticalOptions={"Center"}>
                                     <XF.Label.gestureRecognizers>
                                         <XF.TapGestureRecognizer
-                                            command={ BindMenu.event((s) => s.data.click() ) }
+                                            command={ BindMenu.event((s) => s.data.click(true) ) }
                                             />
                                     </XF.Label.gestureRecognizers>
                                 </XF.Label>
