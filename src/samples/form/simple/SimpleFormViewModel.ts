@@ -18,7 +18,7 @@ export default class SimpleFormViewModel extends AtomViewModel {
         return this.model.password ? "" : "Password is required";
     }
 
-    @Action({ validate: true })
+    @Action({ validate: true, success: "Signup form is valid" })
     public async signup() {
         // nothing
     }

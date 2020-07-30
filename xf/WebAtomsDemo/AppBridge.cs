@@ -3,23 +3,28 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Text;
 using WebAtoms;
+using WebAtoms.Sqlite;
 using WebAtomsDemo.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(WebAtomsDemo.UrlService))]
 
+[assembly: Dependency(typeof(WebAtoms.Sqlite.DatabaseService))]
+
 namespace WebAtomsDemo
 {
     public class AppBridge : AtomBridge
     {
 
-        static AppBridge() {
+        public UrlService UrlService => DependencyService.Get<UrlService>();
 
-            RegisterService("urlService", DependencyService.Get<UrlService>());
-            RegisterService("demoService", DependencyService.Get<DemoService>());
+        public DemoService DemoService => DependencyService.Get<DemoService>();
 
-        }
+        /// <summary>
+        ///  This enables `bridge.database` sqlite
+        /// </summary>
+        public DatabaseService Database => DependencyService.Get<DatabaseService>();
 
     }
 

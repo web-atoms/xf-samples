@@ -1,12 +1,12 @@
 import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFTabbedPage from "@web-atoms/xf-controls/dist/pages/AtomXFTabbedPage";
 import SimpleForm from "../form/simple/SimpleForm";
 import List from "../list/list-view/List";
-import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 const Args = XNode.prepare("WebAtoms.AtomX:Arguments", true);
 
@@ -26,10 +26,15 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                     </XF.ContentPage.iconImageSource>
                     <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 1 Content"/>
-                        <XF.FontImageSource
-                            fontFamily={FontAwesomeSolid.toString()}
-                            glyph={FontAwesomeSolid.gem}
-                            size="20" />
+                        <XF.Image>
+                            <XF.Image.source>
+                                <XF.FontImageSource
+                                    color="#000000"
+                                    fontFamily={FontAwesomeSolid.toString()}
+                                    glyph={FontAwesomeSolid.gem}
+                                    size="20" />
+                            </XF.Image.source>
+                        </XF.Image>
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <XF.ContentPage
@@ -41,10 +46,15 @@ export default class TabbedPageView extends AtomXFTabbedPage {
                     </XF.ContentPage.iconImageSource>
                     <XF.StackLayout orientation = "Vertical">
                         <XF.Label text="Tab 2 Content"/>
-                        <XF.FontImageSource
-                            fontFamily={FontAwesomeSolid.toString()}
-                            glyph={FontAwesomeSolid.globe}
-                            size="20" />
+                        <XF.Image>
+                            <XF.Image.source>
+                                <XF.FontImageSource
+                                    color="#000000"
+                                    fontFamily={FontAwesomeSolid.toString()}
+                                    glyph={FontAwesomeSolid.globe}
+                                    size="20" />
+                            </XF.Image.source>
+                        </XF.Image>
                     </XF.StackLayout>
                 </XF.ContentPage>
                 <SimpleForm>
