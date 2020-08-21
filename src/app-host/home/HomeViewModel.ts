@@ -3,8 +3,11 @@ import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
 import MenuItem from "../../service/menu-service/MenuItem";
 import MenuService from "../../service/menu-service/MenuService";
+import Action from "@web-atoms/core/dist/view-model/Action";
 
 // test 4
+
+declare var bridge;
 
 export default class HomeViewModel extends AtomViewModel {
 
@@ -42,6 +45,11 @@ export default class HomeViewModel extends AtomViewModel {
             }
         }
         this.menus = r;
+    }
+
+    @Action()
+    public async scan() {
+        await bridge.qRCodeService.scanAsync();
     }
 
 }
