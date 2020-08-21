@@ -14,7 +14,11 @@
         "lib": [
             "es6",
             "dom"
-        ]
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@web-atoms/xf-samples/src/*": [ "./src/*" ]
+        }
     },
     "include": [
         "src/**/*"

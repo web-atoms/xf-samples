@@ -5,6 +5,7 @@ import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import MenuItem from "../../service/menu-service/MenuItem";
 import HomeViewModel from "./HomeViewModel";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 const BindMenu = Bind.forData<MenuItem>();
 
@@ -19,6 +20,16 @@ export default class Home extends AtomXFContentPage {
         this.render(
         <XF.ContentPage
             title="Web Atoms Demo">
+            <XF.ContentPage.toolbarItems>
+                <XF.ToolbarItem command={Bind.event(() => this.viewModel.scan())}>
+                    <XF.ToolbarItem.iconImageSource>
+                        <XF.FontImageSource
+                            fontFamily={FontAwesomeSolid}
+                            glyph={FontAwesomeSolid.qrcode}
+                            />
+                    </XF.ToolbarItem.iconImageSource>
+                </XF.ToolbarItem>
+            </XF.ContentPage.toolbarItems>
             <XF.Grid>
                 <XF.Grid.rowDefinitions>
                     <XF.RowDefinition height="auto"/>

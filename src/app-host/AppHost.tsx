@@ -1,12 +1,13 @@
+import logo from "@web-atoms/@web-atoms/xf-samples/src/images/web-atoms.png";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
 import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
+import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
-import X from "@web-atoms/xf-controls/dist/clr/X";
 import Home from "./home/Home";
 
 export default class AppHost extends AtomXFMasterDetailPage {
@@ -27,6 +28,12 @@ export default class AppHost extends AtomXFMasterDetailPage {
                 title="Demo 1">
                 <XF.MasterDetailPage.master>
                     <XF.ContentPage title="Home">
+                        <XF.ContentPage.iconImageSource>
+                            <XF.UriImageSource
+                                uri={logo}
+                                />
+                        </XF.ContentPage.iconImageSource>
+
                         <XF.ListView
                             cachingStrategy="RecycleElement"
                             isGroupingEnabled={true}
