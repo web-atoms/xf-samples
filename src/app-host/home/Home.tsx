@@ -1,11 +1,11 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import MenuItem from "../../service/menu-service/MenuItem";
 import HomeViewModel from "./HomeViewModel";
-import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 
 const BindMenu = Bind.forData<MenuItem>();
 
@@ -24,6 +24,7 @@ export default class Home extends AtomXFContentPage {
                 <XF.ToolbarItem command={Bind.event(() => this.viewModel.scan())}>
                     <XF.ToolbarItem.iconImageSource>
                         <XF.FontImageSource
+                            size={25}
                             fontFamily={FontAwesomeSolid}
                             glyph={FontAwesomeSolid.qrcode}
                             />

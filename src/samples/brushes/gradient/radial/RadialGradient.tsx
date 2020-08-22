@@ -1,3 +1,4 @@
+import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
@@ -20,7 +21,7 @@ export default class RadialGradient extends AtomXFContentPage {
                                 color="Red"
                                 offset={0.1}/>
                             <XF.GradientStop
-                                color="DarkBlue"
+                                color={Colors.darkOrange}
                                 offset={1.0}/>
                         </XF.RadialGradientBrush>
                     </XF.Frame.background>

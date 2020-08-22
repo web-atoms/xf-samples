@@ -1,7 +1,6 @@
 import logo from "@web-atoms/@web-atoms/xf-samples/src/images/web-atoms.png";
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
-import FontAwesomeRegular from "@web-atoms/font-awesome/dist/FontAwesomeRegular";
 import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import X from "@web-atoms/xf-controls/dist/clr/X";
@@ -9,6 +8,7 @@ import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
 import AppHostViewModel from "./AppHostViewModel";
 import Home from "./home/Home";
+import Colors from "@web-atoms/core/dist/core/Colors";
 
 export default class AppHost extends AtomXFMasterDetailPage {
 
@@ -29,8 +29,11 @@ export default class AppHost extends AtomXFMasterDetailPage {
                 <XF.MasterDetailPage.master>
                     <XF.ContentPage title="Home">
                         <XF.ContentPage.iconImageSource>
-                            <XF.UriImageSource
-                                uri={logo}
+                            <XF.FontImageSource
+                                size={25}
+                                color={Colors.darkOrange}
+                                fontFamily={FontAwesomeSolid}
+                                glyph={FontAwesomeSolid.home}
                                 />
                         </XF.ContentPage.iconImageSource>
 
