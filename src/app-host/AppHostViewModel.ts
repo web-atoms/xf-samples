@@ -31,6 +31,7 @@ import addToolbarItem from "../samples/toolbar-item/ToolbarItemSample";
 import addWebViewSample from "../samples/web-view/WebViewSample";
 import MenuService from "../service/menu-service/MenuService";
 import Home from "./home/Home";
+import addBrushSamples from "../samples/brushes/addBrushSamples";
 
 @DISingleton({ globalVar: "bridge.navigationService"})
 class CLRNavigationService {
@@ -75,6 +76,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addFormSamples(this.menuService);
         addDatabaseSamples(this.menuService);
         addCalendarSamples(this.menuService);
+        addBrushSamples(this.menuService);
         addSingleContentSample(this.menuService);
         addLayoutSample(this.menuService);
         addListSamples(this.menuService);
