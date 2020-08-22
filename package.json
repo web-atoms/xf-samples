@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/xf-samples",
-  "version": "1.1.26",
+  "version": "1.1.27",
   "description": "Xamarin.Forms controls for web atoms",
   "main": "index.js",
   "scripts": {
