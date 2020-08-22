@@ -39,8 +39,9 @@ export default class SeatsPage extends AtomXFContentPage {
             <XF.StackLayout HorizontalOptions="FillAndExpand" {...XF.Grid.row(1)} Spacing="30">
                 <XF.Path Stroke="#00b7fc" Aspect="Fill" StrokeThickness="5" HeightRequest="30"
                   Data="M0,0S74.587-33.916,148.078-33.916,293.962,0,293.962,0"/>
-                <skia:SKCanvasView x:Name="canvasView" HeightRequest="250" WidthRequest="350" HorizontalOptions="Center" 
-                               PaintSurface="SKCanvasView_PaintSurface"/>
+                {/* <skia.SKCanvasView Name="canvasView"
+                    HeightRequest="250" WidthRequest="350" HorizontalOptions="Center" 
+                               PaintSurface="SKCanvasView_PaintSurface"/> */}
                 <XF.BoxView BackgroundColor="White" Opacity="0.2" HeightRequest="1" VerticalOptions="Center"/>
                 <XF.StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
                     <XF.StackLayout Orientation="Horizontal">
