@@ -15,11 +15,12 @@ export default class ComboBoxSample extends AtomXFContentPage {
             <XF.StackLayout orientation="Vertical">
                 <AtomXFComboBox
                     showSearch={true}
-                    items={Bind.oneWay(() => this.viewModel.genderList)}
-                    value={Bind.twoWays(() => this.viewModel.gender)}
+                    searchText={Bind.twoWays(() => this.viewModel.search)}
+                    items={Bind.oneWay(() => this.viewModel.countries)}
+                    value={Bind.twoWays(() => this.viewModel.country)}
                     />
                 <XF.Label
-                    text={Bind.oneWay(() => this.viewModel.gender)}
+                    text={Bind.oneWay(() => this.viewModel.country)}
                     />
             </XF.StackLayout>
         </XF.ContentPage>);
