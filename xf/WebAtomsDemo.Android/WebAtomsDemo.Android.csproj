@@ -60,19 +60,19 @@
       <Version>4.3.2</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Core">
-      <Version>1.4.115</Version>
+      <Version>1.4.116</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Sqlite">
-      <Version>1.4.115</Version>
+      <Version>1.4.116</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Xamarin.Forms">
-      <Version>1.4.115</Version>
+      <Version>1.4.116</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.V8">
-      <Version>1.4.115</Version>
+      <Version>1.4.116</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
