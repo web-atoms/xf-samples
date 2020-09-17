@@ -1652,6 +1652,7 @@ namespace WebAtomsDemo.Droid
 			global::WebAtoms.XF.Resource.String.mr_system_route_name = global::WebAtomsDemo.Droid.Resource.String.mr_system_route_name;
 			global::WebAtoms.XF.Resource.String.mr_user_route_category_name = global::WebAtomsDemo.Droid.Resource.String.mr_user_route_category_name;
 			global::WebAtoms.XF.Resource.String.mtrl_chip_close_icon_content_description = global::WebAtomsDemo.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::WebAtoms.XF.Resource.String.overflow_tab_title = global::WebAtomsDemo.Droid.Resource.String.overflow_tab_title;
 			global::WebAtoms.XF.Resource.String.password_toggle_content_description = global::WebAtomsDemo.Droid.Resource.String.password_toggle_content_description;
 			global::WebAtoms.XF.Resource.String.path_password_eye = global::WebAtomsDemo.Droid.Resource.String.path_password_eye;
 			global::WebAtoms.XF.Resource.String.path_password_eye_mask_strike_through = global::WebAtomsDemo.Droid.Resource.String.path_password_eye_mask_strike_through;
