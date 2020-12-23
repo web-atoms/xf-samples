@@ -25,5 +25,14 @@
     "@web-atoms/storage": "^2.0.1",
     "@web-atoms/xf-controls": "^2.0.4",
     "reflect-metadata": "^0.1.13"
-  }
+  },
+  "bundledDependencies": [
+    "@web-atoms/core",
+    "@web-atoms/date-time",
+    "@web-atoms/font-awesome",
+    "@web-atoms/module-loader",
+    "@web-atoms/xf-controls",
+    "@web-atoms/storage",
+    "reflect-metadata"
+  ]
 }
