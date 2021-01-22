@@ -21,9 +21,9 @@
     "@web-atoms/core": "^2.0.3",
     "@web-atoms/date-time": "^1.0.26",
     "@web-atoms/font-awesome": "^1.0.22",
-    "@web-atoms/module-loader": "^2.0.6",
+    "@web-atoms/module-loader": "^2.0.7",
     "@web-atoms/storage": "^2.0.2",
     "@web-atoms/xf-controls": "^2.0.4",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.12"
   }
 }
