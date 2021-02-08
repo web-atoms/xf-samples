@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/xf-samples",
-  "version": "2.0.7",
+  "version": "2.0.10",
   "description": "Xamarin.Forms controls for web atoms",
   "main": "index.js",
   "scripts": {
@@ -18,21 +18,12 @@
   },
   "homepage": "https://github.com/web-atoms/xf-samples#readme",
   "dependencies": {
-    "@web-atoms/core": "^2.0.3",
+    "@web-atoms/core": "^2.0.7",
     "@web-atoms/date-time": "^1.0.26",
     "@web-atoms/font-awesome": "^1.0.22",
-    "@web-atoms/module-loader": "^2.0.6",
+    "@web-atoms/module-loader": "^2.0.8",
     "@web-atoms/storage": "^2.0.2",
-    "@web-atoms/xf-controls": "^2.0.4",
-    "reflect-metadata": "^0.1.13"
-  },
-  "bundledDependencies": [
-    "@web-atoms/core",
-    "@web-atoms/date-time",
-    "@web-atoms/font-awesome",
-    "@web-atoms/module-loader",
-    "@web-atoms/xf-controls",
-    "@web-atoms/storage",
-    "reflect-metadata"
-  ]
+    "@web-atoms/xf-controls": "^2.0.8",
+    "reflect-metadata": "^0.1.12"
+  }
 }

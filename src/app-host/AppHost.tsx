@@ -1,16 +1,16 @@
 import logo from "@web-atoms/@web-atoms/xf-samples/src/images/web-atoms.png";
 import Bind from "@web-atoms/core/dist/core/Bind";
+import Colors from "@web-atoms/core/dist/core/Colors";
 import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import X from "@web-atoms/xf-controls/dist/clr/X";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
-import AtomXFMasterDetailPage from "@web-atoms/xf-controls/dist/pages/AtomXFMasterDetailPage";
+import AtomXFFlyoutPage from "@web-atoms/xf-controls/dist/pages/AtomXFFlyoutPage";
 import AppHostViewModel from "./AppHostViewModel";
 import Home from "./home/Home";
-import Colors from "@web-atoms/core/dist/core/Colors";
 
-export default class AppHost extends AtomXFMasterDetailPage {
+export default class AppHost extends AtomXFFlyoutPage {
 
     public viewModel: AppHostViewModel;
 
@@ -23,10 +23,10 @@ export default class AppHost extends AtomXFMasterDetailPage {
         console.log(`Render start`);
 
         this.render(
-            <XF.MasterDetailPage
+            <XF.FlyoutPage
                 isPresented={Bind.twoWays(() => this.viewModel.menuService.isOpen)}
                 title="Demo 1">
-                <XF.MasterDetailPage.master>
+                <XF.FlyoutPage.flyout>
                     <XF.ContentPage title="Home">
                         <XF.ContentPage.iconImageSource>
                             <XF.FontImageSource
@@ -72,15 +72,15 @@ export default class AppHost extends AtomXFMasterDetailPage {
                             </XF.ListView.itemTemplate>
                         </XF.ListView>
                     </XF.ContentPage>
-                </XF.MasterDetailPage.master>
-                <XF.MasterDetailPage.detail>
+                </XF.FlyoutPage.flyout>
+                <XF.FlyoutPage.detail>
                     <XF.NavigationPage>
                         <X.Arguments>
                             <Home/>
                         </X.Arguments>
                     </XF.NavigationPage>
-                </XF.MasterDetailPage.detail>
-            </XF.MasterDetailPage>
+                </XF.FlyoutPage.detail>
+            </XF.FlyoutPage>
         );
     }
 }
