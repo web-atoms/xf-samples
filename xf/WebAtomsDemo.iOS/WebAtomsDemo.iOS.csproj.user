@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>iPhone 11 iOS 13.3</SelectedDevice>
-    <DefaultDevice>iPhone 11 iOS 13.3</DefaultDevice>
+    <SelectedDevice>iPhone 12 Pro iOS 14.4</SelectedDevice>
+    <DefaultDevice>iPhone 12 Pro iOS 14.4</DefaultDevice>
+    <DeveloperId />
+    <DevelopmentTeamId />
   </PropertyGroup>
 </Project>
