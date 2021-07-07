@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/xf-samples",
-  "version": "2.0.12",
+  "version": "2.0.15",
   "description": "Xamarin.Forms controls for web atoms",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "@web-atoms/font-awesome": "^1.0.22",
     "@web-atoms/module-loader": "^2.0.27",
     "@web-atoms/storage": "^2.0.2",
-    "@web-atoms/xf-controls": "^2.0.10",
+    "@web-atoms/xf-controls": "^2.0.16",
     "reflect-metadata": "^0.1.12"
   }
 }
