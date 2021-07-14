@@ -8,10 +8,9 @@ export default class SolidBrush extends AtomXFContentPage {
         this.render(<XF.ContentPage>
             <XF.Grid padding={20}>
                 <XF.Frame
-                    borderColor="LightGray"
                     hasShadow="True"
                     cornerRadius="12"
-                    background="DarkBlue">
+                    backgroundColor={XF.Color.cyan}>
                 </XF.Frame>
             </XF.Grid>
         </XF.ContentPage>);
