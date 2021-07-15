@@ -33,6 +33,7 @@ export default class SimpleForm extends AtomXFContentPage {
                     label="Username:"
                     isRequired={true}
                     error={Bind.oneWay(() => this.viewModel.errorUsername)}
+                    help="Username should only be alpha/numeric and cannot contain space or any special character"
                     labelColor="#2e2e2e">
                     <XF.Entry
                         text={Bind.twoWays(() => this.viewModel.model.username)}
