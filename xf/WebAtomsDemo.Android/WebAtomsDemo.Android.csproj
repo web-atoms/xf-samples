@@ -15,7 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -62,16 +62,16 @@
       <Version>4.3.2</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Core">
-      <Version>1.5.152</Version>
+      <Version>1.5.164</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Sqlite">
-      <Version>1.5.152</Version>
+      <Version>1.5.164</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Xamarin.Forms">
-      <Version>1.5.152</Version>
+      <Version>1.5.164</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.V8">
-      <Version>1.5.152</Version>
+      <Version>1.5.163</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Core">
       <Version>1.5.0</Version>
