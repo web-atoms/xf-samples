@@ -19,12 +19,12 @@
   "homepage": "https://github.com/web-atoms/xf-samples#readme",
   "bundledDependencies": true,
   "dependencies": {
-    "@web-atoms/core": "^2.0.11",
+    "@web-atoms/core": "^2.0.12",
     "@web-atoms/date-time": "^1.0.26",
     "@web-atoms/font-awesome": "^1.0.24",
     "@web-atoms/module-loader": "^2.0.27",
     "@web-atoms/storage": "^2.0.2",
-    "@web-atoms/xf-controls": "^2.0.26",
+    "@web-atoms/xf-controls": "^2.0.27",
     "reflect-metadata": "^0.1.12"
   }
 }

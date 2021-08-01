@@ -21,7 +21,7 @@ export default class ToggleButtonBar extends AtomXFContentPage {
                         value={Bind.twoWays(() => this.viewModel.gender)}
                         />
                     <XF.Label
-                        fontSize={"Large" as any}
+                        fontSize={20}
                         text={Bind.oneWay(() => `Selected gender is ${this.viewModel.gender}`)}
                         />
                 </XF.StackLayout>
