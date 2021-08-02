@@ -38,12 +38,6 @@
 	<string>For selecting pictures</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1</string>
-	<key>UIAppFonts</key>
-	<array>
-	  <string>Font Awesome 5 Brands-Regular-400.otf</string>
-	  <string>Font Awesome 5 Free-Regular-400.otf</string>
-	  <string>Font Awesome 5 Free-Solid-900.otf</string>
-	</array>
   <key>NSAppTransportSecurity</key>
   <dict>
     <key>NSAllowsArbitraryLoads</key>
