@@ -107,3 +107,5 @@ xf/WebAtomsDemo.Android/bin/
 xf/WebAtomsDemo.iOS/obj/
 xf/WebAtomsDemo.iOS/bin/
 .vs/
+xf/WebAtomsDemo/obj/
+xf/WebAtomsDemo/bin/

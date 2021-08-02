@@ -62,13 +62,13 @@
       <Version>4.3.2</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Core">
-      <Version>1.5.164</Version>
+      <Version>1.6.187</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Sqlite">
-      <Version>1.5.164</Version>
+      <Version>1.6.187</Version>
     </PackageReference>
     <PackageReference Include="WebAtoms.Xamarin.Forms">
-      <Version>1.5.164</Version>
+      <Version>1.6.187</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.V8">
       <Version>1.5.163</Version>
@@ -85,10 +85,10 @@
     <PackageReference Include="Xamarin.AndroidX.RecyclerView">
       <Version>1.2.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
     <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.7" />
     <PackageReference Include="Xamarin.AndroidX.MediaRouter" Version="1.2.4" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -99,9 +99,6 @@
     <None Include="..\..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
-    <AndroidAsset Include="Assets\Font Awesome 5 Brands-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 5 Free-Regular-400.otf" />
-    <AndroidAsset Include="Assets\Font Awesome 5 Free-Solid-900.otf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -136,7 +133,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-  <Import Project="..\WebAtomsDemo\WebAtomsDemo.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\WebAtomsDemo\WebAtomsDemo.csproj">
+      <Project>{6aac2e41-0f8e-4238-aaef-20d769711f54}</Project>
+      <Name>WebAtomsDemo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

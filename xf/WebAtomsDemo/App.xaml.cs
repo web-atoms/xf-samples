@@ -4,6 +4,9 @@ using WebAtoms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Font Awesome 5 Brands-Regular-400.otf", Alias = "FontAwesomeBrands")]
+[assembly: ExportFont("Font Awesome 5 Free-Regular-400.otf", Alias = "FontAwesomeRegular")]
+[assembly: ExportFont("Font Awesome 5 Free-Solid-900.otf", Alias = "FontAwesomeSolid")]
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace WebAtomsDemo
 {
@@ -36,9 +39,9 @@ namespace WebAtomsDemo
 			string root = "";
 
 			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@2.0.21/";
+			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@2.0.22/";
 			// enable following for local testing
-			// root = "http://192.168.0.6:8080";
+			// root = "http://192.168.0.111:8080";
 
 			var jsView = "@web-atoms/xf-samples/dist/Index";
 			var packedView = "dist/Index.pack.js";
