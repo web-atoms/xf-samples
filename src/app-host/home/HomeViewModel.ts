@@ -49,8 +49,8 @@ export default class HomeViewModel extends AtomViewModel {
 
     @Action()
     public async scan() {
-        if (bridge.qRCodeService) {
-            await bridge.qRCodeService.scanAsync();
+        if (bridge.qrcodeService) {
+            await bridge.qrcodeService.scanAsync();
         } else {
             throw new Error("Please update your app");
         }
