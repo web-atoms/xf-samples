@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+[assembly: Xamarin.Forms.Dependency(typeof(Xamarin.Android.V8.JSContextFactory))]
+[assembly: Xamarin.Forms.Dependency(typeof(WebAtoms.AppOkHttpClient))]
+
 namespace WebAtomsDemo.Droid
 {
     [Activity(Label = "WebAtomsDemo", Icon = "@mipmap/icon", Theme = "@style/WebAtomsAppTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

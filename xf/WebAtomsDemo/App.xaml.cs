@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using WebAtoms;
 using Xamarin.Forms;
@@ -7,11 +6,13 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("Font Awesome 5 Brands-Regular-400.otf", Alias = "FontAwesomeBrands")]
 [assembly: ExportFont("Font Awesome 5 Free-Regular-400.otf", Alias = "FontAwesomeRegular")]
 [assembly: ExportFont("Font Awesome 5 Free-Solid-900.otf", Alias = "FontAwesomeSolid")]
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace WebAtomsDemo
 {
 	public partial class App : Application
 	{
+		private ConnectionSettings settings;
+
 		public App ()
 		{
 			InitializeComponent();
@@ -24,40 +25,31 @@ namespace WebAtomsDemo
 			// MainPage = new MainPage();
 
 			MainPage = new NavigationPage( new ContentPage {
-                Title = "Loading..",
-                Content = new Label {
-                    Text = "Loading..."
-                }
-            });
+				Title = "Loading..",
+				Content = new Label {
+					Text = "Loading..."
+				}
+			});
 
-			AtomDevice.Instance.BeginInvokeOnMainThread(InitAsync);
+			AtomDevice.Instance.BeginInvokeOnMainThread(async () => {
+				this.settings = await ConnectionSettings.GetSettingsAsync();
+				await InitAsync();
+			});
 		}
 
 		private async Task InitAsync()
 		{
-			string packageName = "";
-			string root = "";
-
-			packageName = "@web-atoms/xf-samples";
-			root = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@2.0.22/";
-			// enable following for local testing
-			// root = "http://192.168.0.111:8080";
-
-			var jsView = "@web-atoms/xf-samples/dist/Index";
-			var packedView = "dist/Index.pack.js";
-
-
 			var bridge = new AppBridge();
 			await bridge.InitAsync(
-				root, 
-				packageName, 
-				packedView, 
+				settings.Root, 
+				settings.Package, 
+				settings.PackedScript, 
 				// mock views 
-				designMode: true,
+				settings.DesignMode,
 				// enable debugging in Chrome for Android
 				// and auto refresh changes
-				debug: false);
-			var view = await bridge.CreateView(jsView);
+				settings.Debug);
+			var view = await bridge.CreateView(settings.View);
 
 			Current.MainPage = view as Page;
 
