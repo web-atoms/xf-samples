@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:wa="clr-namespace:WebAtoms.Controls;assembly=WebAtoms.XF"
+             x:Class="WebAtomsDemo.SettingsPage">
+    <wa:AtomForm Padding="20">
+        <wa:AtomField>
+            <Label
+                Text="Web Atoms Settings"
+                />
+        </wa:AtomField>
+        <wa:AtomField
+            Label="User Interface Url"
+            Description="Set this to url of web atoms dev server if you are using local instance">
+            <Entry Text="{Binding Root}"/>
+        </wa:AtomField>
+        <wa:AtomField Label="Backend Url">
+            <Entry Text="{Binding EndPointUrl}"/>
+        </wa:AtomField>
+        <wa:AtomField Label="View">
+            <Entry Text="{Binding View}"/>
+        </wa:AtomField>
+        <wa:AtomField Label="Packed Script Path">
+            <Entry Text="{Binding PackedScript}"/>
+        </wa:AtomField>
+        <!--<wa:AtomField
+            Label="Fetch New Version"
+            Help="In Live server, the app will fetch current address, set this to false for localhost testing">
+            <Switch IsToggled="{Binding FetchNewVersion}"/>
+        </wa:AtomField>-->
+        <wa:AtomField
+            Label="Design Mode">
+            <Switch IsToggled="{Binding DesignMode}"/>
+        </wa:AtomField>
+        <wa:AtomField
+            Label="Enable Chrome Debugger (Android Only)"
+            Description="Set to true only with dev-server">
+            <Switch IsToggled="{Binding Debug}"/>
+        </wa:AtomField>
+        <wa:AtomField>
+            <Grid>
+                <Button
+                    x:Name="StartButton"
+                    Text="Start"
+                    Clicked="StartButton_Clicked"
+                    />
+                <ActivityIndicator
+                    x:Name="Activity"
+                    IsVisible="false"
+                    />
+            </Grid>
+        </wa:AtomField>
+    </wa:AtomForm>
+</ContentPage>

@@ -4,6 +4,11 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using WebAtoms;
+using WebAtoms.XF.Core;
+
+[assembly: Xamarin.Forms.Dependency(typeof(WJSContextFactory))]
+[assembly: Xamarin.Forms.Dependency(typeof(AtomWebClient))]
 
 namespace WebAtomsDemo.iOS
 {
