@@ -13,7 +13,13 @@ export default class AttachedPopup extends AtomXFContentPage {
     public create() {
         this.hasFocus = false;
         this.render(<XF.ContentPage>
+            <XF.ScrollView>
             <XF.StackLayout>
+
+                <XF.BoxView
+                    widthRequest={100}
+                    heightRequest={800}
+                    />
 
                 <XF.Entry
                     { ... WA.AtomPopup.displayPopup(Bind.oneWay(() => this.hasFocus))}
@@ -21,19 +27,23 @@ export default class AttachedPopup extends AtomXFContentPage {
                     >
                         <WA.AtomPopup.popupTemplate>
                             <XF.DataTemplate>
-                                <XF.Grid backgroundColor={XF.Color.lightYellow}>
-                                    <XF.Label text="I am in popup">
-                                        <XF.Label.gestureRecognizers>
-                                            <XF.TapGestureRecognizer
-                                                command={Bind.event(() => this.hasFocus = false)}
-                                                />
-                                        </XF.Label.gestureRecognizers>
-                                    </XF.Label>
-                                </XF.Grid>
+                                <XF.Label text="I am in popup">
+                                    <XF.Label.gestureRecognizers>
+                                        <XF.TapGestureRecognizer
+                                            command={Bind.event(() => this.hasFocus = false)}
+                                            />
+                                    </XF.Label.gestureRecognizers>
+                                </XF.Label>
                             </XF.DataTemplate>
                         </WA.AtomPopup.popupTemplate>
                     </XF.Entry>
+
+                <XF.BoxView
+                    widthRequest={100}
+                    heightRequest={100}
+                    />
             </XF.StackLayout>
+            </XF.ScrollView>
         </XF.ContentPage>);
     }
 }
