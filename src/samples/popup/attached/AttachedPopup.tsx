@@ -13,14 +13,14 @@ export default class AttachedPopup extends AtomXFContentPage {
     public create() {
         this.hasFocus = false;
         this.render(<XF.ContentPage>
-            <XF.ScrollView>
-            <XF.StackLayout>
 
-                <XF.BoxView
-                    widthRequest={100}
-                    heightRequest={800}
-                    />
+            <WA.AtomForm>
 
+                <WA.AtomField label="Demo">
+                    <XF.Label text="Demo"/>
+                </WA.AtomField>
+
+                <WA.AtomField label="Popup Demo">
                 <XF.Entry
                     { ... WA.AtomPopup.displayPopup(Bind.oneWay(() => this.hasFocus))}
                     eventFocused={Bind.event(() => this.hasFocus = true)}
@@ -38,12 +38,10 @@ export default class AttachedPopup extends AtomXFContentPage {
                         </WA.AtomPopup.popupTemplate>
                     </XF.Entry>
 
-                <XF.BoxView
-                    widthRequest={100}
-                    heightRequest={100}
-                    />
-            </XF.StackLayout>
-            </XF.ScrollView>
+                </WA.AtomField>
+
+            </WA.AtomForm>
+
         </XF.ContentPage>);
     }
 }
