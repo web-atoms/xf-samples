@@ -23,17 +23,12 @@ export default class AttachedPopup extends AtomXFContentPage {
                 <WA.AtomField label="Popup Demo">
                 <XF.Entry
                     { ... WA.AtomPopup.displayPopup(Bind.oneWay(() => this.hasFocus))}
+                    { ... WA.AtomPopup.popupCloseCommand(Bind.event(() => this.hasFocus = false))}
                     eventFocused={Bind.event(() => this.hasFocus = true)}
                     >
                         <WA.AtomPopup.popupTemplate>
                             <XF.DataTemplate>
-                                <XF.Label text="I am in popup">
-                                    <XF.Label.gestureRecognizers>
-                                        <XF.TapGestureRecognizer
-                                            command={Bind.event(() => this.hasFocus = false)}
-                                            />
-                                    </XF.Label.gestureRecognizers>
-                                </XF.Label>
+                                <XF.Label text="I am in popup"/>
                             </XF.DataTemplate>
                         </WA.AtomPopup.popupTemplate>
                     </XF.Entry>
