@@ -15,15 +15,18 @@ export default class Gender extends AtomXFContentPage {
                             itemsSource={["Male", "Female"]}
                             />
                     </WA.AtomField>
+                    <WA.AtomField backgroundColor={XF.Color.lightGray}>
+                        <WA.AtomExpander background={XF.SolidColorBrush.white}>
+                            <XF.Label text="Heading" />
+                            <WA.AtomExpander.detail>
+                                <XF.Label text="Details"/>
+                            </WA.AtomExpander.detail>
+                        </WA.AtomExpander>
+                    </WA.AtomField>
+                    <WA.AtomField>
+                        <XF.Label text="3rd Field"/>
+                    </WA.AtomField>
                 </WA.AtomForm>
-                <WA.AtomField>
-                    <WA.AtomExpander>
-                        <XF.Label text="Heading" />
-                        <WA.AtomExpander.detail>
-                            <XF.Label text="Details"/>
-                        </WA.AtomExpander.detail>
-                    </WA.AtomExpander>
-                </WA.AtomField>
             </XF.Grid>
         </XF.ContentPage>);
     }
