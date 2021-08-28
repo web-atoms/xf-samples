@@ -4,6 +4,7 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import { AtomXFControl } from "@web-atoms/core/dist/xf/controls/AtomXFControl";
 import DateTime from "@web-atoms/date-time/dist/DateTime";
 import AtomXFCalendar from "@web-atoms/xf-controls/dist/calendar/AtomXFCalendar";
+import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 
@@ -23,7 +24,7 @@ export default class Calendar extends AtomXFContentPage {
                     <XF.RowDefinition height="Auto"/>
                     <XF.RowDefinition />
                 </XF.Grid.rowDefinitions>
-                <AtomXFCalendar
+                <WA.AtomCalendar
                     selectedDate={Bind.twoWays(() => this.date)}
                     />
                 <XF.Label
