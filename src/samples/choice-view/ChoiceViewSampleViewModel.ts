@@ -1,3 +1,4 @@
+import { CancelToken } from "@web-atoms/core/dist/core/types";
 import { AtomViewModel } from "@web-atoms/core/dist/view-model/AtomViewModel";
 import Load from "@web-atoms/core/dist/view-model/Load";
 import countries from "../../model/countries";
@@ -11,7 +12,10 @@ export default class ChoiceViewSampleViewModel extends AtomViewModel {
     public selectedCountry = null;
 
     @Load({ init: true, watch: true })
-    public loadStart() {
+    public async loadStart(ct: CancelToken) {
+        if (ct.cancelled) {
+            return;
+        }
         const s = this.search;
         if (s) {
             this.countries = countries.filter((c) => c.label.indexOf(s) !== -1);
