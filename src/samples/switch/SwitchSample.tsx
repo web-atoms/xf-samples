@@ -14,11 +14,11 @@ export default class SwitchSample extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title = "Switch Sample">
                 <XF.StackLayout>
-                    <XF.Switch isToggled = {Bind.twoWays(() => this.viewModel.switchStatus)}/>
-                    <XF.Label text = {Bind.twoWays(() => this.viewModel.status ? "On" : "Off")}/>
+                    <XF.Switch isToggled = {Bind.twoWays(() => this.viewModel.status)}/>
+                    <XF.Label text = {Bind.oneWay(() => this.viewModel.status ? "On" : "Off")}/>
                     <XF.Switch onColor = "orange" thumbColor = "green"
-                        isToggled = {Bind.event(() => this.viewModel.switchStatus2())}/>
-                    <XF.Label text = {Bind.twoWays(() => this.viewModel.status2 ? "On" : "Off")}/>
+                        isToggled = {Bind.twoWays(() => this.viewModel.status2)}/>
+                    <XF.Label text = {Bind.oneWay(() => this.viewModel.status2 ? "On" : "Off")}/>
                 </XF.StackLayout>
             </XF.ContentPage>
         );

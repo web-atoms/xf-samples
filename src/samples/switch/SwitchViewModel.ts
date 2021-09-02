@@ -6,15 +6,4 @@ export default class SwitchViewModel extends AtomViewModel {
 
     public status2: boolean = false;
 
-    public async init(): Promise<any> {
-        super.init();
-    }
-
-    public switchStatus() {
-        this.status = !this.status;
-    }
-
-    public switchStatus2() {
-        this.status2 = !this.status2;
-    }
 }

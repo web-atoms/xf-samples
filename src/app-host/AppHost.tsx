@@ -5,7 +5,7 @@ import XNode from "@web-atoms/core/dist/core/XNode";
 import FontAwesomeSolid from "@web-atoms/font-awesome/dist/FontAwesomeSolid";
 import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import X from "@web-atoms/xf-controls/dist/clr/X";
-import XF from "@web-atoms/xf-controls/dist/clr/XF";
+import XF, { Xamarin } from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFFlyoutPage from "@web-atoms/xf-controls/dist/pages/AtomXFFlyoutPage";
 import AppHostViewModel from "./AppHostViewModel";
 import Home from "./home/Home";
@@ -41,7 +41,7 @@ export default class AppHost extends AtomXFFlyoutPage {
                             cachingStrategy="RecycleElement"
                             isGroupingEnabled={true}
                             rowHeight={50}
-                            margin = {0}
+                            margin="0,0,0,50"
                             { ... WA.GroupBy.itemsSource(Bind.oneWay(() => this.viewModel.menuService.groupedMenus)) }>
                             <XF.ListView.groupHeaderTemplate>
                                 <XF.DataTemplate>
