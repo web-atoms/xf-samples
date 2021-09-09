@@ -8,7 +8,7 @@ namespace WebAtomsDemo
     public class ConnectionSettings
     {
 
-        public string Root { get; set; } = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@2.0.24/";
+        public string Root { get; set; } = "https://cdn.jsdelivr.net/npm/@web-atoms/xf-samples@2.0.31/";
         public string EndPointUrl { get; set; } = "https://test.yourapi.com";
 
         public string Package { get; set; } = "@web-atoms/xf-samples";
