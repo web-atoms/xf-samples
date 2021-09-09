@@ -109,3 +109,5 @@ xf/WebAtomsDemo.iOS/bin/
 .vs/
 xf/WebAtomsDemo/obj/
 xf/WebAtomsDemo/bin/
+xf/WebAtomsDemo.UWP/bin/
+xf/WebAtomsDemo.UWP/obj/
