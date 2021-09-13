@@ -61,6 +61,22 @@ export default class ChipsSample extends AtomXFContentPage {
                             </XF.BindableLayout.itemTemplate>
                         </XF.StackLayout>
                     </WA.AtomField>
+
+                    <WA.AtomField
+                        label="Select Mode - Strings - Converted to Object"
+                        description="Press enter/Done to add">
+                        <WA.AtomChips
+                            selectedItems={[]}
+                            textToModel={(s) => ({ label: s}) }
+                            >
+                            <WA.AtomChips.itemTemplate>
+                                <XF.DataTemplate>
+                                    <XF.Label text={Bind.oneWay((x) => x.data.label)}/>
+                                </XF.DataTemplate>
+                            </WA.AtomChips.itemTemplate>
+                        </WA.AtomChips>
+                    </WA.AtomField>
+
                 </WA.AtomForm>
             </XF.Grid>
         </XF.ContentPage>);
