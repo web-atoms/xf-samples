@@ -25,6 +25,7 @@ import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
 import addPopupSample from "../samples/popup/PopupSample";
 import addRefreshSample from "../samples/refresh-view/RefreshViewSample";
+import addSuggestions from "../samples/suggestions/addSuggestions";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
 import addTabbedPage from "../samples/tabbed-page/TabbedPageSample";
 import addTableView from "../samples/table-view/TableViewSamplePage";
@@ -80,6 +81,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addChipsSamples(this.menuService);
         addChoiceSamples(this.menuService);
         addCalendarSamples(this.menuService);
+        addSuggestions(this.menuService);
         addBrushSamples(this.menuService);
         addSingleContentSample(this.menuService);
         addLayoutSample(this.menuService);
