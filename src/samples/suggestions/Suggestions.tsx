@@ -21,7 +21,7 @@ export default class Suggestions extends AtomXFContentPage {
                                     </WA.AtomSuggestions.prompt> */}
                                 <WA.AtomSuggestions.itemTemplate>
                                     <XF.DataTemplate>
-                                        <XF.Label text={Bind.oneTime((x) => x.data.label)}/>
+                                        <XF.Label text={Bind.oneWay((x) => x.data.label)}/>
                                     </XF.DataTemplate>
                                 </WA.AtomSuggestions.itemTemplate>
                             </WA.AtomSuggestions>
