@@ -13,6 +13,7 @@ import addBrushSamples from "../samples/brushes/addBrushSamples";
 import addCalendarSamples from "../samples/calendar/calendarSamples";
 import addCarouselPage from "../samples/carousel/carousel-page/CarouselPageSample";
 import addCarousel from "../samples/carousel/carousel-view/CarouselSample";
+import addCheckBoxList from "../samples/check-box-list/addCheckBoxList";
 import addChipsSamples from "../samples/chips/addChipsSamples";
 import addChoiceSamples from "../samples/choice-view/addChoiceSamples";
 import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
@@ -80,6 +81,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addDatabaseSamples(this.menuService);
         addChipsSamples(this.menuService);
         addChoiceSamples(this.menuService);
+        addCheckBoxList(this.menuService);
         addCalendarSamples(this.menuService);
         addSuggestions(this.menuService);
         addBrushSamples(this.menuService);
