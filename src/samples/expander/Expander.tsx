@@ -28,8 +28,10 @@ export default class Expander extends AtomXFContentPage {
                         padding={15}
                         />
                         <WA.AtomExpander
-                            padding={5}
-                            backgroundColor={XF.Color.white}
+                            // padding={5}
+                            // backgroundColor={XF.Color.yellow}
+                            headerBackground={XF.SolidColorBrush.yellow}
+                            detailBackground={XF.SolidColorBrush.lightYellow}
                             horizontalOptions="FillAndExpand"
                             >
                             <WA.AtomExpander.icon>
@@ -73,6 +75,7 @@ export default class Expander extends AtomXFContentPage {
                         </WA.AtomExpander>
                         <WA.AtomExpander
                             padding={5}
+                            backgroundColor={XF.Color.white}
                             horizontalOptions="FillAndExpand"
                             >
                             <WA.AtomExpander.icon>
@@ -94,6 +97,7 @@ export default class Expander extends AtomXFContentPage {
                         </WA.AtomExpander>
                         <WA.AtomExpander
                             padding={5}
+                            backgroundColor={XF.Color.white}
                             horizontalOptions="FillAndExpand"
                             >
                             <WA.AtomExpander.icon>
@@ -115,6 +119,7 @@ export default class Expander extends AtomXFContentPage {
                         </WA.AtomExpander>
                         <WA.AtomExpander
                             padding={5}
+                            backgroundColor={XF.Color.white}
                             horizontalOptions="FillAndExpand"
                             >
                             <WA.AtomExpander.icon>
@@ -136,6 +141,7 @@ export default class Expander extends AtomXFContentPage {
                         </WA.AtomExpander>
                         <WA.AtomExpander
                             padding={5}
+                            backgroundColor={XF.Color.white}
                             horizontalOptions="FillAndExpand"
                             >
                             <WA.AtomExpander.icon>
