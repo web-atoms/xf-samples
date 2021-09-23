@@ -18,6 +18,7 @@ import addChipsSamples from "../samples/chips/addChipsSamples";
 import addChoiceSamples from "../samples/choice-view/addChoiceSamples";
 import addCollectionViewSample from "../samples/collection-view/CollectionViewSamplePage";
 import addDatabaseSamples from "../samples/database/addDatabaseSamples";
+import addExpander from "../samples/expander/addExpander";
 import addFormSamples from "../samples/form/FormSamples";
 import addImage from "../samples/image/ImageSample";
 import addLayoutSample from "../samples/layout/multiple-content/LayoutSample";
@@ -83,6 +84,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addChoiceSamples(this.menuService);
         addCheckBoxList(this.menuService);
         addCalendarSamples(this.menuService);
+        addExpander(this.menuService);
         addSuggestions(this.menuService);
         addBrushSamples(this.menuService);
         addSingleContentSample(this.menuService);
