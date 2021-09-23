@@ -11,7 +11,7 @@ const options = [
     "Audio",
     "Audio & Video",
     "Video",
-    "Slatshot",
+    "Slate Shot",
     "Document",
     "Other"
 ];
@@ -44,44 +44,6 @@ export default class CheckBoxListSample extends AtomXFContentPage {
                                     : "...")}
                                 />
                         </WA.AtomField>
-
-                        <XF.StackLayout background={XF.SolidColorBrush.red}>
-                            <XF.Image>
-                                <XF.Image.source>
-                                    <XF.FontImageSource
-                                            fontFamily={FontAwesomeSolid}
-                                            glyph={FontAwesomeSolid.search}
-                                            color={XF.Color.darkOrange}
-                                            />
-                                </XF.Image.source>
-                            </XF.Image>
-                        </XF.StackLayout>
-
-                        <WA.AtomExpander
-                            icon={ Object.assign( new XF.FontImageSource(), {
-                                fontFamily: FontAwesomeSolid,
-                                glyph: FontAwesomeSolid.search,
-                                color: XF.Color.darkOrange
-                            }) }
-                            background={XF.SolidColorBrush.green}>
-                            {/* <WA.AtomExpander.icon>
-                                <XF.FontImageSource
-                                    fontFamily={FontAwesomeSolid}
-                                    glyph={FontAwesomeSolid.search}
-                                    color={XF.Color.darkOrange}
-                                    size={10}
-                                    />
-                            </WA.AtomExpander.icon> */}
-                            <XF.Label
-                                text="Demo"
-                                />
-                            <WA.AtomExpander.detail>
-                                <XF.Label
-                                    text="This is detail"
-                                    />
-                            </WA.AtomExpander.detail>
-                        </WA.AtomExpander>
-
                     </WA.AtomForm>
                 </XF.ScrollView>
             </XF.Grid>

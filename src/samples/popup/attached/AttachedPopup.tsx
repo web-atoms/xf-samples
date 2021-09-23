@@ -54,7 +54,21 @@ export default class AttachedPopup extends AtomXFContentPage {
                                     color: XF.Color.black
                                 })}>
                                 <WA.AtomPopup.popupTemplate>
-                                    <WA.AtomCalendar/>
+                                    <XF.Grid
+                                        widthRequest={300}
+                                        rowDefinitions="*,auto"
+                                        columnDefinitions="*,*">
+                                        <WA.AtomCalendar
+                                            { ... XF.Grid.columnSpan(2)}
+                                            />
+                                        <XF.Label
+                                            { ... XF.Grid.row(1) }
+                                            text="a"/>
+                                        <XF.Label
+                                            { ... XF.Grid.row(1) }
+                                            { ... XF.Grid.column(1) }
+                                            text="b"/>
+                                    </XF.Grid>
                                 </WA.AtomPopup.popupTemplate>
                             </XF.ImageButton>
                         </XF.Grid>
