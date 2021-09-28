@@ -9,7 +9,9 @@ export default class Essentials extends AtomXFContentPage {
     public create() {
         this.render(<XF.ContentPage>
             <XF.Button
-                text="Pick and Display"
+                horizontalOptions="Center"
+                verticalOptions="Center"
+                text="Pick file and Open using Launcher"
                 command={() => this.app.runAsync(() => this.open())}
                 />
         </XF.ContentPage>);
