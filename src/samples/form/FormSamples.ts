@@ -10,11 +10,13 @@ import LabelView from "../label/LabelView";
 import SearchBarView from "../search-bar/SearchBarView";
 import SliderView from "../slider/SliderView";
 import StepperView from "../stepper/StepperView";
+import CustomForm from "./custom/CustomForm";
 import SimpleForm from "./simple/SimpleForm";
 
 export default function addFormSamples(ms: MenuService) {
     const form = ms.addGroup("Form");
     form.addTabLink("Simple Form", SimpleForm);
+    form.addTabLink("Custom", CustomForm);
     form.addTabLink("Label", LabelView);
     form.addTabLink("CheckBox", CheckBoxView);
     form.addTabLink("Entry", EntryView);
