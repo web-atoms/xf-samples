@@ -58,7 +58,9 @@ export default class AppHost extends AtomXFFlyoutPage {
                             <XF.ListView.itemTemplate>
                                 <XF.DataTemplate>
                                     <XF.ViewCell>
-                                        <XF.Label text={Bind.oneWay((x) => x.data.label)}
+                                        <XF.Label
+                                            automationId="menu"
+                                            text={Bind.oneWay((x) => x.data.label)}
                                             padding="10"
                                             verticalOptions={"Center"}>
                                             <XF.Label.gestureRecognizers>

@@ -36,6 +36,7 @@ export default class SimpleForm extends AtomXFContentPage {
                     help="Username should only be alpha/numeric and cannot contain space or any special character"
                     labelColor="#2e2e2e">
                     <XF.Entry
+                        automationId="username"
                         text={Bind.twoWays(() => this.viewModel.model.username)}
                         placeholder="Enter Username"
                         placeholderColor="#aaa"
@@ -48,6 +49,7 @@ export default class SimpleForm extends AtomXFContentPage {
                     labelColor="#2e2e2e"
                     >
                     <XF.Entry
+                        automationId="password"
                         isPassword={true}
                         text={Bind.twoWays(() => this.viewModel.model.password)}
                         placeholder="Enter Password"
@@ -56,6 +58,7 @@ export default class SimpleForm extends AtomXFContentPage {
                     />
                 </WA.AtomField>
                 <XF.Button
+                    automationId="signup"
                     command={Bind.event((s, e) => this.viewModel.signup())}
                     text="Signup"
                     borderRadius="5"
