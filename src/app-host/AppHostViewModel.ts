@@ -27,6 +27,7 @@ import addSingleContentSample from "../samples/layout/single-content/Sample";
 import addListSamples from "../samples/list/ListSamples";
 import addMenuItem from "../samples/menu-item/MenuSample";
 import addPopupSample from "../samples/popup/PopupSample";
+import addRadioButtonSample from "../samples/radio-button-list/addRadioButtonSample";
 import addRefreshSample from "../samples/refresh-view/RefreshViewSample";
 import addSuggestions from "../samples/suggestions/addSuggestions";
 import addSwitchSample from "../samples/switch/SwitchSamplePage";
@@ -90,6 +91,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addEssentials(this.menuService);
         addBrushSamples(this.menuService);
         addSingleContentSample(this.menuService);
+        addRadioButtonSample(this.menuService);
         addLayoutSample(this.menuService);
         addListSamples(this.menuService);
         addRefreshSample(this.menuService);
