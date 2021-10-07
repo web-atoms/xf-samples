@@ -1,5 +1,6 @@
 import Bind from "@web-atoms/core/dist/core/Bind";
 import XNode from "@web-atoms/core/dist/core/XNode";
+import WA from "@web-atoms/xf-controls/dist/clr/WA";
 import XF from "@web-atoms/xf-controls/dist/clr/XF";
 import AtomXFContentPage from "@web-atoms/xf-controls/dist/pages/AtomXFContentPage";
 import AtomXFToggleButtonBar from "@web-atoms/xf-controls/dist/toggle-button-bar/AtomXFToggleButtonBar";
@@ -16,10 +17,19 @@ export default class ToggleButtonBar extends AtomXFContentPage {
         this.render(
             <XF.ContentPage title="Toggle Button Bar">
                 <XF.StackLayout>
-                    <AtomXFToggleButtonBar
-                        items={this.viewModel.genderList}
-                        value={Bind.twoWays(() => this.viewModel.gender)}
-                        />
+                    <WA.AtomButtonBar
+                        itemsSource={this.viewModel.genderList}
+                        selectedItem={Bind.twoWays(() => this.viewModel.gender, null, {
+                            fromSource: (v) => this.viewModel.genderList.find((i) => i.value === v),
+                            fromTarget: (v) => v.value
+                        })}
+                        >
+                        <WA.AtomButtonBar.itemTemplate>
+                            <XF.DataTemplate>
+                                <XF.Label text={Bind.oneWay((x) => x.data.label)}/>
+                            </XF.DataTemplate>
+                        </WA.AtomButtonBar.itemTemplate>
+                    </WA.AtomButtonBar>
                     <XF.Label
                         fontSize={20}
                         text={Bind.oneWay(() => `Selected gender is ${this.viewModel.gender}`)}

@@ -25,6 +25,7 @@ import addImage from "../samples/image/ImageSample";
 import addLayoutSample from "../samples/layout/multiple-content/LayoutSample";
 import addSingleContentSample from "../samples/layout/single-content/Sample";
 import addListSamples from "../samples/list/ListSamples";
+import addMediaElement from "../samples/media-element/addMediaElement";
 import addMenuItem from "../samples/menu-item/MenuSample";
 import addPopupSample from "../samples/popup/PopupSample";
 import addRadioButtonSample from "../samples/radio-button-list/addRadioButtonSample";
@@ -96,6 +97,7 @@ export default class AppHostViewModel extends AtomViewModel {
         addListSamples(this.menuService);
         addRefreshSample(this.menuService);
         addCarouselPage(this.menuService);
+        addMediaElement(this.menuService);
         addTabbedPage(this.menuService);
         addImage(this.menuService);
         addMenuItem(this.menuService);
