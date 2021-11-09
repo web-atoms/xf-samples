@@ -14,13 +14,21 @@ export default class DateFieldSample extends AtomXFContentPage {
 
         this.render(<XF.ContentPage>
             <XF.Grid>
-                <WA.AtomForm>
-                    <WA.AtomField>
-                        <WA.AtomDateField
-                            selectedDate={Bind.twoWays(() => this.date)}
+                <XF.ScrollView>
+                    <WA.AtomForm>
+                        <XF.BoxView
+                            heightRequest={500}
                             />
-                    </WA.AtomField>
-                </WA.AtomForm>
+                        <WA.AtomField>
+                            <WA.AtomDateField
+                                selectedDate={Bind.twoWays(() => this.date)}
+                                />
+                        </WA.AtomField>
+                        <XF.BoxView
+                            heightRequest={300}
+                            />
+                    </WA.AtomForm>
+                </XF.ScrollView>
             </XF.Grid>
         </XF.ContentPage>);
     }
