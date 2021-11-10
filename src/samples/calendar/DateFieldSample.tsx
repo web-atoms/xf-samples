@@ -25,7 +25,7 @@ export default class DateFieldSample extends AtomXFContentPage {
                                 />
                         </WA.AtomField>
                         <XF.BoxView
-                            heightRequest={300}
+                            heightRequest={500}
                             />
                     </WA.AtomForm>
                 </XF.ScrollView>
