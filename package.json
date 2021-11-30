@@ -17,9 +17,9 @@
     "url": "https://github.com/web-atoms/xf-samples/issues"
   },
   "homepage": "https://github.com/web-atoms/xf-samples#readme",
-  "bundledDependencies": true,
+  "bundledDependencies": false,
   "dependencies": {
-    "@web-atoms/core": "^2.1.61",
+    "@web-atoms/core": "^2.1.64",
     "@web-atoms/date-time": "^1.0.26",
     "@web-atoms/font-awesome": "^1.0.25",
     "@web-atoms/module-loader": "^2.0.27",
