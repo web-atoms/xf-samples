@@ -21,7 +21,6 @@ export default class AppHost extends AtomXFFlyoutPage {
 
         // tslint:disable-next-line: no-console
         console.log(`Render start`);
-        debugger;
         this.render(
             <XF.FlyoutPage
                 isPresented={Bind.twoWays(() => this.viewModel.menuService.isOpen)}
